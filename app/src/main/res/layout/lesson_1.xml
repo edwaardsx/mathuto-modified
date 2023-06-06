@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".lessons.Lesson1Activity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/custom_button_background"
+                android:drawableStart="@drawable/ic_back"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical|start"
+                android:contentDescription="back button"/>
+            <ImageView
+                android:id="@+id/title_entry"
+                android:background="#00bfa5"
+                android:src="@drawable/title_entry_1"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"/>
+            <LinearLayout
+                android:layout_below="@+id/title_entry"
+                android:id="@+id/title"
+                android:background="#00bfa5"
+                android:paddingBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/geologica_bold"
+                    android:paddingHorizontal="10dp"
+                    android:text="Addition and Subtraction of Fractions"
+                    android:textSize="28sp"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:text="Quarter 1: Module 1"
+                    android:textSize="18sp"
+                    android:textColor="#EDEDED"
+                    android:fontFamily="@font/geologica_regular"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        <RelativeLayout
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="#00bfa5"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_tabs"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/bg_view_card_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    app:tabIndicator="@drawable/tab_indicators"
+                    app:tabIndicatorAnimationMode="elastic"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="fixed"
+                    app:tabGravity="center"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextAppearance="@style/MyCustomTextAppearance"
+                    app:tabTextColor="#1B1B1B"
+                    android:contentDescription="tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_below="@id/card_tabs"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
