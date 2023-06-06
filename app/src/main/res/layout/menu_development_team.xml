@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.DevelopmentTeamActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="10dp"
+        android:background="#F1F6F9">
+        <Button
+            android:id="@+id/btn_back"
+            android:background="@null"
+            android:drawableStart="@drawable/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="?attr/actionBarSize" />
+        <TextView
+            android:text="Development Team of the Module"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Writer:"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Ever Luv S. Esquilla"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Editor:"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Elsie S. Yson"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Reviewer:"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Henry T. Legaste, EdD"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Illustrator:"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Roel S. Antonio, PhD"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Layout Artist:"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Ever Luv S. Esquilla"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Cover Art Designer:"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Arvel Garry L. Campollo"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Management Team:"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Allan G. Farnazo, CESO IV – Regional Director"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Fiel Y. Almendra, CESO V – Assistant Regional Director"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Leonardo M. Balala, CESE – Schools Division"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Superintendent Gilbert B. Barrera – Chief, CLMD Arturo D."
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Tingson Jr. – REPS, LRMS"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Peter Van C. Ang-ug – REPS, ADM"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Jade T. Palomar - REPS – Math Supervisor"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Ismael M. Ambalgan - Division CID Chief"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Sheryl L. Osano - Division EPS In Charge of LRMS "
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Josevic F. Hurtada – Division EPS ADM Coordinator"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Ofelia C. Beton – Division EPS - Math Coordinator"
+                        android:fontFamily="@font/geologica_regular"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

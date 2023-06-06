@@ -36,6 +36,16 @@
             android:exported="false" />
 
 
+
+        <activity
+            android:name=".menu.IntroductoryMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.TableOfContentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu.DevelopmentTeamActivity"
+            android:exported="false" />
         <activity
             android:name=".AboutActivity"
             android:exported="false" />

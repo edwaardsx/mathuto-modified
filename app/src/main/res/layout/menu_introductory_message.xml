@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.IntroductoryMessageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="10dp"
+        android:background="#F1F6F9">
+        <Button
+            android:id="@+id/btn_back"
+            android:background="@null"
+            android:drawableStart="@drawable/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="?attr/actionBarSize" />
+        <TextView
+            android:text="Introductory Message"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="For the Facilitator"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:fontFamily="@font/geologica_bold"
+                android:textAlignment="viewStart"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:text="Welcome to the Mathematics 6 Self-Learning Module (SLM) on Addition and Subtraction of Fractions!\n\nThis module was collaboratively designed, developed and reviewed by educators from public institutions to assist you, the teacher or facilitator in helping the learners meet the standards set by the K to 12 Curriculum while overcoming their personal, social, and economic constraints in schooling.\n\nThis learning resource hopes to engage the learners into guided and independent learning activities at their own pace and time. Furthermore, this also aims to help learners acquire the needed 21st century skills while taking into consideration their needs and circumstances.\n\nAs a facilitator you are expected to orient the learners on how to use this module. You also need to keep track of the learners' progress while allowing them to manage their own learning. Furthermore, you are expected to encourage and assist the learners as they do the tasks included in the module."
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:fontFamily="@font/geologica_regular"
+                android:textAlignment="viewStart"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:text="For the Learner"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:fontFamily="@font/geologica_bold"
+                android:textAlignment="viewStart"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:text="Welcome to the Mathematics 6 Self-Learning Module (SLM) on Addition and Subtraction of Fractions!\n\nThe hand is one of the most symbolized parts of the human body. It is often used to depict skill, action and purpose. Through our hands we may learn, create and accomplish. Hence, the hand in this learning resource signifies that you as a learner is capable and empowered to successfully achieve the relevant competencies and skills at your own pace and time. Your academic success lies in your own hands!\n\nThis module was designed to provide you with fun and meaningful opportunities for guided and independent learning at your own pace and time. You will be enabled to process the contents of the learning resource while being an active learner."
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:fontFamily="@font/geologica_regular"
+                android:textAlignment="viewStart"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

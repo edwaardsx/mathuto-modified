@@ -1,16 +1,21 @@
 package tip.capstone.mathuto.lessons
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageButton
-import androidx.appcompat.widget.TooltipCompat
 import com.google.android.material.tabs.TabLayout
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.adapter.Lesson1TabAdapter
 import tip.capstone.mathuto.databinding.Lesson1Binding
+import tip.capstone.mathuto.menu.DevelopmentTeamActivity
+import tip.capstone.mathuto.menu.IntroductoryMessageActivity
+import tip.capstone.mathuto.menu.TableOfContentsActivity
 
 class Lesson1Activity : AppCompatActivity() {
 
@@ -20,6 +25,9 @@ class Lesson1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = Lesson1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         showObjectives()
 
@@ -46,16 +54,6 @@ class Lesson1Activity : AppCompatActivity() {
             override fun onTabReselected(tab: TabLayout.Tab?) {
             }
         })
-
-        binding.btnBack.setOnClickListener {
-            finish()
-            overridePendingTransition(0, 0)
-        }
-
-        for (i in 0 until binding.tabLayout.tabCount) {
-            val tab = binding.tabLayout.getTabAt(i)
-            TooltipCompat.setTooltipText(tab?.view!!, null)
-        }
     }
 
     private fun showObjectives() {
@@ -68,5 +66,39 @@ class Lesson1Activity : AppCompatActivity() {
             dialog.dismiss()
         }
         dialog.show()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_item_lessons, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_introductory_message -> {
+                val intent = Intent(applicationContext, IntroductoryMessageActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                applicationContext.startActivity(intent)
+                overridePendingTransition(0, 0)
+            }
+            R.id.action_table_of_contents -> {
+                val intent = Intent(applicationContext, TableOfContentsActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                applicationContext.startActivity(intent)
+                overridePendingTransition(0, 0)
+            }
+            R.id.action_development_team_of_the_module -> {
+                val intent = Intent(applicationContext, DevelopmentTeamActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                applicationContext.startActivity(intent)
+                overridePendingTransition(0, 0)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

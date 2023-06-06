@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="actions"
+        android:icon="@drawable/ic_more_vert_secondary"
+        app:showAsAction="ifRoom" >
+        <menu>
+            <item
+                android:id="@+id/action_introductory_message"
+                android:title="Introductory Message"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_table_of_contents"
+                android:title="Table of Contents"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_development_team_of_the_module"
+                android:title="Development Team of the Module"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

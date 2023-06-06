@@ -48,7 +48,6 @@
                     <TextView
                         android:id="@+id/lesson"
                         android:hint="Lesson 1"
-                        android:textStyle="bold"
                         android:textColor="@android:color/darker_gray"
                         android:fontFamily="@font/geologica_regular"
                         android:layout_width="wrap_content"

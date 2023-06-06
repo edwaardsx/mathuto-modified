@@ -17,15 +17,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:id="@+id/username_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/description_1"
                     android:text="This module explains that fractions are expressed as a division calculation, one number divided by another. They are also commonly expressed as one number over another.\n\nA fraction is a part of a whole. It has two parts: numerator, on the top, and the denominator, on the bottom,. The numerator tells the number of parts taken. The denominator tells the number of equal parts of a whole is divided."
                     android:fontFamily="@font/geologica_regular"
-                    android:layout_marginVertical="10dp"
+                    android:layout_marginTop="10dp"
                     android:paddingHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Text to Speech"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:text="Example"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/geologica_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <ImageView
@@ -33,9 +54,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="140dp"/>
                 <TextView
-                    android:id="@+id/overview_description"
-                    android:layout_marginTop="10dp"
-                    android:text="Description: Addition and Subtraction of Fractions involves performing mathematical operations to add or subtract fractions."
+                    android:text="Description"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/geologica_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/description_2"
+                    android:text="Addition and Subtraction of Fractions involves performing mathematical operations to add or subtract fractions."
                     android:fontFamily="@font/geologica_regular"
                     android:paddingHorizontal="10dp"
                     android:layout_width="wrap_content"
@@ -45,11 +72,12 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <androidx.cardview.widget.CardView
                         app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp"
+                        app:cardElevation="4dp"
                         app:cardBackgroundColor="#ffffff"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -74,24 +102,24 @@
                             <Button
                                 android:id="@+id/btn_tutorial"
                                 android:text="Watch Tutorial"
+                                android:textAllCaps="false"
                                 android:fontFamily="@font/geologica_regular"
                                 android:textColor="@color/black"
+                                android:drawableStart="@drawable/ic_watch_tutorial"
                                 android:background="@drawable/btn_secondary_button"
                                 android:drawablePadding="10dp"
-                                android:layout_marginTop="10dp"
-                                android:paddingHorizontal="10dp"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginBottom="10dp"
+                                android:layout_margin="10dp"
+                                android:paddingHorizontal="16dp"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="48dp"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp"
+                        app:cardElevation="4dp"
                         app:cardBackgroundColor="#ffffff"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <LinearLayout
@@ -117,16 +145,16 @@
                             <Button
                                 android:id="@+id/btn_start_quiz"
                                 android:text="Start Quiz!"
+                                android:textAllCaps="false"
                                 android:fontFamily="@font/geologica_regular"
                                 android:textColor="@color/white"
+                                android:drawableStart="@drawable/ic_quiz"
                                 android:background="@drawable/btn_primary_button"
                                 android:drawablePadding="10dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_margin="10dp"
                                 android:paddingHorizontal="16dp"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginBottom="10dp"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="48dp"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>

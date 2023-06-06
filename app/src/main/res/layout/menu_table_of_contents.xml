@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.TableOfContentsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="10dp"
+        android:background="#F1F6F9">
+        <Button
+            android:id="@+id/btn_back"
+            android:background="@null"
+            android:drawableStart="@drawable/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="?attr/actionBarSize" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Table of Contents"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_margin="10dp"
+                android:background="@drawable/cell_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:text="What I Need to Know"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="This will give you an idea of the skills or competencies you are expected to learn in the module."
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="What I Know"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="This part includes an activity that aims to check what you already know about the lesson to take. If you get all the answers correct (100%), you may decide to skip this module."
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="What’s In"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="This is a brief drill or review to help you link the current lesson with the previous one."
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="What’s New"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="In this portion, the new lesson will be introduced to you in various ways; a story, a song, a poem, a problem opener, an activity or a situation."
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="What is It"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="This section provides a brief discussion of the lesson. This aims to help you discover and understand new concepts and skills."
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="What’s More"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="This comprises activities for independent practice to solidify your understanding and skills of the topic. You may check the answers to the exercises using the Answer Key at the end of the module."
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="What I Have Learned"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="This includes questions or blank sentence/paragraph to be filled in to process what you learned from the lesson"
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="What I Can Do"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/cell_shape"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:text="This section provides an activity which will help you transfer your new knowledge or skill into real life situations or concerns."
+                        android:fontFamily="@font/geologica_regular"
+                        android:padding="10dp"
+                        android:background="@drawable/cell_shape"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
