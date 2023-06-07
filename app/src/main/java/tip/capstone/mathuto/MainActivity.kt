@@ -1,12 +1,15 @@
 package tip.capstone.mathuto
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.synnapps.carouselview.CarouselView
@@ -133,7 +136,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
         val searchItem = menu?.findItem(R.id.search)
         val searchView = searchItem?.actionView as SearchView
-        searchView.queryHint = "Search for lessons"
+        searchView.queryHint = "Search for lessons, modules & title"
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
@@ -149,6 +152,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         return true
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateCarouselVisibility() {
         if (isSearching) {
             carouselView.visibility = View.GONE
@@ -161,6 +165,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         if (isSearching) {
             if (searchView.query.isBlank()) {

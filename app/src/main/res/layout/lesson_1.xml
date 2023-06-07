@@ -12,30 +12,32 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00bfa5"
+        android:background="#2b163f"
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="256dp"
-            app:contentScrim="#00bfa5"
+            app:expandedTitleTextAppearance="@style/MyExpandedAppBar"
+            app:collapsedTitleTextAppearance="@style/MyCollapsedAppBar"
+            app:contentScrim="#2b163f"
             app:expandedTitleGravity="bottom"
             app:expandedTitleMarginStart="16dp"
             app:expandedTitleMarginBottom="36dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/title_entry_1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/title_entry1"
                 app:layout_collapseMode="parallax" />
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:title="Lesson 1"
+                app:title="Lesson #1"
                 app:contentInsetStart="0dp"
                 app:contentInsetStartWithNavigation="0dp"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
@@ -59,13 +61,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     app:tabIndicator="@drawable/tab_indicators"
-                    app:tabIndicatorColor="#00AE96"
+                    app:tabIndicatorColor="#351749"
                     app:tabTextColor="#1B1B1B"
                     app:tabSelectedTextColor="@color/white"
                     app:tabIndicatorAnimationMode="elastic"
                     app:tabIndicatorGravity="stretch"
                     app:tabMode="fixed"
-                    app:tabGravity="center"
+                    app:tabGravity="fill"
+                    app:tabMaxWidth="0dp"
                     app:tabTextAppearance="@style/MyCustomTextAppearance"
                     app:layout_scrollFlags="scroll|enterAlways" />
             </androidx.cardview.widget.CardView>

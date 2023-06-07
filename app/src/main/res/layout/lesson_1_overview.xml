@@ -49,10 +49,21 @@
                     android:fontFamily="@font/geologica_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
-                <ImageView
-                    android:src="@drawable/lesson_1_sample_1"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"/>
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/ExampleImgView"
+                        android:src="@drawable/lesson_1_sample_1"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:id="@+id/photoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible" />
+                </FrameLayout>
                 <TextView
                     android:text="Description"
                     android:paddingHorizontal="10dp"
@@ -88,13 +99,15 @@
                             <TextView
                                 android:text="Tutorial"
                                 android:textSize="18sp"
-                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:paddingTop="10dp"
+                                android:paddingHorizontal="16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/geologica_regular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:paddingHorizontal="10dp"
+                                android:paddingHorizontal="16dp"
                                 android:text="Are you struggling with the numbers mixing in your head? In this tutorial, we will guide you through the step-by-step process of this lesson!"
                                 android:fontFamily="@font/geologica_regular"
                                 android:layout_width="match_parent"
@@ -108,7 +121,9 @@
                                 android:drawableStart="@drawable/ic_watch_tutorial"
                                 android:background="@drawable/btn_secondary_button"
                                 android:drawablePadding="10dp"
-                                android:layout_margin="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginHorizontal="16dp"
                                 android:paddingHorizontal="16dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="48dp"/>
@@ -130,13 +145,15 @@
                             <TextView
                                 android:text="Quiz"
                                 android:textSize="18sp"
-                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:paddingTop="10dp"
+                                android:paddingHorizontal="16dp"
                                 android:textColor="@color/white"
                                 android:fontFamily="@font/geologica_regular"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:paddingHorizontal="10dp"
+                                android:paddingHorizontal="16dp"
                                 android:text="Let's measure your problem-solving skills with the quiz composed of true or false and multiple-choice questions to assess your level of understanding."
                                 android:textColor="@color/white"
                                 android:fontFamily="@font/geologica_regular"
@@ -151,7 +168,9 @@
                                 android:drawableStart="@drawable/ic_quiz"
                                 android:background="@drawable/btn_primary_button"
                                 android:drawablePadding="10dp"
-                                android:layout_margin="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginHorizontal="16dp"
                                 android:paddingHorizontal="16dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="48dp"/>

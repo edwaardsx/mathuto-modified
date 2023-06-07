@@ -11,7 +11,6 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-
     </style>
 
     <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
@@ -20,17 +19,16 @@
         <item name="android:fontFamily">@font/geologica_regular</item>
     </style>
 
-    <!--<style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/white</item>
+    <style name="MyExpandedAppBar" parent="@style/TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="fontFamily">@font/geologica_regular</item>
+        <item name="android:fontFamily">@font/geologica_regular</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">@font/geologica_bold</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textAppearance">@font/geologica_bold</item>
-    </style>-->
+    <style name="MyCollapsedAppBar" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="fontFamily">@font/geologica_regular</item>
+        <item name="android:fontFamily">@font/geologica_regular</item>
+    </style>
 
 </resources>

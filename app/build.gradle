@@ -53,4 +53,6 @@ dependencies {
     implementation 'com.github.Philjay:MPAndroidChart:v3.1.0'
     //text-to-speech
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.0'
+    //photo view
+    implementation 'com.github.chrisbanes:PhotoView:2.2.0'
 }
