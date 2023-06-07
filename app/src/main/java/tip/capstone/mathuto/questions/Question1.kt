@@ -1,14 +1,16 @@
-package com.capstone.mathuto.questions
+package tip.capstone.mathuto.questions
 
 import com.capstone.mathuto.sqlite.Question
+import java.io.Serializable
 
-object Question1 {
+object Question1 : Serializable {
 
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"
     const val WRONG_ANS: String = "wrong_answers"
     const val UNANSWERED_QUESTIONS: String = "unanswered_questions"
     const val SELECTED_ANSWERS: String = "selected_answers"
+    const val QUESTION_ARRANGEMENT: String = "question_arrangement"
 
     fun getQuestions(): ArrayList<Question>{
 

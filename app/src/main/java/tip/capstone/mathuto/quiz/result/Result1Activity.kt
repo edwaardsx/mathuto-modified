@@ -9,11 +9,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.capstone.mathuto.questions.Question1.CORRECT_ANS
-import com.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import com.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import com.capstone.mathuto.questions.Question1.UNANSWERED_QUESTIONS
-import com.capstone.mathuto.questions.Question1.WRONG_ANS
+import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question1.UNANSWERED_QUESTIONS
+import tip.capstone.mathuto.questions.Question1.WRONG_ANS
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
@@ -26,6 +26,7 @@ import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizResult1Binding
 import tip.capstone.mathuto.lessons.Lesson1Activity
 import tip.capstone.mathuto.quiz.summary.Summary1
+
 
 class Result1Activity : AppCompatActivity() {
 

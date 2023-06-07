@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 "Dividing Whole Numbers by Decimals Up 2 Decimal Places",
                 "Lesson 13"),
             Data(R.drawable.recycler_img_4,
-                "Dividing Decimals/Mixed Decimals",
+                "Dividing Decimals and Mixed Decimals",
                 "Lesson 14"),
             Data(R.drawable.recycler_img_5,
                 "Dividing Decimals Up to 4 Decimal Places by 0.1, 0.01 and 0.001",

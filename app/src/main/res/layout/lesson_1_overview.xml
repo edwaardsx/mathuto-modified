@@ -49,24 +49,16 @@
                     android:fontFamily="@font/geologica_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
-                <FrameLayout
+                <ImageView
+                    android:id="@+id/ExampleImgView"
+                    android:src="@drawable/lesson_1_sample_1"
+                    android:scaleType="centerCrop"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:id="@+id/ExampleImgView"
-                        android:src="@drawable/lesson_1_sample_1"
-                        android:scaleType="centerCrop"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-                    <com.github.chrisbanes.photoview.PhotoView
-                        android:id="@+id/photoView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:visibility="invisible" />
-                </FrameLayout>
+                    android:layout_height="match_parent"/>
                 <TextView
                     android:text="Description"
                     android:paddingHorizontal="10dp"
+                    android:layout_marginTop="10dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/geologica_bold"
                     android:layout_width="match_parent"
@@ -121,7 +113,7 @@
                                 android:drawableStart="@drawable/ic_watch_tutorial"
                                 android:background="@drawable/btn_secondary_button"
                                 android:drawablePadding="10dp"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginTop="10dp"
                                 android:layout_marginBottom="16dp"
                                 android:layout_marginHorizontal="16dp"
                                 android:paddingHorizontal="16dp"
@@ -168,7 +160,7 @@
                                 android:drawableStart="@drawable/ic_quiz"
                                 android:background="@drawable/btn_primary_button"
                                 android:drawablePadding="10dp"
-                                android:layout_marginTop="20dp"
+                                android:layout_marginTop="10dp"
                                 android:layout_marginBottom="16dp"
                                 android:layout_marginHorizontal="16dp"
                                 android:paddingHorizontal="16dp"

@@ -3,7 +3,7 @@ package tip.capstone.mathuto
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.capstone.mathuto.sqlite.SQLiteHelper
+import tip.capstone.mathuto.sqlite.SQLiteHelper
 import tip.capstone.mathuto.databinding.ActivityMainScoresBinding
 
 class MainScoresActivity : AppCompatActivity() {

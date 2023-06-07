@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.ImageButton
 import com.google.android.material.tabs.TabLayout
 import tip.capstone.mathuto.R
@@ -25,7 +26,7 @@ class Lesson1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = Lesson1Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor = Color.parseColor("#4abe37")
+        window.statusBarColor = Color.parseColor("#2b163f")
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -64,6 +65,10 @@ class Lesson1Activity : AppCompatActivity() {
 
         val btnClose = dialog.findViewById<ImageButton>(R.id.btn_objectives_close)
         btnClose.setOnClickListener {
+            dialog.dismiss()
+        }
+        val btnGetStarted = dialog.findViewById<Button>(R.id.btn_lets_get_started)
+        btnGetStarted.setOnClickListener {
             dialog.dismiss()
         }
         dialog.show()

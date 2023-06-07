@@ -9,11 +9,12 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.capstone.mathuto.questions.Question1
+import tip.capstone.mathuto.questions.Question1
 import com.capstone.mathuto.sqlite.Question
 import tip.capstone.mathuto.MainActivity
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizSummary1Binding
+import tip.capstone.mathuto.sqlite.SQLiteHelper
 
 class Summary1 : AppCompatActivity() {
 
@@ -21,16 +22,16 @@ class Summary1 : AppCompatActivity() {
 
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<Question>? = null
-
+    private lateinit var db: SQLiteHelper
     private var isBackButtonVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        db = SQLiteHelper(this)
         binding = QuizSummary1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mQuestionList = Question1.getQuestions()
+        mQuestionList = db.getAllQuestions()
         setQuestion()
 
         binding.btnNext.setOnClickListener{
@@ -43,6 +44,7 @@ class Summary1 : AppCompatActivity() {
                 setQuestion()
             } else {
                 val intent = Intent(applicationContext, MainActivity::class.java)
+                db.deleteQuestion()
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)

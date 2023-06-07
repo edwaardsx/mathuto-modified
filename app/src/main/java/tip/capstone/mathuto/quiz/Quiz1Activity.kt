@@ -6,26 +6,26 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.capstone.mathuto.questions.Question1
-import com.capstone.mathuto.questions.Question1.CORRECT_ANS
-import com.capstone.mathuto.questions.Question1.WRONG_ANS
-import com.capstone.mathuto.questions.Question1.UNANSWERED_QUESTIONS
+import tip.capstone.mathuto.questions.Question1
+import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question1.UNANSWERED_QUESTIONS
+import tip.capstone.mathuto.questions.Question1.WRONG_ANS
 import com.capstone.mathuto.sqlite.Question
-import java.util.*
-import kotlin.collections.ArrayList
-import android.os.CountDownTimer
-import com.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import com.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import com.capstone.mathuto.sqlite.SQLiteHelper
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Quiz1Binding
 import tip.capstone.mathuto.quiz.result.Result1Activity
+import tip.capstone.mathuto.sqlite.SQLiteHelper
+import java.util.*
+
 
 @Suppress("DEPRECATION")
 class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
@@ -36,6 +36,7 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
 
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<Question>? = null
+
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mWrongAnswers: Int = 0
@@ -50,6 +51,7 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
     private var seWrong: MediaPlayer? = null
     private var seBackgroundMusic: MediaPlayer? = null
     private var isBackgroundMusicPlaying: Boolean = false
+    val QuestionListArrangement: ArrayList<Question>? =  null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -120,6 +122,16 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
             binding.tvOptionTwo.text = question.optionB
             binding.tvOptionThree.text = question.optionC
             binding.tvOptionFour.text = question.optionD
+            QuestionListArrangement?.add(question)
+
+            db.insertQuestion(question);
+
+            println("question: " + question)
+            println("mCurrentPosition: " + mCurrentPosition)
+            /* println("QuestionListArrangement: " + (QuestionListArrangement?.get(mCurrentPosition) ?: question))*/
+
+
+
         }
     }
 
@@ -221,13 +233,24 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
                         db.updateHighScores("Lesson 1", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {
-                   QUIZ1_PASSED = true
+                    QUIZ1_PASSED = true
                 }
+
+                val qList = db.getAllQuestions();
+
+                for(question in qList){
+                    println("KOTO: " + question)
+                }
+
+
+
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
                 intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
                 intent.putIntegerArrayListExtra(SELECTED_ANSWERS, selectedAnswer)
+                intent.putExtra(CORRECT_ANS, mCorrectAnswers)
+
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
@@ -280,7 +303,12 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
             seWrong?.start()
         }
     }
+
+
+
+
 }
+
 
 
 

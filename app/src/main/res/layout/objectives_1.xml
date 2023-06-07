@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,10 +20,9 @@
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/animationView"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"
+                    android:layout_height="200dp"
                     android:scaleType="fitXY"
                     app:lottie_rawRes="@raw/objectives"
-                    app:lottie_speed="1"
                     app:lottie_autoPlay="true"
                     app:lottie_loop="true"/>
                 <ImageButton
@@ -38,15 +37,18 @@
                     android:contentDescription="button_close"
                     android:src="@drawable/ic_close" />
                 <TextView
+                    android:id="@+id/objectives"
                     android:text="Objectives"
                     android:textColor="#3f2570"
-                    android:textSize="18sp"
-                    android:layout_marginTop="190dp"
+                    android:textSize="21sp"
+                    android:layout_marginTop="180dp"
                     android:gravity="center"
                     android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/geologica_bold"
                     android:layout_width="wrap_content"
-                    android:layout_height="48dp"/>
+                    android:layout_height="wrap_content"/>
+
             </RelativeLayout>
             <TextView
                 android:text="This lesson covers the addition and subtraction of simple fractions and mixed numbers with or without regrouping."
@@ -104,14 +106,10 @@
                 android:background="@drawable/btn_objectives_button"
                 android:drawablePadding="10dp"
                 android:layout_marginBottom="16dp"
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginHorizontal="10dp"
                 android:paddingHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"/>
-            <!--<View
-                android:layout_width="match_parent"
-                android:layout_height="28dp"
-                android:background="#3f2570"/>-->
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
