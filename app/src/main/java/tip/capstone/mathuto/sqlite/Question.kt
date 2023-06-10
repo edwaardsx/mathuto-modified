@@ -1,4 +1,4 @@
-package com.capstone.mathuto.sqlite
+package tip.capstone.mathuto.sqlite
 
 data class Question(
     val id: Int,

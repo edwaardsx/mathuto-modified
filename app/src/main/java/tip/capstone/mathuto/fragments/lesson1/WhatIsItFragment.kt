@@ -1,12 +1,18 @@
 package tip.capstone.mathuto.fragments.lesson1
 
 import android.annotation.SuppressLint
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
+import tip.capstone.mathuto.FullScreenImageAdapter
+import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Lesson1WhatIsItBinding
 import java.util.*
 
@@ -45,13 +51,52 @@ class WhatIsItFragment : Fragment(), TextToSpeech.OnInitListener {
                 if (isReadingAloud) {
                     tts.stop()
                     isReadingAloud = false
-                    binding.btnTts.text = "Text to Speech"
+                    binding.btnTts.text = "Read Aloud"
                 } else {
                     tts.speak(mDescription, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
-                    binding.btnTts.text = "Stop Text to Speech"
+                    binding.btnTts.text = "Stop Read Aloud"
                 }
             }
+        }
+        binding.example1.setOnClickListener {
+            val dialog = Dialog(requireContext())
+            dialog.setContentView(R.layout.activity_full_screen_image)
+            dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+            val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
+            val images = listOf(R.drawable.lesson_1_sample_3)
+            val adapter = FullScreenImageAdapter(requireContext(), images)
+            viewPager.adapter = adapter
+
+            dialog.show()
+        }
+        binding.example2.setOnClickListener {
+            val dialog = Dialog(requireContext())
+            dialog.setContentView(R.layout.activity_full_screen_image)
+            dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+            val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
+            val images = listOf(R.drawable.lesson_1_sample_3_1)
+            val adapter = FullScreenImageAdapter(requireContext(), images)
+            viewPager.adapter = adapter
+
+            dialog.show()
+        }
+        binding.example3.setOnClickListener {
+            val dialog = Dialog(requireContext())
+            dialog.setContentView(R.layout.activity_full_screen_image)
+            dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+            val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
+            val images = listOf(R.drawable.lesson_1_sample_3_2)
+            val adapter = FullScreenImageAdapter(requireContext(), images)
+            viewPager.adapter = adapter
+
+            dialog.show()
         }
     }
 

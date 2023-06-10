@@ -16,6 +16,34 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="What's In"
+                    android:textColor="#401d58"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/geologica_bold"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"/>
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
             <TextView
                 android:text="Let’s go over to the past lesson you have learned so you could be able to understand better as we go along to this lesson. There are some basic terms and rules of fractions to consider such as the following: Similar Fractions are fractions with the same denominator, such as 𝟑/𝟔 and 𝟒/𝟔 Dissimilar Fractions are fractions with different denominators, such as 𝟑/𝟓 and 𝟐/𝟕 Mixed Fractions is composed of whole number and fraction, such as 𝟐𝟏/𝟐 and 𝟖 𝟐/𝟔.\n\nTo add and subtract dissimilar fractions, you need to find the smallest number that can be divided by the denominators. This is called the Least Common Denominator or LCD.\n\nTo simplify a fraction, divide both the top and bottom by the Greatest Common Factor or GCF. It is the highest number that divides exactly into two or more numbers."
                 android:fontFamily="@font/geologica_regular"
@@ -23,29 +51,15 @@
                 android:paddingHorizontal="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/btn_tts"
-                android:text="Text to Speech"
-                android:fontFamily="@font/geologica_regular"
-                android:background="@drawable/btn_secondary_button"
-                android:drawableStart="@drawable/ic_text_to_speech"
-                android:textAllCaps="false"
-                android:drawablePadding="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginVertical="10dp"
-                android:paddingStart="10dp"
-                android:paddingEnd="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:contentDescription="example"
+                android:layout_marginVertical="10dp"
                 android:src="@drawable/lesson_1_sample_2"/>
             <TextView
                 android:text="Example #1:"
                 android:paddingHorizontal="10dp"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/geologica_bold"
                 android:layout_width="wrap_content"
@@ -58,14 +72,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <ImageView
+                android:id="@+id/example_1"
                 android:layout_width="match_parent"
-                android:layout_height="360dp"
+                android:layout_height="match_parent"
                 android:contentDescription="example"
+                android:layout_marginVertical="10dp"
                 android:src="@drawable/lesson_1_sample_2_1"/>
             <TextView
                 android:text="Example #2:"
                 android:paddingHorizontal="10dp"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/geologica_bold"
                 android:layout_width="wrap_content"

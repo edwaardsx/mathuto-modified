@@ -6,7 +6,6 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.capstone.mathuto.sqlite.Highscores
-import com.capstone.mathuto.sqlite.Question
 
 class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db", null, 1) {
 
@@ -43,23 +42,22 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
         return true
     }
 
-    fun insertQuestion(question: Question) :Boolean {
+    fun insertQuestion(qestion: Question) :Boolean {
         val db = writableDatabase
         val values = ContentValues().apply {
-            put("id", question.id)
-            put("question", question.question)
-            put("optionA", question.optionA)
-            put("optionB", question.optionB)
-            put("optionC", question.optionC)
-            put("optionD", question.optionD)
-            put("correctAnswer", question.correctAnswer)
+            put("id", qestion.id)
+            put("question", qestion.question)
+            put("optionA", qestion.optionA)
+            put("optionB", qestion.optionB)
+            put("optionC", qestion.optionC)
+            put("optionD", qestion.optionD)
+            put("correctAnswer", qestion.correctAnswer)
         }
         db.insert("QUESTIONS", null, values)
         db.close()
         return true
     }
 
-    @SuppressLint("Recycle")
     fun updateHighScores(lesson: String, score: String): Boolean {
         val db = this.writableDatabase
         val contentValues = ContentValues()
@@ -112,11 +110,11 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
         if (cursor.moveToFirst()) {
             do {
                 val id = cursor.getInt(cursor.getColumnIndex("id"))
-                val question= cursor.getString(cursor.getColumnIndex("question"))
-                val optionA= cursor.getString(cursor.getColumnIndex("optionA"))
-                val optionB= cursor.getString(cursor.getColumnIndex("optionB"))
-                val optionC= cursor.getString(cursor.getColumnIndex("optionC"))
-                val optionD= cursor.getString(cursor.getColumnIndex("optionD"))
+                var question= cursor.getString(cursor.getColumnIndex("question"))
+                var optionA= cursor.getString(cursor.getColumnIndex("optionA"))
+                var optionB= cursor.getString(cursor.getColumnIndex("optionB"))
+                var optionC= cursor.getString(cursor.getColumnIndex("optionC"))
+                var optionD= cursor.getString(cursor.getColumnIndex("optionD"))
                 val correctAnswer = cursor.getInt(cursor.getColumnIndex("correctAnswer"))
 
                 val questionObject = Question(id, question, optionA, optionB, optionC, optionD, correctAnswer)

@@ -20,45 +20,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+                <LinearLayout
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:text="Overview"
+                        android:textColor="#401d58"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/geologica_bold"
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="48dp"/>
+                    <Button
+                        android:id="@+id/btn_tts"
+                        android:text="Read Aloud"
+                        android:fontFamily="@font/geologica_regular"
+                        android:background="@drawable/btn_secondary_button"
+                        android:drawableStart="@drawable/ic_text_to_speech"
+                        android:textAllCaps="false"
+                        android:drawablePadding="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp" />
+                </LinearLayout>
                 <TextView
                     android:id="@+id/description_1"
                     android:text="This module explains that fractions are expressed as a division calculation, one number divided by another. They are also commonly expressed as one number over another.\n\nA fraction is a part of a whole. It has two parts: numerator, on the top, and the denominator, on the bottom,. The numerator tells the number of parts taken. The denominator tells the number of equal parts of a whole is divided."
                     android:fontFamily="@font/geologica_regular"
-                    android:layout_marginTop="10dp"
                     android:paddingHorizontal="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <Button
-                    android:id="@+id/btn_tts"
-                    android:text="Text to Speech"
-                    android:fontFamily="@font/geologica_regular"
-                    android:background="@drawable/btn_secondary_button"
-                    android:drawableStart="@drawable/ic_text_to_speech"
-                    android:textAllCaps="false"
-                    android:drawablePadding="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginVertical="10dp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"/>
-                <TextView
-                    android:text="Example"
-                    android:paddingHorizontal="10dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/geologica_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <ImageView
-                    android:id="@+id/ExampleImgView"
+                    android:id="@+id/example_1"
                     android:src="@drawable/lesson_1_sample_1"
-                    android:scaleType="centerCrop"
+                    android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
                 <TextView
                     android:text="Description"
                     android:paddingHorizontal="10dp"
-                    android:layout_marginTop="10dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/geologica_bold"
                     android:layout_width="match_parent"

@@ -9,20 +9,22 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import tip.capstone.mathuto.questions.Question1
-import com.capstone.mathuto.sqlite.Question
 import tip.capstone.mathuto.MainActivity
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizSummary1Binding
+import tip.capstone.mathuto.questions.Question1
+import tip.capstone.mathuto.quiz.result.Result1Activity
+import tip.capstone.mathuto.sqlite.Question
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 
 class Summary1 : AppCompatActivity() {
 
     private lateinit var binding: QuizSummary1Binding
+    private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<Question>? = null
-    private lateinit var db: SQLiteHelper
+
     private var isBackButtonVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +36,10 @@ class Summary1 : AppCompatActivity() {
         mQuestionList = db.getAllQuestions()
         setQuestion()
 
+        binding.btnBack.setOnClickListener{
+            finish()
+            overridePendingTransition(0, 0)
+        }
         binding.btnNext.setOnClickListener{
             if (!isBackButtonVisible) {
                 binding.btnBackPreviousQuestion.visibility = View.VISIBLE
@@ -43,7 +49,7 @@ class Summary1 : AppCompatActivity() {
                 mCurrentPosition++
                 setQuestion()
             } else {
-                val intent = Intent(applicationContext, MainActivity::class.java)
+                val intent = Intent(applicationContext, Result1Activity::class.java)
                 db.deleteQuestion()
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)

@@ -244,6 +244,6 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
         const val COMPLETED: String = "Complete"
         const val LOCK: String = "Lock"
-        const val ONGOING: String = "OnGoing"
+        const val ONGOING: String = "In Progress"
     }
 }

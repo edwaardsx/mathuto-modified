@@ -12,17 +12,17 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
+import tip.capstone.mathuto.R
+import tip.capstone.mathuto.databinding.Quiz1Binding
 import tip.capstone.mathuto.questions.Question1
 import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
 import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
 import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
 import tip.capstone.mathuto.questions.Question1.UNANSWERED_QUESTIONS
 import tip.capstone.mathuto.questions.Question1.WRONG_ANS
-import com.capstone.mathuto.sqlite.Question
-import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
-import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.Quiz1Binding
 import tip.capstone.mathuto.quiz.result.Result1Activity
+import tip.capstone.mathuto.sqlite.Question
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import java.util.*
 
@@ -308,8 +308,3 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
 
 
 }
-
-
-
-
-
