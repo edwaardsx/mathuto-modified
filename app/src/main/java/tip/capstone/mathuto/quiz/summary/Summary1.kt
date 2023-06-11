@@ -49,11 +49,11 @@ class Summary1 : AppCompatActivity() {
                 mCurrentPosition++
                 setQuestion()
             } else {
-                val intent = Intent(applicationContext, Result1Activity::class.java)
                 db.deleteQuestion()
+                /*val intent = Intent(applicationContext, Result1Activity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 applicationContext.startActivity(intent)
-                overridePendingTransition(0, 0)
+                overridePendingTransition(0, 0)*/
             }
         }
         binding.btnBackPreviousQuestion.setOnClickListener{
@@ -97,8 +97,9 @@ class Summary1 : AppCompatActivity() {
         defaultOptionView()
 
         val myIntArray = intent.getIntegerArrayListExtra(Question1.SELECTED_ANSWERS)
+        println("ANSWER KEY ARRANGEMENT: " +myIntArray)
 
-        if (mCurrentPosition < mQuestionList!!.size) {
+        if (mCurrentPosition <= mQuestionList!!.size) {
             val question: Question = mQuestionList!![mCurrentPosition - 1]
             binding.tvProgress.text = "Question $mCurrentPosition"
             binding.tvQuestion.text = question.question
@@ -108,11 +109,12 @@ class Summary1 : AppCompatActivity() {
             binding.tvOptionFour.text = question.optionD
 
             if (myIntArray != null) {
-                if(myIntArray[mCurrentPosition] != question.correctAnswer){
-                    answerView(myIntArray[mCurrentPosition], R.drawable.quiz_wrong_option_border_bg)
+                if(myIntArray[mCurrentPosition - 1] != question.correctAnswer){
+                    answerView(myIntArray[mCurrentPosition - 1], R.drawable.quiz_wrong_option_border_bg)
                 }
             }
             answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
+            println("mCurrentPosition $mCurrentPosition")
         }
     }
 

@@ -19,7 +19,6 @@ import tip.capstone.mathuto.questions.Question1
 import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
 import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
 import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.UNANSWERED_QUESTIONS
 import tip.capstone.mathuto.questions.Question1.WRONG_ANS
 import tip.capstone.mathuto.quiz.result.Result1Activity
 import tip.capstone.mathuto.sqlite.Question
@@ -36,11 +35,12 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
 
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<Question>? = null
+    private val questionListArrangement: ArrayList<Question>? =  null
 
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
     private var mWrongAnswers: Int = 0
-    private var mUnansweredQuestion: Int = 0
+    //private var mUnansweredQuestion: Int = 0
     private var areOptionsEnabled = true
 
     private val handler = Handler()
@@ -51,7 +51,6 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
     private var seWrong: MediaPlayer? = null
     private var seBackgroundMusic: MediaPlayer? = null
     private var isBackgroundMusicPlaying: Boolean = false
-    val QuestionListArrangement: ArrayList<Question>? =  null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -122,15 +121,11 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
             binding.tvOptionTwo.text = question.optionB
             binding.tvOptionThree.text = question.optionC
             binding.tvOptionFour.text = question.optionD
-            QuestionListArrangement?.add(question)
+            questionListArrangement?.add(question)
 
             db.insertQuestion(question);
-
-            println("question: " + question)
-            println("mCurrentPosition: " + mCurrentPosition)
-            /* println("QuestionListArrangement: " + (QuestionListArrangement?.get(mCurrentPosition) ?: question))*/
-
-
+            println("INSERTION NG QUESTION: " + question)
+            /*println("QuestionListArrangement: " + (QuestionListArrangement?.get(mCurrentPosition) ?: question))*/
 
         }
     }
@@ -239,14 +234,13 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
                 val qList = db.getAllQuestions();
 
                 for(question in qList){
-                    println("KOTO: " + question)
+                    println("QUESTION ARRANGEMENT: " + question)
                 }
 
-
-
                 intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
-                intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
-                intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
+                intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers))
+                //intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
+                //intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
                 intent.putIntegerArrayListExtra(SELECTED_ANSWERS, selectedAnswer)
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)

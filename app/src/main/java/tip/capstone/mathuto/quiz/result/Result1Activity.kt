@@ -23,7 +23,6 @@ import tip.capstone.mathuto.lessons.Lesson1Activity
 import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
 import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
 import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.UNANSWERED_QUESTIONS
 import tip.capstone.mathuto.questions.Question1.WRONG_ANS
 import tip.capstone.mathuto.quiz.summary.Summary1
 
@@ -42,7 +41,7 @@ class Result1Activity : AppCompatActivity() {
         val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)
         val correctAnswer = intent.getIntExtra(CORRECT_ANS, 0)
         val wrongAnswer = intent.getIntExtra(WRONG_ANS, 0)
-        val unansweredQuestion = intent.getIntExtra(UNANSWERED_QUESTIONS, 0)
+        //val unansweredQuestion = intent.getIntExtra(UNANSWERED_QUESTIONS, 0)
 
         val entries = mutableListOf<PieEntry>()
         if (correctAnswer != 0) {
@@ -51,9 +50,9 @@ class Result1Activity : AppCompatActivity() {
         if (wrongAnswer != 0) {
             entries.add(PieEntry(wrongAnswer.toFloat(), "Wrong"))
         }
-        if (unansweredQuestion != 0) {
+        /*if (unansweredQuestion != 0) {
             entries.add(PieEntry(unansweredQuestion.toFloat(), "Unanswered"))
-        }
+        }*/
 
         val dataSet = PieDataSet(entries, "")
         val colors = mutableListOf<Int>()
@@ -91,8 +90,8 @@ class Result1Activity : AppCompatActivity() {
         binding.tvScoreWrong.text = "$wrongAnswer"
         binding.tvScoreWrong.setTextColor(Color.WHITE)
 
-        binding.tvUnansweredQuestion.text = "$unansweredQuestion"
-        binding.tvUnansweredQuestion.setTextColor(Color.WHITE)
+        /*binding.tvUnansweredQuestion.text = "$unansweredQuestion"
+        binding.tvUnansweredQuestion.setTextColor(Color.WHITE)*/
 
         binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
         binding.totalNumberOfQuestions.setTextColor(Color.WHITE)

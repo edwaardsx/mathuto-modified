@@ -17,10 +17,12 @@ import tip.capstone.mathuto.databinding.Lesson1Binding
 import tip.capstone.mathuto.menu.DevelopmentTeamActivity
 import tip.capstone.mathuto.menu.IntroductoryMessageActivity
 import tip.capstone.mathuto.menu.TableOfContentsActivity
+import tip.capstone.mathuto.sqlite.SQLiteHelper
 
 class Lesson1Activity : AppCompatActivity() {
 
     private lateinit var binding: Lesson1Binding
+    private lateinit var db: SQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +32,9 @@ class Lesson1Activity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        db = SQLiteHelper(this)
+        db.deleteQuestion()
 
         showObjectives()
 
