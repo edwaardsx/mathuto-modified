@@ -50,7 +50,7 @@
                 android:paddingHorizontal="10dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/geologica_regular"
-                android:text="Fractions look a little like division expressions, but they aren’t problems to be solved. They are a way of expressing an amount. Like numbers, fractions tell you how much you have of something. There are different kinds of fractions that you need to get acquainted with and be able to deal with utmost understanding.\n\nHere are the different kinds of fractions and their examples. Go over it."/>
+                android:text="Fractions look a little like division expressions, but they aren’t problems to be solved. They are a way of expressing an amount. Like numbers, fractions tell you how much you have of something. There are different kinds of fractions that you need to get acquainted with and be able to deal with utmost understanding."/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
             <ImageView
                 android:id="@+id/example_2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
                 android:layout_marginVertical="10dp"
                 android:contentDescription="example"
                 android:src="@drawable/lesson_1_sample_3_1" />

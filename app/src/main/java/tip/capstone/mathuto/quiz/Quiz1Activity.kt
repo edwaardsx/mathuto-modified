@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Quiz1Binding
@@ -117,6 +118,7 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
             binding.progressBar.progress = mCurrentPosition
             binding.tvProgress.text = "Question $mCurrentPosition/${binding.progressBar.max}"
             binding.tvQuestion.text = question.question
+            binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
             binding.tvOptionOne.text = question.optionA
             binding.tvOptionTwo.text = question.optionB
             binding.tvOptionThree.text = question.optionC
@@ -159,7 +161,7 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
         }
         for (option in options) {
             option.setTextColor(Color.parseColor("#FFFFFF"))
-            option.typeface = Typeface.DEFAULT
+            option.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
             option.background = ContextCompat.getDrawable(
                 this,
                 R.drawable.quiz_default_option_border_bg)
@@ -297,8 +299,4 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
             seWrong?.start()
         }
     }
-
-
-
-
 }

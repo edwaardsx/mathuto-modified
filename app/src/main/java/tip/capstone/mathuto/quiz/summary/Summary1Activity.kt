@@ -1,38 +1,40 @@
 package tip.capstone.mathuto.quiz.summary
 
 import android.annotation.SuppressLint
-import android.content.Intent
+import android.app.AlertDialog
 import android.graphics.Color
 import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import tip.capstone.mathuto.MainActivity
+import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizSummary1Binding
 import tip.capstone.mathuto.questions.Question1
-import tip.capstone.mathuto.quiz.result.Result1Activity
 import tip.capstone.mathuto.sqlite.Question
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 
-class Summary1 : AppCompatActivity() {
+class Summary1Activity : AppCompatActivity() {
 
     private lateinit var binding: QuizSummary1Binding
     private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
     private var mQuestionList: ArrayList<Question>? = null
-
     private var isBackButtonVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        db = SQLiteHelper(this)
+
         binding = QuizSummary1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.statusBarColor = Color.parseColor("#303030")
+        db = SQLiteHelper(this)
         mQuestionList = db.getAllQuestions()
         setQuestion()
 
@@ -50,10 +52,6 @@ class Summary1 : AppCompatActivity() {
                 setQuestion()
             } else {
                 db.deleteQuestion()
-                /*val intent = Intent(applicationContext, Result1Activity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                applicationContext.startActivity(intent)
-                overridePendingTransition(0, 0)*/
             }
         }
         binding.btnBackPreviousQuestion.setOnClickListener{
@@ -85,7 +83,7 @@ class Summary1 : AppCompatActivity() {
         }
         for (option in options) {
             option.setTextColor(Color.parseColor("#FFFFFF"))
-            option.typeface = Typeface.DEFAULT
+            option.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
             option.background = ContextCompat.getDrawable(
                 this,
                 R.drawable.quiz_default_option_border_bg)
@@ -101,8 +99,9 @@ class Summary1 : AppCompatActivity() {
 
         if (mCurrentPosition <= mQuestionList!!.size) {
             val question: Question = mQuestionList!![mCurrentPosition - 1]
-            binding.tvProgress.text = "Question $mCurrentPosition"
+            binding.tvProgress.text = "Question $mCurrentPosition/10"
             binding.tvQuestion.text = question.question
+            binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
             binding.tvOptionOne.text = question.optionA
             binding.tvOptionTwo.text = question.optionB
             binding.tvOptionThree.text = question.optionC
@@ -110,12 +109,50 @@ class Summary1 : AppCompatActivity() {
 
             if (myIntArray != null) {
                 if(myIntArray[mCurrentPosition - 1] != question.correctAnswer){
-                    answerView(myIntArray[mCurrentPosition - 1], R.drawable.quiz_wrong_option_border_bg)
+                    binding.seeWhy.visibility = View.VISIBLE
+                    binding.seeWhy.setOnClickListener{
+                        showExplanationDialog(question)
+                    }
+                    answerView(myIntArray[mCurrentPosition - 1], R.drawable.quiz_summary_wrong_option_border_bg)
+                } else {
+                    binding.seeWhy.visibility = View.GONE
                 }
             }
-            answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
+            answerView(question.correctAnswer, R.drawable.quiz_summary_correct_option_border_bg)
+
             println("mCurrentPosition $mCurrentPosition")
         }
+    }
+
+    private fun showExplanationDialog(question: Question) {
+        val dialogBuilder = AlertDialog.Builder(this)
+        val titleFont = ResourcesCompat.getFont(this, R.font.geologica_bold)
+        val messageFont = ResourcesCompat.getFont(this, R.font.geologica_regular)
+
+        dialogBuilder.setTitle("Explanation")
+        dialogBuilder.setMessage(question.explanation)
+
+        dialogBuilder.setPositiveButton("GOT IT") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = dialogBuilder.create()
+
+        dialog.apply {
+            val titleView = dialog.findViewById<TextView>(android.R.id.title)
+            val messageView = dialog.findViewById<TextView>(android.R.id.message)
+
+            titleView?.typeface = titleFont
+            messageView?.typeface = messageFont
+
+            window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+            val cornerRadius = 16 * resources.displayMetrics.density
+            val cornerDrawable = GradientDrawable()
+            cornerDrawable.setColor(Color.WHITE)
+            cornerDrawable.cornerRadius = cornerRadius
+            window?.setBackgroundDrawable(cornerDrawable)
+        }
+        dialog.show()
     }
 
     private fun answerView(answer: Int, drawableView: Int) {

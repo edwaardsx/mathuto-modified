@@ -24,7 +24,7 @@ import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
 import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
 import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
 import tip.capstone.mathuto.questions.Question1.WRONG_ANS
-import tip.capstone.mathuto.quiz.summary.Summary1
+import tip.capstone.mathuto.quiz.summary.Summary1Activity
 
 
 class Result1Activity : AppCompatActivity() {
@@ -38,9 +38,9 @@ class Result1Activity : AppCompatActivity() {
         binding = QuizResult1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)
         val correctAnswer = intent.getIntExtra(CORRECT_ANS, 0)
         val wrongAnswer = intent.getIntExtra(WRONG_ANS, 0)
+        val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)
         //val unansweredQuestion = intent.getIntExtra(UNANSWERED_QUESTIONS, 0)
 
         val entries = mutableListOf<PieEntry>()
@@ -84,17 +84,15 @@ class Result1Activity : AppCompatActivity() {
         binding.pieChart.animateY(1000)
         binding.pieChart.invalidate()
 
+        val scorePercentage = (correctAnswer.toFloat() / totalQuestions) * 100
+        val formattedPercentage = String.format("%.0f", scorePercentage)
+        binding.tvScore.text = "$formattedPercentage%"
+
         binding.tvScoreCorrect.text = "$correctAnswer"
-        binding.tvScoreCorrect.setTextColor(Color.WHITE)
-
         binding.tvScoreWrong.text = "$wrongAnswer"
-        binding.tvScoreWrong.setTextColor(Color.WHITE)
+        binding.totalNumberOfQuestions.text = "$totalQuestions"
 
-        /*binding.tvUnansweredQuestion.text = "$unansweredQuestion"
-        binding.tvUnansweredQuestion.setTextColor(Color.WHITE)*/
-
-        binding.totalNumberOfQuestions.text = "Total number of questions: $totalQuestions"
-        binding.totalNumberOfQuestions.setTextColor(Color.WHITE)
+        /*binding.tvUnansweredQuestion.text = "$unansweredQuestion"*/
 
         binding.btnBack.setOnClickListener{
             val intent = Intent(applicationContext,  Lesson1Activity::class.java)
@@ -114,7 +112,7 @@ class Result1Activity : AppCompatActivity() {
             val bundle = intent.extras
             val myIntArray = bundle!!.getIntegerArrayList(SELECTED_ANSWERS)
 
-            val intent = Intent(applicationContext,  Summary1::class.java)
+            val intent = Intent(applicationContext,  Summary1Activity::class.java)
             intent.putIntegerArrayListExtra(SELECTED_ANSWERS, myIntArray)
 
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK

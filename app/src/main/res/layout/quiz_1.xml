@@ -9,20 +9,21 @@
     android:layout_height="match_parent"
     tools:context=".quiz.Quiz1Activity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:elevation="10dp"
-            android:background="#303030">
-            <TextView
-                android:text="Quizzes"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </androidx.appcompat.widget.Toolbar>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="10dp"
+        android:background="#303030">
+        <TextView
+            android:text="Quizzes"
+            android:fontFamily="@font/geologica_regular"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -38,10 +39,12 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textAlignment="textStart"
+            android:fontFamily="@font/geologica_regular"
             tools:text="Question 3/10" />
         <TextView
             android:id="@+id/tvTimer"
-            android:hint="Timer: 30"
+            android:hint="Timer: 59"
+            android:fontFamily="@font/geologica_regular"
             android:textColorHint="@color/white"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -57,18 +60,17 @@
         android:progressTint="#304FFE"
         android:progressBackgroundTint="@color/white"
         android:layout_marginHorizontal="23dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:indeterminate="false"
         android:max="10"
         android:minHeight="30dp"
-        android:progress="5" />
+        android:progress="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:gravity="center"
         android:paddingHorizontal="10dp"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <androidx.cardview.widget.CardView
@@ -78,6 +80,8 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/tv_question"
+                android:hint="To add or subtract dissimilar fractions, this is the smallest number that can be divided by the denominators."
+                android:textColorHint="@color/white"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/geologica_regular"
@@ -106,6 +110,7 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:text="Option 1"
+                android:fontFamily="@font/geologica_regular"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
@@ -118,6 +123,7 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:text="Option 2"
+                android:fontFamily="@font/geologica_regular"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
@@ -130,6 +136,7 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:text="Option 3"
+                android:fontFamily="@font/geologica_regular"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
@@ -142,6 +149,7 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:text="Option 4"
+                android:fontFamily="@font/geologica_regular"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"

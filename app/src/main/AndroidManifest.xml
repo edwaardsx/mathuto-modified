@@ -17,7 +17,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".quiz.summary.Summary1"
+            android:name=".quiz.summary.Summary1Activity"
             android:exported="false" />
 
 

@@ -13,7 +13,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE HIGHSCORES(id Integer PRIMARY KEY, lesson TEXT, score TEXT)")
-        db.execSQL("CREATE TABLE QUESTIONS(id TEXT, question TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, correctAnswer TEXT)")
+        db.execSQL("CREATE TABLE QUESTIONS(id TEXT, question TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, correctAnswer TEXT, explanation TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -42,16 +42,17 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
         return true
     }
 
-    fun insertQuestion(qestion: Question) :Boolean {
+    fun insertQuestion(question: Question) :Boolean {
         val db = writableDatabase
         val values = ContentValues().apply {
-            put("id", qestion.id)
-            put("question", qestion.question)
-            put("optionA", qestion.optionA)
-            put("optionB", qestion.optionB)
-            put("optionC", qestion.optionC)
-            put("optionD", qestion.optionD)
-            put("correctAnswer", qestion.correctAnswer)
+            put("id", question.id)
+            put("question", question.question)
+            put("optionA", question.optionA)
+            put("optionB", question.optionB)
+            put("optionC", question.optionC)
+            put("optionD", question.optionD)
+            put("correctAnswer", question.correctAnswer)
+            put("explanation", question.explanation)
         }
         db.insert("QUESTIONS", null, values)
         db.close()
@@ -110,18 +111,18 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
         if (cursor.moveToFirst()) {
             do {
                 val id = cursor.getInt(cursor.getColumnIndex("id"))
-                var question= cursor.getString(cursor.getColumnIndex("question"))
-                var optionA= cursor.getString(cursor.getColumnIndex("optionA"))
-                var optionB= cursor.getString(cursor.getColumnIndex("optionB"))
-                var optionC= cursor.getString(cursor.getColumnIndex("optionC"))
-                var optionD= cursor.getString(cursor.getColumnIndex("optionD"))
+                val question = cursor.getString(cursor.getColumnIndex("question"))
+                val optionA = cursor.getString(cursor.getColumnIndex("optionA"))
+                val optionB = cursor.getString(cursor.getColumnIndex("optionB"))
+                val optionC = cursor.getString(cursor.getColumnIndex("optionC"))
+                val optionD = cursor.getString(cursor.getColumnIndex("optionD"))
                 val correctAnswer = cursor.getInt(cursor.getColumnIndex("correctAnswer"))
+                val explanation = cursor.getString(cursor.getColumnIndex("explanation"))
 
-                val questionObject = Question(id, question, optionA, optionB, optionC, optionD, correctAnswer)
+                val questionObject = Question(id, question, optionA, optionB, optionC, optionD, correctAnswer, explanation)
                 questionList.add(questionObject)
             } while (cursor.moveToNext())
         }
-
         cursor.close()
         db.close()
         return questionList

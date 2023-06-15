@@ -40,7 +40,8 @@ class WhatsInFragment : Fragment(), TextToSpeech.OnInitListener {
         binding.btnTts.setOnClickListener {
             val description1 = binding.description1.text.toString()
             val description2 = binding.description2.text.toString()
-            val mDescription = "$description1 $description2"
+            val description3 = binding.description3.text.toString()
+            val mDescription = "$description1 $description2 $description3"
 
             if (mDescription.isNotEmpty()) {
                 if (isReadingAloud) {
