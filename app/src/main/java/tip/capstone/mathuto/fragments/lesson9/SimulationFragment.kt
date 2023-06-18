@@ -1,10 +1,16 @@
 package tip.capstone.mathuto.fragments.lesson9
 
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
+import tip.capstone.mathuto.FullScreenImageAdapter
+import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Lesson1SimulationBinding
 import tip.capstone.mathuto.databinding.Lesson2SimulationBinding
 import tip.capstone.mathuto.databinding.Lesson5SimulationBinding
@@ -22,18 +28,24 @@ class SimulationFragment : Fragment() {
         return binding.root
     }
 
-    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnTutorial.setOnClickListener {
-            val intent = Intent(requireActivity(), Tutorial1Activity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            requireActivity().startActivity(intent)
+        binding.simulation.setOnClickListener {
+            val dialog = Dialog(requireContext())
+            dialog.setContentView(R.layout.activity_full_screen_image)
+            dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+            val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
+            val images = listOf(
+                R.drawable.simulation_9_1, R.drawable.simulation_9_2, R.drawable.simulation_9_3,
+                R.drawable.simulation_9_4, R.drawable.simulation_9_5, R.drawable.simulation_9_6, R.drawable.simulation_9_7,
+                R.drawable.simulation_9_8, R.drawable.simulation_9_9)
+            val adapter = FullScreenImageAdapter(requireContext(), images)
+            viewPager.adapter = adapter
+
+            dialog.show()
         }
-        binding.btnStartQuiz.setOnClickListener {
-            val intent = Intent(requireActivity(), Quiz1Activity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            requireActivity().startActivity(intent)
-        }
-    }*/
+    }
 }

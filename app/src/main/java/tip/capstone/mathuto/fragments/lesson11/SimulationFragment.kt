@@ -29,19 +29,21 @@ class SimulationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*binding.simulation.setOnClickListener {
+        binding.simulation.setOnClickListener {
             val dialog = Dialog(requireContext())
             dialog.setContentView(R.layout.activity_full_screen_image)
             dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
             val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
-            val images = listOf(R.drawable.simulation_1, R.drawable.simulation_1_1, R.drawable.simulation_1_2, R.drawable.simulation_1_3,
-                R.drawable.simulation_1_4, R.drawable.simulation_1_5, R.drawable.simulation_1_6, R.drawable.simulation_1_7, R.drawable.simulation_1_8,)
+            val images = listOf(
+                R.drawable.simulation_11_0, R.drawable.simulation_11_1, R.drawable.simulation_11_2,
+                R.drawable.simulation_11_3, R.drawable.simulation_11_4, R.drawable.simulation_11_5, R.drawable.simulation_11_6,
+                R.drawable.simulation_11_7, R.drawable.simulation_11_8, R.drawable.simulation_11_9, R.drawable.simulation_11_10)
             val adapter = FullScreenImageAdapter(requireContext(), images)
             viewPager.adapter = adapter
 
             dialog.show()
-        }*/
+        }
     }
 }

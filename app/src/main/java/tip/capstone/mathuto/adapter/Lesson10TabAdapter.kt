@@ -5,9 +5,10 @@ package tip.capstone.mathuto.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import tip.capstone.mathuto.fragments.lesson13.OverviewFragment
-import tip.capstone.mathuto.fragments.lesson13.SimulationFragment
-import tip.capstone.mathuto.fragments.lesson13.WhatsNewFragment
+import tip.capstone.mathuto.fragments.lesson10.OverviewFragment
+import tip.capstone.mathuto.fragments.lesson10.SimulationFragment
+import tip.capstone.mathuto.fragments.lesson10.WhatsInFragment
+import tip.capstone.mathuto.fragments.lesson10.WhatsNewFragment
 
 @Suppress("DEPRECATION")
 internal class Lesson10TabAdapter(fragmentManager: FragmentManager,

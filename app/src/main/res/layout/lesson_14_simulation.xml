@@ -5,21 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson16.SimulationFragment">
+    tools:context=".fragments.lesson14.SimulationFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:overScrollMode="never">
+        android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
-            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Simulation"
-                android:textSize="28sp"
-                android:gravity="center"
+                android:text="Dividing Decimals/Mixed Decimals\n\nThis learning resource hopes to engage the learners into guided and independent learning activities at their own pace and time. Furthermore, this also aims to help learners acquire the needed 21st century skills while taking into consideration their needs and circumstances"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/simulation"
+                android:text="Simulate"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary_button"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

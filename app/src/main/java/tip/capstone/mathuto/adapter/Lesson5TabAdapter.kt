@@ -5,10 +5,10 @@ package tip.capstone.mathuto.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import tip.capstone.mathuto.fragments.lesson17.OverviewFragment
-import tip.capstone.mathuto.fragments.lesson17.SimulationFragment
-import tip.capstone.mathuto.fragments.lesson17.WhatIsItFragment
-import tip.capstone.mathuto.fragments.lesson17.WhatsInFragment
+import tip.capstone.mathuto.fragments.lesson5.OverviewFragment
+import tip.capstone.mathuto.fragments.lesson5.SimulationFragment
+import tip.capstone.mathuto.fragments.lesson5.WhatIsItFragment
+import tip.capstone.mathuto.fragments.lesson5.WhatsInFragment
 import tip.capstone.mathuto.fragments.lesson5.*
 
 @Suppress("DEPRECATION")

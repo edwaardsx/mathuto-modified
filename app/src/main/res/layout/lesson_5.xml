@@ -66,7 +66,7 @@
                     app:tabSelectedTextColor="@color/white"
                     app:tabIndicatorAnimationMode="elastic"
                     app:tabIndicatorGravity="stretch"
-                    app:tabMode="fixed"
+                    app:tabMode="scrollable"
                     app:tabGravity="fill"
                     app:tabMaxWidth="0dp"
                     app:tabTextAppearance="@style/MyCustomTextAppearance"
