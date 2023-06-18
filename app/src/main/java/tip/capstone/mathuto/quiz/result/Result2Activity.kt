@@ -15,18 +15,14 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
 import tip.capstone.mathuto.MainActivity
-import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ2_PASSED
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.QuizResult1Binding
 import tip.capstone.mathuto.databinding.QuizResult2Binding
-import tip.capstone.mathuto.lessons.Lesson1Activity
 import tip.capstone.mathuto.lessons.Lesson2Activity
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
-import tip.capstone.mathuto.quiz.summary.Summary1Activity
+import tip.capstone.mathuto.questions.Question2.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question2.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question2.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question2.WRONG_ANS
 import tip.capstone.mathuto.quiz.summary.Summary2Activity
 
 

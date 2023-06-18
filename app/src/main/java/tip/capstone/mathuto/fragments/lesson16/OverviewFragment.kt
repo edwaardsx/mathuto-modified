@@ -16,7 +16,9 @@ import tip.capstone.mathuto.FullScreenImageAdapter
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Lesson16OverviewBinding
 import tip.capstone.mathuto.quiz.Quiz10Activity
+import tip.capstone.mathuto.quiz.Quiz16Activity
 import tip.capstone.mathuto.tutorial.Tutorial10Activity
+import tip.capstone.mathuto.tutorial.Tutorial16Activity
 import java.util.*
 
 class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
@@ -56,12 +58,12 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
             }
         }
         binding.btnTutorial.setOnClickListener {
-            val intent = Intent(requireActivity(), Tutorial10Activity::class.java)
+            val intent = Intent(requireActivity(), Tutorial16Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }
         binding.btnStartQuiz.setOnClickListener {
-            val intent = Intent(requireActivity(), Quiz10Activity::class.java)
+            val intent = Intent(requireActivity(), Quiz16Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }

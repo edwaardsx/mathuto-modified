@@ -13,19 +13,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
+import tip.capstone.mathuto.MainActivity.Companion.QUIZ4_PASSED
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.Quiz1Binding
 import tip.capstone.mathuto.databinding.Quiz4Binding
-import tip.capstone.mathuto.questions.Question1
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
 import tip.capstone.mathuto.questions.Question4
-import tip.capstone.mathuto.quiz.result.Result1Activity
+import tip.capstone.mathuto.questions.Question4.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question4.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question4.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question4.WRONG_ANS
 import tip.capstone.mathuto.quiz.result.Result4Activity
-import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import tip.capstone.mathuto.sqlite.TrueOrFalse
 import java.util.*
@@ -212,7 +208,7 @@ class Quiz4Activity : AppCompatActivity(), View.OnClickListener {
                         db.updateHighScores("Lesson 4", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {
-                    QUIZ1_PASSED = true
+                    QUIZ4_PASSED = true
                 }
 
                 val qList = db.getAllQuestions2();

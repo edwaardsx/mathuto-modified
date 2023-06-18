@@ -39,7 +39,9 @@ class SimulationFragment : Fragment() {
 
             val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
             val images = listOf(
-                R.drawable.simulation_12_1)
+                R.drawable.simulation_12_1, R.drawable.simulation_12_2,
+                R.drawable.simulation_12_3, R.drawable.simulation_12_4, R.drawable.simulation_12_5, R.drawable.simulation_12_6,
+                R.drawable.simulation_12_7)
             val adapter = FullScreenImageAdapter(requireContext(), images)
             viewPager.adapter = adapter
 

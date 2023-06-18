@@ -13,16 +13,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
+import tip.capstone.mathuto.MainActivity.Companion.QUIZ15_PASSED
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Quiz15Binding
-import tip.capstone.mathuto.databinding.Quiz1Binding
-import tip.capstone.mathuto.questions.Question1
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
-import tip.capstone.mathuto.quiz.result.Result1Activity
+import tip.capstone.mathuto.questions.Question15
+import tip.capstone.mathuto.questions.Question15.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question15.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question15.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question15.WRONG_ANS
+import tip.capstone.mathuto.quiz.result.Result15Activity
 import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import java.util.*
@@ -47,7 +46,7 @@ class Quiz15Activity : AppCompatActivity(), View.OnClickListener {
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
-    private var remainingTime: Long = 60000
+    private var remainingTime: Long = 120000
 
     private var seCorrect: MediaPlayer? = null
     private var seWrong: MediaPlayer? = null
@@ -71,7 +70,7 @@ class Quiz15Activity : AppCompatActivity(), View.OnClickListener {
         seWrong = MediaPlayer.create(this, R.raw.sound_effect_wrong)
         seBackgroundMusic = MediaPlayer.create(this, R.raw.sound_background_music)
 
-        mMultipleChoiceList = Question1.getQuestions()
+        mMultipleChoiceList = Question15.getQuestions()
         mMultipleChoiceList?.shuffle()
         setQuestion()
 
@@ -219,19 +218,19 @@ class Quiz15Activity : AppCompatActivity(), View.OnClickListener {
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mMultipleChoiceList!!.size) {
             handler.postDelayed({
-                val intent = Intent(applicationContext, Result1Activity::class.java)
+                val intent = Intent(applicationContext, Result15Activity::class.java)
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
                 if(scores.isEmpty()){
-                    db.insertHighScores("Lesson 1", mCorrectAnswers.toString())
+                    db.insertHighScores("Lesson 15", mCorrectAnswers.toString())
                 }else{
                     if (mCorrectAnswers > Integer.parseInt(scores[0].score))
-                        db.updateHighScores("Lesson 1", mCorrectAnswers.toString())
+                        db.updateHighScores("Lesson 15", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {
-                    QUIZ1_PASSED = true
+                    QUIZ15_PASSED = true
                 }
 
                 val qList = db.getAllQuestions();

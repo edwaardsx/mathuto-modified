@@ -12,9 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.QuizSummary1Binding
 import tip.capstone.mathuto.databinding.QuizSummary7Binding
-import tip.capstone.mathuto.questions.Question1
+import tip.capstone.mathuto.questions.Question7
 import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 
@@ -94,7 +93,7 @@ class Summary7Activity : AppCompatActivity() {
     private fun setQuestion() {
         defaultOptionView()
 
-        val myIntArray = intent.getIntegerArrayListExtra(Question1.SELECTED_ANSWERS)
+        val myIntArray = intent.getIntegerArrayListExtra(Question7.SELECTED_ANSWERS)
         println("ANSWER KEY ARRANGEMENT: " +myIntArray)
 
         if (mCurrentPosition <= mMultipleChoiceList!!.size) {

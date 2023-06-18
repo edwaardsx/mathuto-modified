@@ -18,12 +18,12 @@ import tip.capstone.mathuto.MainActivity
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ15_PASSED
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizResult15Binding
-import tip.capstone.mathuto.lessons.Lesson1Activity
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
-import tip.capstone.mathuto.quiz.summary.Summary1Activity
+import tip.capstone.mathuto.lessons.Lesson15Activity
+import tip.capstone.mathuto.questions.Question15.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question15.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question15.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question15.WRONG_ANS
+import tip.capstone.mathuto.quiz.summary.Summary15Activity
 
 
 class Result15Activity : AppCompatActivity() {
@@ -94,7 +94,7 @@ class Result15Activity : AppCompatActivity() {
         /*binding.tvUnansweredQuestion.text = "$unansweredQuestion"*/
 
         binding.btnBack.setOnClickListener{
-            val intent = Intent(applicationContext,  Lesson1Activity::class.java)
+            val intent = Intent(applicationContext,  Lesson15Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)
@@ -111,7 +111,7 @@ class Result15Activity : AppCompatActivity() {
             val bundle = intent.extras
             val myIntArray = bundle!!.getIntegerArrayList(SELECTED_ANSWERS)
 
-            val intent = Intent(applicationContext,  Summary1Activity::class.java)
+            val intent = Intent(applicationContext,  Summary15Activity::class.java)
             intent.putIntegerArrayListExtra(SELECTED_ANSWERS, myIntArray)
 
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK

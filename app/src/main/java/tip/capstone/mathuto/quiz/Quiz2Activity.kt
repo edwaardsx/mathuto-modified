@@ -13,17 +13,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
+import tip.capstone.mathuto.MainActivity.Companion.QUIZ2_PASSED
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.Quiz1Binding
 import tip.capstone.mathuto.databinding.Quiz2Binding
-import tip.capstone.mathuto.questions.Question1
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
+import tip.capstone.mathuto.questions.Question2.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question2.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question2.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question2.WRONG_ANS
 import tip.capstone.mathuto.questions.Question2
-import tip.capstone.mathuto.quiz.result.Result1Activity
+import tip.capstone.mathuto.quiz.result.Result2Activity
 import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import java.util.*
@@ -48,7 +46,7 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
-    private var remainingTime: Long = 60000
+    private var remainingTime: Long = 120000
 
     private var seCorrect: MediaPlayer? = null
     private var seWrong: MediaPlayer? = null
@@ -220,19 +218,19 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mMultipleChoiceList!!.size) {
             handler.postDelayed({
-                val intent = Intent(applicationContext, Result1Activity::class.java)
+                val intent = Intent(applicationContext, Result2Activity::class.java)
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
                 if(scores.isEmpty()){
-                    db.insertHighScores("Lesson 1", mCorrectAnswers.toString())
+                    db.insertHighScores("Lesson 2", mCorrectAnswers.toString())
                 }else{
                     if (mCorrectAnswers > Integer.parseInt(scores[0].score))
-                        db.updateHighScores("Lesson 1", mCorrectAnswers.toString())
+                        db.updateHighScores("Lesson 2", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {
-                    QUIZ1_PASSED = true
+                    QUIZ2_PASSED = true
                 }
 
                 val qList = db.getAllQuestions();

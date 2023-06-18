@@ -42,15 +42,14 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
 
         binding.btnTts.setOnClickListener {
             val description1 = binding.description1.text.toString()
-            val mDescription = "$description1"
 
-            if (mDescription.isNotEmpty()) {
+            if (description1.isNotEmpty()) {
                 if (isReadingAloud) {
                     tts.stop()
                     isReadingAloud = false
                     binding.btnTts.text = "Read Aloud"
                 } else {
-                    tts.speak(mDescription, TextToSpeech.QUEUE_FLUSH, null, null)
+                    tts.speak(description1, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop Read Aloud"
                 }

@@ -15,7 +15,9 @@ import androidx.viewpager.widget.ViewPager
 import tip.capstone.mathuto.FullScreenImageAdapter
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Lesson11OverviewBinding
+import tip.capstone.mathuto.quiz.Quiz11Activity
 import tip.capstone.mathuto.quiz.Quiz1Activity
+import tip.capstone.mathuto.tutorial.Tutorial11Activity
 import tip.capstone.mathuto.tutorial.Tutorial1Activity
 import java.util.*
 
@@ -56,12 +58,12 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
             }
         }
         binding.btnTutorial.setOnClickListener {
-            val intent = Intent(requireActivity(), Tutorial1Activity::class.java)
+            val intent = Intent(requireActivity(), Tutorial11Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }
         binding.btnStartQuiz.setOnClickListener {
-            val intent = Intent(requireActivity(), Quiz1Activity::class.java)
+            val intent = Intent(requireActivity(), Quiz11Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }

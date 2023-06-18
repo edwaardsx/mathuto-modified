@@ -18,13 +18,11 @@ import tip.capstone.mathuto.MainActivity
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ4_PASSED
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizResult4Binding
-import tip.capstone.mathuto.lessons.Lesson1Activity
 import tip.capstone.mathuto.lessons.Lesson4Activity
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
-import tip.capstone.mathuto.quiz.summary.Summary1Activity
+import tip.capstone.mathuto.questions.Question4.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question4.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question4.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question4.WRONG_ANS
 import tip.capstone.mathuto.quiz.summary.Summary4Activity
 
 

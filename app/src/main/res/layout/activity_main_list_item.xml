@@ -55,6 +55,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="10dp" />
                     <ImageView
+                        android:id="@+id/status"
                         android:src="@drawable/ic_unlock"
                         android:layout_marginHorizontal="3dp"
                         android:layout_width="20dp"

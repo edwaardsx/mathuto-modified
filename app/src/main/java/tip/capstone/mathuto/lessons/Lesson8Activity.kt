@@ -4,17 +4,15 @@ import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.adapter.Lesson1TabAdapter
 import tip.capstone.mathuto.adapter.Lesson8TabAdapter
-import tip.capstone.mathuto.databinding.Lesson1Binding
 import tip.capstone.mathuto.databinding.Lesson8Binding
 import tip.capstone.mathuto.menu.DevelopmentTeamActivity
 import tip.capstone.mathuto.menu.IntroductoryMessageActivity
@@ -30,8 +28,8 @@ class Lesson8Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = Lesson8Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor = Color.parseColor("#2b163f")
 
+        window.statusBarColor = Color.parseColor("#2b163f")
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

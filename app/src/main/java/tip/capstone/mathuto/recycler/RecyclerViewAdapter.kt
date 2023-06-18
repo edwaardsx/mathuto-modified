@@ -7,9 +7,9 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import tip.capstone.mathuto.MainActivity.Companion.COMPLETED
+import tip.capstone.mathuto.MainActivity.Companion.IN_PROGRESS
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.ActivityMainAboutBinding
-import tip.capstone.mathuto.databinding.ActivityMainBinding
 
 class RecyclerViewAdapter(private val dataList: List<Data>,
                           private var itemClickListener: OnItemClickListener) :
@@ -21,6 +21,8 @@ class RecyclerViewAdapter(private val dataList: List<Data>,
         val image: ImageView = itemView.findViewById(R.id.image)
         val title: TextView = itemView.findViewById(R.id.title)
         val lesson: TextView = itemView.findViewById(R.id.lesson)
+        val status: ImageView = itemView.findViewById(R.id.status)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,6 +36,19 @@ class RecyclerViewAdapter(private val dataList: List<Data>,
         holder.image.setImageResource(data.image)
         holder.title.text = data.title
         holder.lesson.text = data.lesson
+        holder.status.setImageResource(data.status)
+
+        when (data.status) {
+            IN_PROGRESS -> {
+                holder.status.setImageResource(R.drawable.ic_unlock)
+            }
+            COMPLETED -> {
+                holder.status.setImageResource(R.drawable.ic_done)
+            }
+            else -> {
+                holder.status.setImageResource(R.drawable.ic_lock)
+            }
+        }
 
         holder.itemView.setOnClickListener {
             itemClickListener.onItemClick(data)
@@ -62,4 +77,4 @@ class RecyclerViewAdapter(private val dataList: List<Data>,
     }
 }
 
-data class Data(val image: Int, val title: String, val lesson: String)
+data class Data(val image: Int, val title: String, val lesson: String, val status: Int)

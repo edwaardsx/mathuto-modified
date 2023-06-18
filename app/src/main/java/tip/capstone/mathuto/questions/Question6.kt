@@ -1,8 +1,9 @@
 package tip.capstone.mathuto.questions
 
 import tip.capstone.mathuto.sqlite.TrueOrFalse
+import java.io.Serializable
 
-object Question6 {
+object Question6 : Serializable {
 
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"

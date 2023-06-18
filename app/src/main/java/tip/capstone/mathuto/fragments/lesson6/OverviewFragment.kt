@@ -10,7 +10,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import tip.capstone.mathuto.databinding.Lesson6OverviewBinding
 import tip.capstone.mathuto.quiz.Quiz5Activity
+import tip.capstone.mathuto.quiz.Quiz6Activity
 import tip.capstone.mathuto.tutorial.Tutorial5Activity
+import tip.capstone.mathuto.tutorial.Tutorial6Activity
 import java.util.*
 
 class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
@@ -50,12 +52,12 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
             }
         }
         binding.btnTutorial.setOnClickListener {
-            val intent = Intent(requireActivity(), Tutorial5Activity::class.java)
+            val intent = Intent(requireActivity(), Tutorial6Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }
         binding.btnStartQuiz.setOnClickListener {
-            val intent = Intent(requireActivity(), Quiz5Activity::class.java)
+            val intent = Intent(requireActivity(), Quiz6Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }

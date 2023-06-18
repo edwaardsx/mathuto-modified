@@ -1,9 +1,10 @@
 package tip.capstone.mathuto.questions
 
 import tip.capstone.mathuto.sqlite.MultipleChoice
+import java.io.Serializable
 
 
-object Question3 {
+object Question3 : Serializable {
 
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"

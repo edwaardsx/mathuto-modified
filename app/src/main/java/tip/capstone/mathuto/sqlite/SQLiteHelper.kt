@@ -77,7 +77,7 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
             put("correctAnswer", trueOrFalse.correctAnswer)
             put("explanation", trueOrFalse.explanation)
         }
-        db.insert("QUESTIONS", null, values)
+        db.insert("QUESTIONSTF", null, values)
         db.close()
         return true
     }

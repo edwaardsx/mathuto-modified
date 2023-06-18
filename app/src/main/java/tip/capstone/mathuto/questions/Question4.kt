@@ -1,14 +1,14 @@
 package tip.capstone.mathuto.questions
 
 import tip.capstone.mathuto.sqlite.TrueOrFalse
+import java.io.Serializable
 
 
-object Question4 {
+object Question4 : Serializable {
 
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val CORRECT_ANS: String = "correct_answers"
     const val WRONG_ANS: String = "wrong_answers"
-    const val UNANSWERED_QUESTIONS: String = "unanswered_questions"
     const val SELECTED_ANSWERS: String = "selected_answers"
 
     fun getQuestions(): ArrayList<TrueOrFalse>{

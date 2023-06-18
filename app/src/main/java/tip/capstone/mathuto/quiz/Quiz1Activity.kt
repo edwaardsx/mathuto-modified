@@ -46,7 +46,7 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
-    private var remainingTime: Long = 60000
+    private var remainingTime: Long = 120000
 
     private var seCorrect: MediaPlayer? = null
     private var seWrong: MediaPlayer? = null

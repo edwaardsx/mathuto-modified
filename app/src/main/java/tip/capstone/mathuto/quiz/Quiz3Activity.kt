@@ -13,17 +13,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
+import tip.capstone.mathuto.MainActivity.Companion.QUIZ3_PASSED
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.Quiz1Binding
 import tip.capstone.mathuto.databinding.Quiz3Binding
-import tip.capstone.mathuto.questions.Question1
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
 import tip.capstone.mathuto.questions.Question3
-import tip.capstone.mathuto.quiz.result.Result1Activity
+import tip.capstone.mathuto.questions.Question3.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question3.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question3.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question3.WRONG_ANS
 import tip.capstone.mathuto.quiz.result.Result3Activity
 import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
@@ -48,7 +45,7 @@ class Quiz3Activity : AppCompatActivity(), View.OnClickListener {
 
     private val handler = Handler()
     private val delayDuration: Long = 2000
-    private var remainingTime: Long = 60000
+    private var remainingTime: Long = 120000
 
     private var seCorrect: MediaPlayer? = null
     private var seWrong: MediaPlayer? = null
@@ -130,6 +127,7 @@ class Quiz3Activity : AppCompatActivity(), View.OnClickListener {
             db.insertQuestion(multipleChoice);
             println("INSERTION NG QUESTION: " + multipleChoice)
             /*println("QuestionListArrangement: " + (QuestionListArrangement?.get(mCurrentPosition) ?: question))*/
+
         }
     }
 
@@ -231,7 +229,7 @@ class Quiz3Activity : AppCompatActivity(), View.OnClickListener {
                         db.updateHighScores("Lesson 3", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {
-                    QUIZ1_PASSED = true
+                    QUIZ3_PASSED = true
                 }
 
                 val qList = db.getAllQuestions();

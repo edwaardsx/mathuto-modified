@@ -28,8 +28,8 @@ class Lesson1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = Lesson1Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor = Color.parseColor("#2b163f")
 
+        window.statusBarColor = Color.parseColor("#2b163f")
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

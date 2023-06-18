@@ -12,11 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.QuizSummary1Binding
 import tip.capstone.mathuto.databinding.QuizSummary4Binding
-import tip.capstone.mathuto.questions.Question1
 import tip.capstone.mathuto.questions.Question4
-import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import tip.capstone.mathuto.sqlite.TrueOrFalse
 
@@ -26,17 +23,18 @@ class Summary4Activity : AppCompatActivity() {
     private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
-    private var mTrueOrFalseList: ArrayList<TrueOrFalse>? = null
+    private var mTrueOrFalse: ArrayList<TrueOrFalse>? = null
     private var isBackButtonVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = QuizSummary4Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor = Color.parseColor("#303030")
 
+        window.statusBarColor = Color.parseColor("#303030")
         db = SQLiteHelper(this)
-        mTrueOrFalseList = db.getAllQuestions2()
+        mTrueOrFalse = db.getAllQuestions2()
         setQuestion()
 
         binding.btnBack.setOnClickListener{
@@ -48,7 +46,7 @@ class Summary4Activity : AppCompatActivity() {
                 binding.btnBackPreviousQuestion.visibility = View.VISIBLE
                 isBackButtonVisible = true
             }
-            if (mCurrentPosition < mTrueOrFalseList!!.size) {
+            if (mCurrentPosition < mTrueOrFalse!!.size) {
                 mCurrentPosition++
                 setQuestion()
             } else {
@@ -92,8 +90,8 @@ class Summary4Activity : AppCompatActivity() {
         val myIntArray = intent.getIntegerArrayListExtra(Question4.SELECTED_ANSWERS)
         println("ANSWER KEY ARRANGEMENT: " +myIntArray)
 
-        if (mCurrentPosition <= mTrueOrFalseList!!.size) {
-            val trueOrFalse: TrueOrFalse = mTrueOrFalseList!![mCurrentPosition - 1]
+        if (mCurrentPosition <= mTrueOrFalse!!.size) {
+            val trueOrFalse: TrueOrFalse = mTrueOrFalse!![mCurrentPosition - 1]
             binding.tvProgress.text = "Question $mCurrentPosition/10"
             binding.tvQuestion.text = trueOrFalse.question
             binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)

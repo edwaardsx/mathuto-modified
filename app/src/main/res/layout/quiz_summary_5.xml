@@ -97,6 +97,7 @@
             <TextView
                 android:id="@+id/tv_option_one"
                 android:text="Option 1"
+                android:gravity="center_vertical"
                 android:fontFamily="@font/geologica_regular"
                 android:background="@drawable/quiz_default_option_border_bg"
                 android:paddingStart="16dp"
@@ -104,10 +105,11 @@
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"/>
+                android:layout_height="120dp"/>
             <TextView
                 android:id="@+id/tv_option_two"
                 android:text="Option 2"
+                android:gravity="center_vertical"
                 android:fontFamily="@font/geologica_regular"
                 android:background="@drawable/quiz_default_option_border_bg"
                 android:layout_marginVertical="10dp"
@@ -116,30 +118,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"/>
-            <TextView
-                android:id="@+id/tv_option_three"
-                android:text="Option 3"
-                android:fontFamily="@font/geologica_regular"
-                android:background="@drawable/quiz_default_option_border_bg"
-                android:layout_marginBottom="10dp"
-                android:paddingStart="16dp"
-                android:padding="15dp"
-                android:textSize="18sp"
-                android:textColor="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"/>
-            <TextView
-                android:id="@+id/tv_option_four"
-                android:text="Option 4"
-                android:fontFamily="@font/geologica_regular"
-                android:background="@drawable/quiz_default_option_border_bg"
-                android:paddingStart="16dp"
-                android:padding="15dp"
-                android:textSize="18sp"
-                android:textColor="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"/>
+                android:layout_height="120dp"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"

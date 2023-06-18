@@ -16,7 +16,9 @@ import tip.capstone.mathuto.FullScreenImageAdapter
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Lesson19OverviewBinding
 import tip.capstone.mathuto.databinding.Lesson8OverviewBinding
+import tip.capstone.mathuto.quiz.Quiz19Activity
 import tip.capstone.mathuto.quiz.Quiz5Activity
+import tip.capstone.mathuto.tutorial.Tutorial19Activity
 import tip.capstone.mathuto.tutorial.Tutorial5Activity
 import java.util.*
 
@@ -43,15 +45,14 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
 
         binding.btnTts.setOnClickListener {
             val description1 = binding.description1.text.toString()
-            val mDescription = "$description1"
 
-            if (mDescription.isNotEmpty()) {
+            if (description1.isNotEmpty()) {
                 if (isReadingAloud) {
                     tts.stop()
                     isReadingAloud = false
                     binding.btnTts.text = "Read Aloud"
                 } else {
-                    tts.speak(mDescription, TextToSpeech.QUEUE_FLUSH, null, null)
+                    tts.speak(description1, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop Read Aloud"
                 }
@@ -84,12 +85,12 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
             }
         }
         binding.btnTutorial.setOnClickListener {
-            val intent = Intent(requireActivity(), Tutorial5Activity::class.java)
+            val intent = Intent(requireActivity(), Tutorial19Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }
         binding.btnStartQuiz.setOnClickListener {
-            val intent = Intent(requireActivity(), Quiz5Activity::class.java)
+            val intent = Intent(requireActivity(), Quiz19Activity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             requireActivity().startActivity(intent)
         }

@@ -13,21 +13,18 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
+import tip.capstone.mathuto.MainActivity.Companion.QUIZ14_PASSED
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.Quiz13Binding
 import tip.capstone.mathuto.databinding.Quiz14Binding
-import tip.capstone.mathuto.databinding.Quiz1Binding
-import tip.capstone.mathuto.questions.Question1
-import tip.capstone.mathuto.questions.Question1.CORRECT_ANS
-import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
-import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
-import tip.capstone.mathuto.questions.Question1.WRONG_ANS
-import tip.capstone.mathuto.quiz.result.Result1Activity
-import tip.capstone.mathuto.sqlite.MultipleChoice
+import tip.capstone.mathuto.questions.Question14
+import tip.capstone.mathuto.questions.Question14.CORRECT_ANS
+import tip.capstone.mathuto.questions.Question14.SELECTED_ANSWERS
+import tip.capstone.mathuto.questions.Question14.TOTAL_QUESTIONS
+import tip.capstone.mathuto.questions.Question14.WRONG_ANS
+import tip.capstone.mathuto.quiz.result.Result14Activity
 import tip.capstone.mathuto.sqlite.SQLiteHelper
+import tip.capstone.mathuto.sqlite.TrueOrFalse
 import java.util.*
-
 
 @Suppress("DEPRECATION")
 class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
@@ -37,8 +34,8 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
     private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
-    private var mMultipleChoiceList: ArrayList<MultipleChoice>? = null
-    private val multipleChoiceListArrangement: ArrayList<MultipleChoice>? =  null
+    private var mTrueOrFalseList: ArrayList<TrueOrFalse>? = null
+    private val trueOrFalseListArrangement: ArrayList<TrueOrFalse>? =  null
 
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
@@ -65,15 +62,13 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
 
         binding.tvOptionOne.setOnClickListener(this)
         binding.tvOptionTwo.setOnClickListener(this)
-        binding.tvOptionThree.setOnClickListener(this)
-        binding.tvOptionFour.setOnClickListener(this)
 
         seCorrect = MediaPlayer.create(this, R.raw.sound_effect_correct)
         seWrong = MediaPlayer.create(this, R.raw.sound_effect_wrong)
         seBackgroundMusic = MediaPlayer.create(this, R.raw.sound_background_music)
 
-        mMultipleChoiceList = Question1.getQuestions()
-        mMultipleChoiceList?.shuffle()
+        mTrueOrFalseList = Question14.getQuestions()
+        mTrueOrFalseList?.shuffle()
         setQuestion()
 
         selectedAnswer = ArrayList()
@@ -109,26 +104,24 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOptionView()
-        if (mCurrentPosition <= mMultipleChoiceList!!.size) {
+        if (mCurrentPosition <= mTrueOrFalseList!!.size) {
             timer.start()
             if (!areOptionsEnabled) {
                 disableOptions()
             } else {
                 enableOptions()
             }
-            val multipleChoice: MultipleChoice = mMultipleChoiceList!![mCurrentPosition - 1]
+            val trueOrFalse: TrueOrFalse = mTrueOrFalseList!![mCurrentPosition - 1]
             binding.progressBar.progress = mCurrentPosition
             binding.tvProgress.text = "Question $mCurrentPosition/${binding.progressBar.max}"
-            binding.tvQuestion.text = multipleChoice.question
+            binding.tvQuestion.text = trueOrFalse.question
             binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
-            binding.tvOptionOne.text = multipleChoice.optionA
-            binding.tvOptionTwo.text = multipleChoice.optionB
-            binding.tvOptionThree.text = multipleChoice.optionC
-            binding.tvOptionFour.text = multipleChoice.optionD
-            multipleChoiceListArrangement?.add(multipleChoice)
+            binding.tvOptionOne.text = trueOrFalse.optionA
+            binding.tvOptionTwo.text = trueOrFalse.optionB
+            trueOrFalseListArrangement?.add(trueOrFalse)
 
-            db.insertQuestion(multipleChoice);
-            println("INSERTION NG QUESTION: " + multipleChoice)
+            db.insertQuestion2(trueOrFalse);
+            println("INSERTION NG QUESTION: " + trueOrFalse)
             /*println("QuestionListArrangement: " + (QuestionListArrangement?.get(mCurrentPosition) ?: question))*/
 
         }
@@ -137,14 +130,10 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
     private fun disableOptions() {
         binding.tvOptionOne.isEnabled = false
         binding.tvOptionTwo.isEnabled = false
-        binding.tvOptionThree.isEnabled = false
-        binding.tvOptionFour.isEnabled = false
     }
     private fun enableOptions() {
         binding.tvOptionOne.isEnabled = true
         binding.tvOptionTwo.isEnabled = true
-        binding.tvOptionThree.isEnabled = true
-        binding.tvOptionFour.isEnabled = true
     }
 
     private fun defaultOptionView() {
@@ -154,12 +143,6 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
         }
         binding.tvOptionTwo.let {
             options.add(1, it)
-        }
-        binding.tvOptionThree.let {
-            options.add(2, it)
-        }
-        binding.tvOptionFour.let {
-            options.add(3, it)
         }
         for (option in options) {
             option.setTextColor(Color.parseColor("#FFFFFF"))
@@ -191,14 +174,6 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
                 selectedOptionView(binding.tvOptionTwo, 2)
                 processOptionSelected()
             }
-            R.id.tv_option_three -> {
-                selectedOptionView(binding.tvOptionThree, 3)
-                processOptionSelected()
-            }
-            R.id.tv_option_four -> {
-                selectedOptionView(binding.tvOptionFour, 4)
-                processOptionSelected()
-            }
         }
     }
 
@@ -206,43 +181,43 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
         areOptionsEnabled = false
         timer.cancel()
         disableOptions()
-        val question = mMultipleChoiceList?.get(mCurrentPosition - 1)
+        val question = mTrueOrFalseList?.get(mCurrentPosition - 1)
         selectedAnswer.add(mSelectedOptionPosition)
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
             seWrong?.start()
-            mMultipleChoiceList
+            mTrueOrFalseList
         } else {
             mCorrectAnswers++
             seCorrect?.start()
         }
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
-        if (mCurrentPosition == mMultipleChoiceList!!.size) {
+        if (mCurrentPosition == mTrueOrFalseList!!.size) {
             handler.postDelayed({
-                val intent = Intent(applicationContext, Result1Activity::class.java)
+                val intent = Intent(applicationContext, Result14Activity::class.java)
                 seBackgroundMusic?.stop()
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
                 if(scores.isEmpty()){
-                    db.insertHighScores("Lesson 1", mCorrectAnswers.toString())
+                    db.insertHighScores("Lesson 14", mCorrectAnswers.toString())
                 }else{
                     if (mCorrectAnswers > Integer.parseInt(scores[0].score))
-                        db.updateHighScores("Lesson 1", mCorrectAnswers.toString())
+                        db.updateHighScores("Lesson 14", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {
-                    QUIZ1_PASSED = true
+                    QUIZ14_PASSED = true
                 }
 
-                val qList = db.getAllQuestions();
+                val qList = db.getAllQuestions2();
 
                 for(question in qList){
                     println("QUESTION ARRANGEMENT: " + question)
                 }
 
-                intent.putExtra(TOTAL_QUESTIONS, mMultipleChoiceList!!.size)
-                intent.putExtra(WRONG_ANS, mMultipleChoiceList!!.size - (mCorrectAnswers))
+                intent.putExtra(TOTAL_QUESTIONS, mTrueOrFalseList!!.size)
+                intent.putExtra(WRONG_ANS, mTrueOrFalseList!!.size - (mCorrectAnswers))
                 //intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 //intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
@@ -271,14 +246,6 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
             }
             2 -> {
                 binding.tvOptionTwo.background = ContextCompat.getDrawable(
-                    this, drawableView)
-            }
-            3 -> {
-                binding.tvOptionThree.background = ContextCompat.getDrawable(
-                    this, drawableView)
-            }
-            4 -> {
-                binding.tvOptionFour.background = ContextCompat.getDrawable(
                     this, drawableView)
             }
         }

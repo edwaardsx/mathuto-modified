@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizSummary2Binding
-import tip.capstone.mathuto.questions.Question1
 import tip.capstone.mathuto.questions.Question2
 import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
