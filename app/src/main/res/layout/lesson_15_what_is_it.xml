@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson16.WhatIsItFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="In dividing decimals by 0.1, 0.01, 0.001..., move the decimal point to the right as many times as the number of decimal places of the number in the dividend. Place a zero (0) if the decimal point has moved to a decimal place without a digit.\n\n• Dividing by 0.1 - move one place to the right\n▪ 8.6253 ÷ 0.1 = 86.253\n8 . 6 2 5 3\n\n• Dividing by 0.01 – move two (2) places to the right\n▪ 8.6253 ÷ 0.01 = 862.53\n8 . 6 2 5 3\n\n• Dividing by 0.001 – move three (3) places to the right\n▪ 8.6253 ÷ 0.001 = 8625.3\n8 . 6 2 5 3\n\nHere are some examples:\n▪ 43.657 ÷ 10 = 436.57\n4 3 . 6 5 7\n▪ 21.894 ÷ 100 =2 189.4\n▪ 21.894 ÷ 100 =2 189.4\n▪ 6.36 ÷ 1000 = 6 360\n\n6 . 3 6 0 add zero if needed"/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:src="@drawable/lesson_15_sample_2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

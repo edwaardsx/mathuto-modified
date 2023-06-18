@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
 import tip.capstone.mathuto.databinding.ActivityMainBinding
-import tip.capstone.mathuto.lessons.Lesson1Activity
+import tip.capstone.mathuto.lessons.*
 import tip.capstone.mathuto.recycler.Data
 import tip.capstone.mathuto.recycler.RecyclerViewAdapter
 
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
         val dataList = listOf(
             Data(R.drawable.recycler_img_1,
-                "Addition and Subtraction of Fractions",
+                "Addition and Subtraction of Fractions 1",
                 "Lesson 1"),
             Data(R.drawable.recycler_img_2,
                 "Problem Solving Involving Addition and Subtraction of Fractions",
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 "Solving Routine or Non-Routine Problems Involving Division Without or With Any of the Other Operations of Fractions and Mixed Fractions",
                 "Lesson 6"),
             Data(R.drawable.recycler_img_2,
-                "Addition and Subtraction of Fractions",
+                "Addition and Subtraction of Fractions 2",
                 "Lesson 7"),
             Data(R.drawable.recycler_img_3,
                 "Solving Routine or Non-Routine Problems Involving Addition and Subtraction of Decimals and Mixed Decimals Using Appropriate Problem Solving Strategies and Tools",
@@ -112,17 +112,178 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-
     }
 
     override fun onItemClick(data: Data) {
-        val intent = when (data.lesson) {
+        val intent1 = when (data.lesson) {
             "Lesson 1" -> Intent(this, Lesson1Activity::class.java)
             else -> null
         }
-        intent?.let {
-            startActivity(intent)
+        intent1?.let {
+            startActivity(intent1)
             overridePendingTransition(0, 0)
+        }
+        if (data.lesson == "Lesson 2" && QUIZ1_PASSED) {
+            val intent2 = when (data.lesson) {
+                "Lesson 2" -> Intent(this, Lesson2Activity::class.java)
+                else -> null
+            }
+            intent2?.let {
+                startActivity(intent2)
+            }
+        }
+        if (data.lesson == "Lesson 3" && QUIZ2_PASSED) {
+            val intent3 = when (data.lesson) {
+                "Lesson 3" -> Intent(this, Lesson3Activity::class.java)
+                else -> null
+            }
+            intent3?.let {
+                startActivity(intent3)
+            }
+        }
+        if (data.lesson == "Lesson 4" && QUIZ3_PASSED) {
+            val intent4 = when (data.lesson) {
+                "Lesson 4" -> Intent(this, Lesson4Activity::class.java)
+                else -> null
+            }
+            intent4?.let {
+                startActivity(intent4)
+            }
+        }
+        if (data.lesson == "Lesson 5" && QUIZ4_PASSED) {
+            val intent5 = when (data.lesson) {
+                "Lesson 5" -> Intent(this, Lesson5Activity::class.java)
+                else -> null
+            }
+            intent5?.let {
+                startActivity(intent5)
+            }
+        }
+        if (data.lesson == "Lesson 6" && QUIZ5_PASSED) {
+            val intent6 = when (data.lesson) {
+                "Lesson 6" -> Intent(this, Lesson6Activity::class.java)
+                else -> null
+            }
+            intent6?.let {
+                startActivity(intent6)
+            }
+        }
+        if (data.lesson == "Lesson 7" && QUIZ6_PASSED) {
+            val intent7 = when (data.lesson) {
+                "Lesson 7" -> Intent(this, Lesson7Activity::class.java)
+                else -> null
+            }
+            intent7?.let {
+                startActivity(intent7)
+            }
+        }
+        if (data.lesson == "Lesson 8" && QUIZ7_PASSED) {
+            val intent8 = when (data.lesson) {
+                "Lesson 8" -> Intent(this, Lesson8Activity::class.java)
+                else -> null
+            }
+            intent8?.let {
+                startActivity(intent8)
+            }
+        }
+        if (data.lesson == "Lesson 9" && QUIZ8_PASSED) {
+            val intent9 = when (data.lesson) {
+                "Lesson 9" -> Intent(this, Lesson9Activity::class.java)
+                else -> null
+            }
+            intent9?.let {
+                startActivity(intent9)
+            }
+        }
+        if (data.lesson == "Lesson 10" && QUIZ9_PASSED) {
+            val intent10 = when (data.lesson) {
+                "Lesson 10" -> Intent(this, Lesson10Activity::class.java)
+                else -> null
+            }
+            intent10?.let {
+                startActivity(intent10)
+            }
+        }
+        if (data.lesson == "Lesson 11" && QUIZ10_PASSED) {
+            val intent11 = when (data.lesson) {
+                "Lesson 11" -> Intent(this, Lesson11Activity::class.java)
+                else -> null
+            }
+            intent11?.let {
+                startActivity(intent11)
+            }
+        }
+        if (data.lesson == "Lesson 12" && QUIZ11_PASSED) {
+            val intent12 = when (data.lesson) {
+                "Lesson 12" -> Intent(this, Lesson12Activity::class.java)
+                else -> null
+            }
+            intent12?.let {
+                startActivity(intent12)
+            }
+        }
+        if (data.lesson == "Lesson 13" && QUIZ12_PASSED) {
+            val intent13 = when (data.lesson) {
+                "Lesson 13" -> Intent(this, Lesson13Activity::class.java)
+                else -> null
+            }
+            intent13?.let {
+                startActivity(intent13)
+            }
+        }
+        if (data.lesson == "Lesson 14" && QUIZ13_PASSED) {
+            val intent14 = when (data.lesson) {
+                "Lesson 14" -> Intent(this, Lesson14Activity::class.java)
+                else -> null
+            }
+            intent14?.let {
+                startActivity(intent14)
+            }
+        }
+        if (data.lesson == "Lesson 15" && QUIZ14_PASSED) {
+            val intent15 = when (data.lesson) {
+                "Lesson 15" -> Intent(this, Lesson15Activity::class.java)
+                else -> null
+            }
+            intent15?.let {
+                startActivity(intent15)
+            }
+        }
+        if (data.lesson == "Lesson 16" && QUIZ15_PASSED) {
+            val intent16 = when (data.lesson) {
+                "Lesson 16" -> Intent(this, Lesson16Activity::class.java)
+                else -> null
+            }
+            intent16?.let {
+                startActivity(intent16)
+            }
+        }
+        if (data.lesson == "Lesson 17" && QUIZ16_PASSED) {
+            val intent17 = when (data.lesson) {
+                "Lesson 17" -> Intent(this, Lesson17Activity::class.java)
+                else -> null
+            }
+            intent17?.let {
+                startActivity(intent17)
+            }
+        }
+        if (data.lesson == "Lesson 18" && QUIZ17_PASSED) {
+            val intent18 = when (data.lesson) {
+                "Lesson 18" -> Intent(this, Lesson18Activity::class.java)
+                else -> null
+            }
+            intent18?.let {
+                startActivity(intent18)
+            }
+        }
+        if (data.lesson == "Lesson 19" && QUIZ18_PASSED) {
+            val intent19 = when (data.lesson) {
+                "Lesson 19" -> Intent(this, Lesson19Activity::class.java)
+                else -> null
+            }
+            intent19?.let {
+                startActivity(intent19)
+            }
         }
     }
 
@@ -202,48 +363,29 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
     }
 
     companion object {
-        var WATCHED_TUTORIAL1: Boolean = false
-        var WATCHED_TUTORIAL2: Boolean = false
-        var WATCHED_TUTORIAL3: Boolean = false
-        var WATCHED_TUTORIAL4: Boolean = false
-        var WATCHED_TUTORIAL5: Boolean = false
-        var WATCHED_TUTORIAL6: Boolean = false
-        var WATCHED_TUTORIAL7: Boolean = false
-        var WATCHED_TUTORIAL8: Boolean = false
-        var WATCHED_TUTORIAL9: Boolean = false
-        var WATCHED_TUTORIAL10: Boolean = false
-        var WATCHED_TUTORIAL11: Boolean = false
-        var WATCHED_TUTORIAL12: Boolean = false
-        var WATCHED_TUTORIAL13: Boolean = false
-        var WATCHED_TUTORIAL14: Boolean = false
-        var WATCHED_TUTORIAL15: Boolean = false
-        var WATCHED_TUTORIAL16: Boolean = false
-        var WATCHED_TUTORIAL17: Boolean = false
-        var WATCHED_TUTORIAL18: Boolean = false
-        var WATCHED_TUTORIAL19: Boolean = false
 
-        var QUIZ1_PASSED: Boolean = false
-        var QUIZ2_PASSED: Boolean = false
-        var QUIZ3_PASSED: Boolean = false
-        var QUIZ4_PASSED: Boolean = false
-        var QUIZ5_PASSED: Boolean = false
-        var QUIZ6_PASSED: Boolean = false
-        var QUIZ7_PASSED: Boolean = false
-        var QUIZ8_PASSED: Boolean = false
-        var QUIZ9_PASSED: Boolean = false
-        var QUIZ10_PASSED: Boolean = false
-        var QUIZ11_PASSED: Boolean = false
-        var QUIZ12_PASSED: Boolean = false
-        var QUIZ13_PASSED: Boolean = false
-        var QUIZ14_PASSED: Boolean = false
-        var QUIZ15_PASSED: Boolean = false
-        var QUIZ16_PASSED: Boolean = false
-        var QUIZ17_PASSED: Boolean = false
-        var QUIZ18_PASSED: Boolean = false
-        var QUIZ19_PASSED: Boolean = false
+        var QUIZ1_PASSED: Boolean = true
+        var QUIZ2_PASSED: Boolean = true
+        var QUIZ3_PASSED: Boolean = true
+        var QUIZ4_PASSED: Boolean = true
+        var QUIZ5_PASSED: Boolean = true
+        var QUIZ6_PASSED: Boolean = true
+        var QUIZ7_PASSED: Boolean = true
+        var QUIZ8_PASSED: Boolean = true
+        var QUIZ9_PASSED: Boolean = true
+        var QUIZ10_PASSED: Boolean = true
+        var QUIZ11_PASSED: Boolean = true
+        var QUIZ12_PASSED: Boolean = true
+        var QUIZ13_PASSED: Boolean = true
+        var QUIZ14_PASSED: Boolean = true
+        var QUIZ15_PASSED: Boolean = true
+        var QUIZ16_PASSED: Boolean = true
+        var QUIZ17_PASSED: Boolean = true
+        var QUIZ18_PASSED: Boolean = true
+        var QUIZ19_PASSED: Boolean = true
 
         const val COMPLETED: String = "Complete"
         const val LOCK: String = "Lock"
-        const val ONGOING: String = "In Progress"
+        const val IN_PROGRESS: String = "In Progress"
     }
 }

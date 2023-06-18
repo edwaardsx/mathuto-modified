@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson3.WhatIsItFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="Hello, learner! Are you willing to learn more using this module? Come on! Let us study the different examples. This lesson will give you more ideas on how to multiply fraction with whole number, simple fraction, and mixed fraction. The presentation of the solving process will guide you in finding the answer in simple form. After studying the examples, answer the questions that follow."/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="example"
+                android:src="@drawable/lesson_3_sample_2" />
+            <TextView
+                android:id="@+id/description_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geologica_regular"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/black"
+                android:text="1/8 x 3\n\n= 1/8 x 3 =3 Multiply the numerator and the whole number. \n\n= 1/8 x 3 = 3/8 Copy the denominator.\n\n3/4 x 2/3\n\n= 3/4 x 2/3 = 6/12 Multiply both numerators and denominators.\n\n= 1/2 Reduce the answer to lowest term, if possible.\n\n4 2/3 x 2/4 \n\n= 14/3 x 2/4 Change mixed fraction to improper fraction.\n\n= 14 x 2 / 3 x 4 = 28/12 Multiply both numerators and denominators.\n\n= 28/12 = 2 4/12 Change improper fraction to mixed fraction.\n\n= 2 2/3 Reduce the answer to lowest term if possible.\n\n2/5 x 2 2/4\n\n= 2/5 x 10/4 Change mixed fraction to improper fraction.\n\n= 2x10/5x4 = 20/20 Multiply both numerators and denominators.\n\n= 20/20 or 1 If both numerator and denominator are the same\n\nchange the fraction to 1." />
+            <ImageView
+                android:id="@+id/example_2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="example"
+                android:src="@drawable/lesson_3_sample_2_1" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

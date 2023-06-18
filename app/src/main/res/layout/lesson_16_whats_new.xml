@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson16.WhatsInFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:textColor="@color/black"
+                android:text="Do you miss the normal days we have before the pandemic arises? I miss it too. I miss those times that I can play freely in my neighbour’s backyard, taking a meal in my favorite fast food chain, going to the church, and of course going to school and playing with my classmates. Let me ask you some questions. Every time you go to school, how much allowance do your parents give you? Did you spend it wisely? Wow, that is amazing!Read and understand this problem.\n\nAna have Php 1 500.75 in her piggy bank and she wants to divide her money by 10, 100 and 1000.\n\nShe solved it and arrived with this correct answer.\n\nPhp 1 500.75 ÷ 10 = 150.075\n\nPhp 1 500.75 ÷ 100 = 15.0075\n\nPhp 1 500.75 ÷ 1000 = 1.50075\n\nAsked the following questions:\n\na. What happens to the decimal point?\n\nb. What direction does it move?\n\nc. Is there a pattern of the movement of the decimal point?"
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

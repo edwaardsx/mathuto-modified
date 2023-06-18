@@ -1,6 +1,6 @@
 package tip.capstone.mathuto.questions
 
-import tip.capstone.mathuto.sqlite.Question
+import tip.capstone.mathuto.sqlite.MultipleChoice
 import java.io.Serializable
 
 object Question1 : Serializable {
@@ -12,11 +12,11 @@ object Question1 : Serializable {
     const val SELECTED_ANSWERS: String = "selected_answers"
     const val QUESTION_ARRANGEMENT: String = "question_arrangement"
 
-    fun getQuestions(): ArrayList<Question>{
+    fun getQuestions(): ArrayList<MultipleChoice>{
 
-        val questionList = ArrayList<Question>()
+        val multipleChoiceList = ArrayList<MultipleChoice>()
 
-        val question1 = Question(
+        val multipleChoice1 = MultipleChoice(
             1,
             "What is a part of a whole or a set.",
             "Fraction",
@@ -26,9 +26,9 @@ object Question1 : Serializable {
             1,
             "A fraction represents a part of a whole or a set. It consists of a numerator (the number above the line) and a denominator (the number below the line). The numerator represents the number of parts being considered, while the denominator represents the total number of equal parts that make up the whole or set. Fractions are commonly used to express parts or portions, such as 1/2, 3/4, or 2/5, where the numerator indicates the number of parts and the denominator indicates the total number of equal parts in the whole or set."
         )
-        questionList.add(question1)
+        multipleChoiceList.add(multipleChoice1)
 
-        val question2 = Question(
+        val multipleChoice2 = MultipleChoice(
             1,
             "Fractions with the same denominator.",
             "Fraction",
@@ -38,9 +38,9 @@ object Question1 : Serializable {
             2,
             "Fractions with the same denominator are called similar fractions. Similar fractions have different numerators but share a common denominator.\n\nFor example: 1/4, 3/4, and 5/4 are similar fractions because they all have a denominator of 4. The numerators (1, 3, and 5) indicate different parts of the whole or set, while the denominator (4) remains the same. Similar fractions represent different quantities that are partitioned into the same number of equal parts."
         )
-        questionList.add(question2)
+        multipleChoiceList.add(multipleChoice2)
 
-        val question3 = Question(
+        val multipleChoice3 = MultipleChoice(
             1,
             "Fractions with different denominators.",
             "Lowest Common Denominator (LCD)",
@@ -50,9 +50,9 @@ object Question1 : Serializable {
             3,
             "Fractions with different denominators are called dissimilar fractions. Dissimilar fractions have different numerators and different denominators.\n\nFor example: 1/3 and 2/5 are dissimilar fractions because they have different denominators (3 and 5). Dissimilar fractions represent different quantities that are partitioned into a different number of equal parts."
         )
-        questionList.add(question3)
+        multipleChoiceList.add(multipleChoice3)
 
-        val question4 = Question(
+        val multipleChoice4 = MultipleChoice(
             1,
             "Composed of a whole number and a fraction.",
             "Dissimilar Fraction",
@@ -62,9 +62,9 @@ object Question1 : Serializable {
             2,
             "Mixed fractions are composed of a whole number and a fraction. They are written in the form of a whole number followed by a proper fraction.\n\nFor example: 3 1/2 is a mixed fraction, where 3 is the whole number and 1/2 is the fraction. Mixed fractions are used to represent quantities that include a whole number and a portion of another whole."
         )
-        questionList.add(question4)
+        multipleChoiceList.add(multipleChoice4)
 
-        val question5 = Question(
+        val multipleChoice5 = MultipleChoice(
             1,
             "To add or subtract dissimilar fractions, this is the smallest number that can be divided by the denominators.",
             "Fraction",
@@ -74,9 +74,9 @@ object Question1 : Serializable {
             3,
             "To add or subtract dissimilar fractions, you need to find the least common denominator (LCD). The LCD is the smallest number that can be divided evenly by the denominators of the given fractions. Finding the LCD allows you to convert the fractions into equivalent fractions with the same denominator, making it possible to add or subtract them. By using the LCD, the fractions can be combined and simplified to obtain the final result."
         )
-        questionList.add(question5)
+        multipleChoiceList.add(multipleChoice5)
 
-        val question6 = Question(
+        val multipleChoice6 = MultipleChoice(
             1,
             "It is the highest number that divides exactly into two or more numbers.",
             "Dissimilar Fraction",
@@ -86,9 +86,9 @@ object Question1 : Serializable {
             3,
             "The Greatest Common Factor (GCF) is the highest number that divides exactly into two or more numbers. It is the largest number that is a common factor of the given numbers. The GCF is used to simplify fractions, factor polynomials, and solve various mathematical problems. When dealing with fractions, finding the GCF allows you to reduce the fractions to their simplest form by dividing both the numerator and denominator by the GCF."
         )
-        questionList.add(question6)
+        multipleChoiceList.add(multipleChoice6)
 
-        val question7 = Question(
+        val multipleChoice7 = MultipleChoice(
             1,
             "When adding and subtracting fractions, all answers must be express in the?",
             "Lowest Term",
@@ -98,9 +98,9 @@ object Question1 : Serializable {
             1,
             "When adding and subtracting fractions, it is generally recommended to express the answers in the lowest term. This means simplifying the fraction as much as possible by dividing both the numerator and denominator by their greatest common factor (GCF). By reducing the fraction to its lowest terms, you obtain a fraction where the numerator and denominator have no common factors other than 1. This gives a simplified and more concise representation of the fraction."
         )
-        questionList.add(question7)
+        multipleChoiceList.add(multipleChoice7)
 
-        val question8 = Question(
+        val multipleChoice8 = MultipleChoice(
             1,
             "A pizza is a great example of fractions! Each piece represents a part of a whole. The pizza is divided into 8 pieces. If you have one piece, what fraction of pizza you are eating?.",
             "1/8",
@@ -116,9 +116,9 @@ object Question1 : Serializable {
                     "4. The total number of pieces in the pizza is 8, so you write this as the denominator.\n" +
                     "5. Therefore, the fraction that represents the amount of pizza you are eating is 1/8."
         )
-        questionList.add(question8)
+        multipleChoiceList.add(multipleChoice8)
 
-        val question9 = Question(
+        val multipleChoice9 = MultipleChoice(
             1,
             "3/4 + 2/4 is what example of fraction?",
             "Dissimilar Fraction",
@@ -135,9 +135,9 @@ object Question1 : Serializable {
                     "5. The denominator remains the same, which is 4.\n" +
                     "6. Therefore, the sum of 3/4 + 2/4 is 5/4."
         )
-        questionList.add(question9)
+        multipleChoiceList.add(multipleChoice9)
 
-        val question10 = Question(
+        val multipleChoice10 = MultipleChoice(
             1,
             "5/6 - 3/4 is what example of fraction?",
             "Dissimilar Fraction",
@@ -154,8 +154,8 @@ object Question1 : Serializable {
                     "5. Now that both fractions have the same denominator of 12, you can subtract them. 10/12 - 9/12 gives you 1/12.\n" +
                     "6. Therefore, the difference of 5/6 - 3/4 is 1/12"
         )
-        questionList.add(question10)
+        multipleChoiceList.add(multipleChoice10)
 
-        return questionList
+        return multipleChoiceList
     }
 }

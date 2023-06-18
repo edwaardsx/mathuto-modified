@@ -22,7 +22,7 @@ import tip.capstone.mathuto.questions.Question1.SELECTED_ANSWERS
 import tip.capstone.mathuto.questions.Question1.TOTAL_QUESTIONS
 import tip.capstone.mathuto.questions.Question1.WRONG_ANS
 import tip.capstone.mathuto.quiz.result.Result1Activity
-import tip.capstone.mathuto.sqlite.Question
+import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import java.util.*
 
@@ -35,8 +35,8 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
     private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
-    private var mQuestionList: ArrayList<Question>? = null
-    private val questionListArrangement: ArrayList<Question>? =  null
+    private var mMultipleChoiceList: ArrayList<MultipleChoice>? = null
+    private val multipleChoiceListArrangement: ArrayList<MultipleChoice>? =  null
 
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
@@ -70,8 +70,8 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
         seWrong = MediaPlayer.create(this, R.raw.sound_effect_wrong)
         seBackgroundMusic = MediaPlayer.create(this, R.raw.sound_background_music)
 
-        mQuestionList = Question1.getQuestions()
-        mQuestionList?.shuffle()
+        mMultipleChoiceList = Question1.getQuestions()
+        mMultipleChoiceList?.shuffle()
         setQuestion()
 
         selectedAnswer = ArrayList()
@@ -107,26 +107,26 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOptionView()
-        if (mCurrentPosition <= mQuestionList!!.size) {
+        if (mCurrentPosition <= mMultipleChoiceList!!.size) {
             timer.start()
             if (!areOptionsEnabled) {
                 disableOptions()
             } else {
                 enableOptions()
             }
-            val question: Question = mQuestionList!![mCurrentPosition - 1]
+            val multipleChoice: MultipleChoice = mMultipleChoiceList!![mCurrentPosition - 1]
             binding.progressBar.progress = mCurrentPosition
             binding.tvProgress.text = "Question $mCurrentPosition/${binding.progressBar.max}"
-            binding.tvQuestion.text = question.question
+            binding.tvQuestion.text = multipleChoice.question
             binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
-            binding.tvOptionOne.text = question.optionA
-            binding.tvOptionTwo.text = question.optionB
-            binding.tvOptionThree.text = question.optionC
-            binding.tvOptionFour.text = question.optionD
-            questionListArrangement?.add(question)
+            binding.tvOptionOne.text = multipleChoice.optionA
+            binding.tvOptionTwo.text = multipleChoice.optionB
+            binding.tvOptionThree.text = multipleChoice.optionC
+            binding.tvOptionFour.text = multipleChoice.optionD
+            multipleChoiceListArrangement?.add(multipleChoice)
 
-            db.insertQuestion(question);
-            println("INSERTION NG QUESTION: " + question)
+            db.insertQuestion(multipleChoice);
+            println("INSERTION NG QUESTION: " + multipleChoice)
             /*println("QuestionListArrangement: " + (QuestionListArrangement?.get(mCurrentPosition) ?: question))*/
 
         }
@@ -204,19 +204,19 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
         areOptionsEnabled = false
         timer.cancel()
         disableOptions()
-        val question = mQuestionList?.get(mCurrentPosition - 1)
+        val question = mMultipleChoiceList?.get(mCurrentPosition - 1)
         selectedAnswer.add(mSelectedOptionPosition)
         if (question!!.correctAnswer != mSelectedOptionPosition) {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
             seWrong?.start()
-            mQuestionList
+            mMultipleChoiceList
         } else {
             mCorrectAnswers++
             seCorrect?.start()
         }
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
-        if (mCurrentPosition == mQuestionList!!.size) {
+        if (mCurrentPosition == mMultipleChoiceList!!.size) {
             handler.postDelayed({
                 val intent = Intent(applicationContext, Result1Activity::class.java)
                 seBackgroundMusic?.stop()
@@ -239,8 +239,8 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
                     println("QUESTION ARRANGEMENT: " + question)
                 }
 
-                intent.putExtra(TOTAL_QUESTIONS, mQuestionList!!.size)
-                intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers))
+                intent.putExtra(TOTAL_QUESTIONS, mMultipleChoiceList!!.size)
+                intent.putExtra(WRONG_ANS, mMultipleChoiceList!!.size - (mCorrectAnswers))
                 //intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 //intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)

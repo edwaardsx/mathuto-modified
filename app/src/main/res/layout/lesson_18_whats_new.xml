@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson18.WhatsInFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:textColor="@color/black"
+                android:text="Are you excited with our new lesson? I hope you will enjoy the different activities especially prepared for you. This time, we will be learning on how to solve routine and non-routine word problem involving division of decimals, mixed decimals, and whole numbers including money by using appropriate problem solving strategies and tools. Are you ready? Let’s start\n\nI know you love to solve problems and I’m sure our topic for today will help you find problem solving easy. Let’s get it on and let’s explore!\n\nNow, let us be guided by the different steps in problem solving. Remember the acronym U P E R, where U stands for Understand, P for Plan, E for Execute and R for Review.\n\nSteps in Problem Solving:\n\nUnderstand:\n\nThis is the first and the most important thing to do to go deeper into the problem. In this stage, you need to read and re-read the word problem and find out for yourself of what is really the problem since you cannot solve a problem which you do not know exactly what to solve. In this stage, no pen or paper is needed.\n\nJust bear in mind that you have to know the following:\n\n• What is asked?\n\n• What are the given facts?\n\nPlan:\n\nAfter understanding, you have to plan and make a course of action! You can choose a problem-solving strategy or a combination of two strategies. Here are some of suggested strategies:\n\n• draw a picture or diagram\n\n• make an organized list\n\n• make a table\n\n• solve a simpler related problem\n\n• find a pattern\n\n• guess and check\n\n• act out a problem\n\n• work backward\n\n• write an equation\n\n• use manipulatives\n\n• break it into parts\n\nExecute:\n\nSince you already have a plan on how to find the answer to the problem, it is time for you to do the solving. Remember, your plan is flexible. You can change the strategy or strategies when it is deemed necessary.\n\nReview:\n\nThis is the last process and you need to be very careful because it is of equal importance as with three first steps. Math wizards always look back and check their works. Go back to the problem and carefully check the processes you have gone through. Check if:\n\n• your answer sensible or practical\n\n• your estimation is applicable to check whether your answer is reasonable\n\n• you did not get the answer correctly, go back and check the process carefully to find where you have gone wrong.\n\nKeywords to remember in Division!!!!\n\nper, a, out of, ratio of, quotient of, percent (divide by 100) equal pieces, split, average, separate, each."
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:src="@drawable/lesson_18_sample_2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

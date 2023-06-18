@@ -5,7 +5,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.capstone.mathuto.sqlite.Highscores
 
 class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db", null, 1) {
 
@@ -14,11 +13,13 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE HIGHSCORES(id Integer PRIMARY KEY, lesson TEXT, score TEXT)")
         db.execSQL("CREATE TABLE QUESTIONS(id TEXT, question TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, correctAnswer TEXT, explanation TEXT)")
+        db.execSQL("CREATE TABLE QUESTIONSTF(id TEXT, question TEXT, optionA TEXT, optionB TEXT, correctAnswer TEXT, explanation TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS HIGHSCORES")
         db.execSQL("DROP TABLE IF EXISTS QUESTIONS")
+        db.execSQL("DROP TABLE IF EXISTS QUESTIONSTF")
         onCreate(db)
     }
 
@@ -42,17 +43,39 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
         return true
     }
 
-    fun insertQuestion(question: Question) :Boolean {
+    fun deleteQuestion2() :Boolean {
+        val db = writableDatabase
+        db.execSQL("DELETE FROM QUESTIONSTF")
+        db.close()
+        return true
+    }
+
+    fun insertQuestion(multipleChoice: MultipleChoice) :Boolean {
         val db = writableDatabase
         val values = ContentValues().apply {
-            put("id", question.id)
-            put("question", question.question)
-            put("optionA", question.optionA)
-            put("optionB", question.optionB)
-            put("optionC", question.optionC)
-            put("optionD", question.optionD)
-            put("correctAnswer", question.correctAnswer)
-            put("explanation", question.explanation)
+            put("id", multipleChoice.id)
+            put("question", multipleChoice.question)
+            put("optionA", multipleChoice.optionA)
+            put("optionB", multipleChoice.optionB)
+            put("optionC", multipleChoice.optionC)
+            put("optionD", multipleChoice.optionD)
+            put("correctAnswer", multipleChoice.correctAnswer)
+            put("explanation", multipleChoice.explanation)
+        }
+        db.insert("QUESTIONS", null, values)
+        db.close()
+        return true
+    }
+
+    fun insertQuestion2(trueOrFalse: TrueOrFalse) :Boolean {
+        val db = writableDatabase
+        val values = ContentValues().apply {
+            put("id", trueOrFalse.id)
+            put("question", trueOrFalse.question)
+            put("optionA", trueOrFalse.optionA)
+            put("optionB", trueOrFalse.optionB)
+            put("correctAnswer", trueOrFalse.correctAnswer)
+            put("explanation", trueOrFalse.explanation)
         }
         db.insert("QUESTIONS", null, values)
         db.close()
@@ -101,8 +124,8 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
 
 
     @SuppressLint("Range")
-    fun getAllQuestions(): ArrayList<Question> {
-        val questionList = ArrayList<Question>()
+    fun getAllQuestions(): ArrayList<MultipleChoice> {
+        val multipleChoiceList = ArrayList<MultipleChoice>()
         val db = readableDatabase
         val selectQuery = "SELECT * FROM QUESTIONS"
 
@@ -119,12 +142,38 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
                 val correctAnswer = cursor.getInt(cursor.getColumnIndex("correctAnswer"))
                 val explanation = cursor.getString(cursor.getColumnIndex("explanation"))
 
-                val questionObject = Question(id, question, optionA, optionB, optionC, optionD, correctAnswer, explanation)
-                questionList.add(questionObject)
+                val multipleChoiceObject = MultipleChoice(id, question, optionA, optionB, optionC, optionD, correctAnswer, explanation)
+                multipleChoiceList.add(multipleChoiceObject)
             } while (cursor.moveToNext())
         }
         cursor.close()
         db.close()
-        return questionList
+        return multipleChoiceList
+    }
+
+    @SuppressLint("Range")
+    fun getAllQuestions2(): ArrayList<TrueOrFalse> {
+        val trueOrFalseList = ArrayList<TrueOrFalse>()
+        val db = readableDatabase
+        val selectQuery = "SELECT * FROM QUESTIONSTF"
+
+        val cursor = db.rawQuery(selectQuery, null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndex("id"))
+                val question = cursor.getString(cursor.getColumnIndex("question"))
+                val optionA = cursor.getString(cursor.getColumnIndex("optionA"))
+                val optionB = cursor.getString(cursor.getColumnIndex("optionB"))
+                val correctAnswer = cursor.getInt(cursor.getColumnIndex("correctAnswer"))
+                val explanation = cursor.getString(cursor.getColumnIndex("explanation"))
+
+                val trueOrFalseObject = TrueOrFalse(id, question, optionA, optionB, correctAnswer, explanation)
+                trueOrFalseList.add(trueOrFalseObject)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+        return trueOrFalseList
     }
 }

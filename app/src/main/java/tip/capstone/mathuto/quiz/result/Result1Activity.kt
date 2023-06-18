@@ -16,7 +16,6 @@ import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
 import tip.capstone.mathuto.MainActivity
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ1_PASSED
-import tip.capstone.mathuto.MainActivity.Companion.WATCHED_TUTORIAL1
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizResult1Binding
 import tip.capstone.mathuto.lessons.Lesson1Activity
@@ -101,7 +100,7 @@ class Result1Activity : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
         binding.btnMainMenu.setOnClickListener {
-            if(QUIZ1_PASSED && WATCHED_TUTORIAL1)
+            if(QUIZ1_PASSED)
                 unLockNextLesson2()
             else
                 startActivity(Intent(this, MainActivity::class.java))

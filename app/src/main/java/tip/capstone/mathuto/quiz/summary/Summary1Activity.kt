@@ -3,7 +3,6 @@ package tip.capstone.mathuto.quiz.summary
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.graphics.Color
-import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
@@ -15,7 +14,7 @@ import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizSummary1Binding
 import tip.capstone.mathuto.questions.Question1
-import tip.capstone.mathuto.sqlite.Question
+import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 
 class Summary1Activity : AppCompatActivity() {
@@ -24,7 +23,7 @@ class Summary1Activity : AppCompatActivity() {
     private lateinit var db: SQLiteHelper
 
     private var mCurrentPosition: Int = 1
-    private var mQuestionList: ArrayList<Question>? = null
+    private var mMultipleChoiceList: ArrayList<MultipleChoice>? = null
     private var isBackButtonVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +34,7 @@ class Summary1Activity : AppCompatActivity() {
 
         window.statusBarColor = Color.parseColor("#303030")
         db = SQLiteHelper(this)
-        mQuestionList = db.getAllQuestions()
+        mMultipleChoiceList = db.getAllQuestions()
         setQuestion()
 
         binding.btnBack.setOnClickListener{
@@ -47,7 +46,7 @@ class Summary1Activity : AppCompatActivity() {
                 binding.btnBackPreviousQuestion.visibility = View.VISIBLE
                 isBackButtonVisible = true
             }
-            if (mCurrentPosition < mQuestionList!!.size) {
+            if (mCurrentPosition < mMultipleChoiceList!!.size) {
                 mCurrentPosition++
                 setQuestion()
             } else {
@@ -97,40 +96,40 @@ class Summary1Activity : AppCompatActivity() {
         val myIntArray = intent.getIntegerArrayListExtra(Question1.SELECTED_ANSWERS)
         println("ANSWER KEY ARRANGEMENT: " +myIntArray)
 
-        if (mCurrentPosition <= mQuestionList!!.size) {
-            val question: Question = mQuestionList!![mCurrentPosition - 1]
+        if (mCurrentPosition <= mMultipleChoiceList!!.size) {
+            val multipleChoice: MultipleChoice = mMultipleChoiceList!![mCurrentPosition - 1]
             binding.tvProgress.text = "Question $mCurrentPosition/10"
-            binding.tvQuestion.text = question.question
+            binding.tvQuestion.text = multipleChoice.question
             binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
-            binding.tvOptionOne.text = question.optionA
-            binding.tvOptionTwo.text = question.optionB
-            binding.tvOptionThree.text = question.optionC
-            binding.tvOptionFour.text = question.optionD
+            binding.tvOptionOne.text = multipleChoice.optionA
+            binding.tvOptionTwo.text = multipleChoice.optionB
+            binding.tvOptionThree.text = multipleChoice.optionC
+            binding.tvOptionFour.text = multipleChoice.optionD
 
             if (myIntArray != null) {
-                if(myIntArray[mCurrentPosition - 1] != question.correctAnswer){
+                if(myIntArray[mCurrentPosition - 1] != multipleChoice.correctAnswer){
                     binding.seeWhy.visibility = View.VISIBLE
                     binding.seeWhy.setOnClickListener{
-                        showExplanationDialog(question)
+                        showExplanationDialog(multipleChoice)
                     }
                     answerView(myIntArray[mCurrentPosition - 1], R.drawable.quiz_summary_wrong_option_border_bg)
                 } else {
                     binding.seeWhy.visibility = View.GONE
                 }
             }
-            answerView(question.correctAnswer, R.drawable.quiz_summary_correct_option_border_bg)
+            answerView(multipleChoice.correctAnswer, R.drawable.quiz_summary_correct_option_border_bg)
 
             println("mCurrentPosition $mCurrentPosition")
         }
     }
 
-    private fun showExplanationDialog(question: Question) {
+    private fun showExplanationDialog(multipleChoice: MultipleChoice) {
         val dialogBuilder = AlertDialog.Builder(this)
         val titleFont = ResourcesCompat.getFont(this, R.font.geologica_bold)
         val messageFont = ResourcesCompat.getFont(this, R.font.geologica_regular)
 
         dialogBuilder.setTitle("Explanation")
-        dialogBuilder.setMessage(question.explanation)
+        dialogBuilder.setMessage(multipleChoice.explanation)
 
         dialogBuilder.setPositiveButton("GOT IT") { dialog, _ ->
             dialog.dismiss()

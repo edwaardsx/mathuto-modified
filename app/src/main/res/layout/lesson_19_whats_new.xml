@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson19.WhatsInFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:textColor="@color/black"
+                android:text="Do you know that in everything we do, we apply Mathematics? Unknowingly, we apply Mathematics every time we cook, buy things, and perform our task. In most situations and problems we met, we need to apply Mathematics.\n\nThis time, I know you are now ready to apply the basic skills you learned in the different fundamental operations including division.\n\nHave you gone to a mall? What form of transportation did you use to go there? Try to read the problem below and answer the questions that follow:\n\nProblem Opener:\n\nMarian, Joan and their 2 classmates went to the mall. They took a taxi and the fare was Php379. How much was each one’s share of the fare?\n\nQuestions:\n\n1. Who went to the mall?\n\nAnswer: Marian, Joan and 2 of their classmates went to the mall.\n\n2. What transportation did they use to go there?\n\nAnswer: They rode on a taxi."
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:src="@drawable/lesson_19_sample_2"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

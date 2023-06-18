@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson9.WhatIsItFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="Learning to solve the different mathematical problems in fraction is very interesting. Have you experienced being given a slice of watermelon and still have to share a part of that slice to someone? Dividing fractions need to follow some steps in order to solve it. It can be a little tricky and confusing, but it is really simple. This time I will be presenting to you the following processes on how to divide simple fractions and mixed fractions. Read and observe very carefully our discussion.\n\nReciprocals\n\nIf the product of two numbers is 1, then they are reciprocals or multiplicative inverse of each other. To find the reciprocal of a fraction, interchange the numerator and the denominator.\n\nLet us take 2/3. The reciprocal of 2/3 is 3/2. Multiplying the number and its reciprocal, we have 2/3 x 3/2 = 6/6 = 1. So, 2/3 and 3/2 are reciprocals or the multiplicative inverse of each other."/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="example"
+                android:src="@drawable/lesson_5_sample_3" />
+            <TextView
+                android:id="@+id/description_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geologica_regular"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/black"
+                android:text="Dividing Fractions\n\nTo divide fractions, rewrite the division as a related multiplication in which you multiply the dividend by the reciprocal of the divisor." />
+            <ImageView
+                android:id="@+id/example_2"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="example"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/lesson_5_sample_3_1" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

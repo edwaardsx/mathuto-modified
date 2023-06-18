@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson16.WhatsNewFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:textColor="@color/black"
+                android:text="On the onset of the lesson, you already have exercised skills needed as you go along with this lesson. Now, we are about explore more things needed and are imperative for you to proceed to higher skills you needed to master. What do you think happens when we divide a decimal by another decimal?\n\nTo know the answer, here’s an example to further explain it. Just follow the steps in dividing decimals mentioned below.\n\nSelena wants to surprise her mother with a dress for Mother’s Day. The dress cost P539.65. So, she decides to save P 125.50 a week. How many weeks do you think she needs to save an amount that is enough to buy the dress?\n\nTo solve this problem, you need to divide P539.65 by her savings of P 125.50 weekly."
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:src="@drawable/lesson_14_sample_2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+            <TextView
+                android:id="@+id/description_2"
+                android:textColor="@color/black"
+                android:text="The following are the steps in dividing decimals\n\nStep 1.\nChange the divisor into a whole number by moving the decimal point to one or more places to the right.\n\nStep 2.\nMove the decimal point of the dividend the same number of places as the divisor.\n\nStep 3.\nDivide the dividend by the divisor just the way you divide whole numbers.\n\nStep 4.\nWrite the decimal point of the quotient directly above the decimal point in the dividend."
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginBottom="20dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

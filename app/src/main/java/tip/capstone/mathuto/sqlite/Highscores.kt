@@ -1,4 +1,4 @@
-package com.capstone.mathuto.sqlite
+package tip.capstone.mathuto.sqlite
 
 data class Highscores(
     val id: Int,

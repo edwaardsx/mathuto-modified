@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson8.WhatsInFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:textColor="@color/black"
+                android:text="We have a new lesson for today and this is all about decimal numbers. We have just started. We feel how eager you are to learn the content of this module. We hope that you keep it up for you to accomplish the activities/exercises of this lesson.\n\nWe believed on your potential, that’s the reason why we are tuned to bring you more challenging activities. Now, let’s try to have a quick review on how we can estimate the sums and differences.\n\nKids don’t you know that we can answer the question without computing for the exact sum or differences? Let’s just illustrate an example to show how estimation works using two different methods.\n\nExample:\n\nEstimate 35.50 + 50.25 + 15.75\nMethod 1 Using front-end estimation\n36 + 50 + 15 = 100 Add the whole number\n0.50 + 0.25 + 0.75 = 1.5 Adjust the sum\nEstimated sum : Php 102.00\nMethod 2 Rounding to the nearest whole number\n36 + 50 + 16 = 102 Round each number to the nearest\nwhole number.\n\nThen add Estimated sum : 102"
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:contentDescription="example"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/lesson_8_sample_2"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

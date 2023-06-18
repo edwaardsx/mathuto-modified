@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson17.WhatIsItFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="I’m sure by now, you already mastered the conversion of fractions to decimals. Now, try to go back and to look at how you arrived at your answers. To change fractions to decimals, you do the division process, right? Notice that in some of the division process, you were able to solve it immediately because you end up with a zero remainder.\n\nFor some, you have to continue dividing because you arrived at different remainders and others gives you the same remainders as you continue the division process. Sounds confusing? To make a better understanding of it, let’s study first the following words:\n\n1. repeat - to do, say or write the same thing again and again\n\n2. terminate - ends completely or immediately\n\n3. non-terminating - without end\n\nThis time, take a look at the following decimals.\n\n0.333\n\n0.428571…\n\n0.5\n\nThe first decimal number is a repeating decimal. Can you give me the reason why it is called a repeating decimal? You are correct when you say that the digit is repeated. The digit that is repeated in a repeating decimal is called repetend. In the example given, 3 is the repetend."/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:src="@drawable/lesson_17_sample_3_1"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"/>
+            <TextView
+                android:id="@+id/description_2"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="The second decimal number is an example of a non-terminating decimal. When you divide a number and you get different remainders, the result is a non-terminating decimal quotient."
+                android:fontFamily="@font/geologica_regular"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/example_2"
+                android:src="@drawable/lesson_17_sample_3_2"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

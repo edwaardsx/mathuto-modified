@@ -42,8 +42,7 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
 
         binding.btnTts.setOnClickListener {
             val description1 = binding.description1.text.toString()
-            val description2 = binding.description2.text.toString()
-            val mDescription = "$description1 $description2"
+            val mDescription = "$description1"
 
             if (mDescription.isNotEmpty()) {
                 if (isReadingAloud) {

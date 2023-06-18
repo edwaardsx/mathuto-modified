@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson11.WhatIsItFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:text="To solve the problem, you can follow the following steps:"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/geologica_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="A. Understand\n\n1. Read and understand the problem.\n\n2. Know what is asked \n\n- How much will she pay for the three pairs of socks?\n\n3. Find the necessary information or given facts. The given facts are: 3 pairs of socks, and ₱ 263.50 each pair,\n\nB. Plan\n\n1. Determine the operation to be used.\n\n- multiplication\n\n2. Write the number sentence\n\n3 x ₱ 263.50 = N\n\nC. Solve.\n\nShow your solution:\n\n3 x ₱ 263.50 = N\n\n₱ 790.50 = N\n\nTherefore, N = ₱ 790.50\n\nD. Write the complete answer:\n\n- Mother will pay ₱ 790.50 for the three pairs of socks\n\nE. Check and Look Back:\n\nDid I do the operation correctly? Is my answer reasonable?\n\nDid I write my answer in a complete sentence?\n\n* Note: Problem 1 is an example of a routine problem. The solutions used can be applied in daily living or in the future."/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:src="@drawable/lesson_11_sample_2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

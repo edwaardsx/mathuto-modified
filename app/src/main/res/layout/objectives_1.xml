@@ -51,7 +51,7 @@
 
             </RelativeLayout>
             <TextView
-                android:text="This lesson covers the addition and subtraction of simple fractions and mixed numbers with or without regrouping."
+                android:text="This lesson covers the addition and subtraction of simple fractions and mixed numbers with or without regrouping.\n\nAfter going through this module, you are expected to:"
                 android:textSize="16sp"
                 android:fontFamily="@font/geologica_regular"
                 android:paddingHorizontal="10dp"

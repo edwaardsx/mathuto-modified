@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:text="You've unlocked lesson 2: Addition and Subtraction of Fractions"
+                android:text="You've unlocked lesson 2: Problem Solving Involving Addition and Subtraction of Fractions"
                 android:gravity="center"
                 android:fontFamily="@font/geologica_regular"
                 android:padding="16dp"

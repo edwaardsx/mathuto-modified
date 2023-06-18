@@ -42,10 +42,7 @@ class WhatIsItFragment : Fragment(), TextToSpeech.OnInitListener {
             val description2 = binding.description2.text.toString()
             val description3 = binding.description3.text.toString()
             val description4 = binding.description4.text.toString()
-            val description5 = binding.description5.text.toString()
-            val description6 = binding.description6.text.toString()
-            val description7 = binding.description7.text.toString()
-            val mDescription = "$description1 $description2 $description3 $description4 $description5 $description6 $description7"
+            val mDescription = "$description1 $description2 $description3 $description4"
 
             if (mDescription.isNotEmpty()) {
                 if (isReadingAloud) {
