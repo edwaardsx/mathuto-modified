@@ -15,9 +15,7 @@ import androidx.viewpager.widget.ViewPager
 import tip.capstone.mathuto.FullScreenImageAdapter
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Lesson3OverviewBinding
-import tip.capstone.mathuto.quiz.Quiz1Activity
 import tip.capstone.mathuto.quiz.Quiz3Activity
-import tip.capstone.mathuto.tutorial.Tutorial1Activity
 import tip.capstone.mathuto.tutorial.Tutorial3Activity
 import java.util.*
 
@@ -34,6 +32,7 @@ class OverviewFragment : Fragment(), TextToSpeech.OnInitListener {
     ): View {
         binding = Lesson3OverviewBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     @SuppressLint("SetTextI18n")

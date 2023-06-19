@@ -169,6 +169,77 @@ object Question7 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "What is the sum of 2.3 and 4.7?",
+            "6.1",
+            "7.0",
+            "6.5",
+            "6.9",
+            2,
+            "To find the sum of 2.3 and 4.7, simply add the two numbers together.\n" +
+                    "2.3 + 4.7 = 7.0\n\n" +
+                    "Therefore, the sum of 2.3 and 4.7 is 7.0."
+
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "What is the result of 9.25 - 3.18?",
+            "6.07",
+            "10.07",
+            "5.07",
+            "5.0709",
+            1,
+            "To find the result of 9.25 - 3.18, subtract the second number from the first number.\n" +
+                    "9.25 - 3.18 = 6.07\n\n" +
+                    "Therefore, the result of 9.25 - 3.18 is 6.07."
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "What is the sum of 0.8 and 0.15?",
+            "0.85",
+            "0.95",
+            "1.05",
+            "1.2",
+            2,
+            "To find the sum of 0.8 and 0.15, simply add the two numbers together.\n\n" +
+                    "0.8 + 0.15 = 0.95\n\n" +
+                    "Therefore, the sum of 0.8 and 0.15 is 0.95."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "What is the sum of 0.5 and 0.23?",
+            "0.73",
+            "0.95",
+            "1.05",
+            "1.2",
+            1,
+            "To find the sum of 0.5 and 0.23, simply add the two numbers together.\n\n" +
+                    "0.5 + 0.23 = 0.73\n\n" +
+                    "Therefore, the sum of 0.5 and 0.23 is 0.73."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "What is the sum of 0.7 and 1.23?",
+            "1.78",
+            "1.93",
+            "2.3",
+            "4.12",
+            2,
+            "To find the sum of 0.7 and 1.23, simply add the two numbers together.\n\n" +
+                    "0.7 + 1.23 = 1.93\n\n" +
+                    "Therefore, the sum of 0.7 and 1.23 is 1.93."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

@@ -263,6 +263,107 @@ object Question2 : Serializable {
         )
         multipleChoiceList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "Yael walked one-half of a kilometer yesterday and three-fourths of a kilometer today. How many miles has Yael walked?",
+            "1 1/4",
+            "0.7767",
+            "3 1/3",
+            "2 1/2",
+            2,
+            "To convert kilometers to miles, we can use the conversion factor of 0.621371 miles per kilometer.\n\n" +
+                    "Yael walked one-half of a kilometer yesterday, which is equal to:\n\n" +
+                    "(1/2) kilometer * 0.621371 miles/kilometer = 0.3106855 miles.\n\n" +
+                    "Yael walked three-fourths of a kilometer today, which is equal to:\n\n" +
+                    "(3/4) kilometer * 0.621371 miles/kilometer = 0.46602825 miles.\n\n" +
+                    "To find the total distance Yael walked, we add the distances from yesterday and today:\n\n" +
+                    "0.3106855 miles + 0.46602825 miles = 0.77671375 miles.\n\n" +
+                    "Therefore, Yael has walked approximately 0.7767 miles."
+        )
+        multipleChoiceList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "Mother bought three and one-third dozen apples. She served three-fourths of the apples to Rico’s friends. How many apples remained?",
+            "3 3/12",
+            "2 7/12",
+            "5/6",
+            "4 4/12",
+            3,
+            "First, we convert the whole number to a fraction by multiplying it by the denominator of the fraction and adding the numerator.\n\n" +
+                    "3 * 3 = 9\n" +
+                    "9 + 1 = 10\n\n" +
+                    "So, \"three and one-third\" can be written as the improper fraction 10/3.\n\n" +
+                    "Next, we need to find three-fourths of the apples, which means multiplying the total number of apples by 3/4.\n\n" +
+                    "10/3 * 3/4 = (10 * 3) / (3 * 4) = 30/12 = 2 6/12\n\n" +
+                    "To simplify the fraction, we can reduce it by dividing both the numerator and the denominator by their greatest common divisor, which is 6.\n\n" +
+                    "2 6/12 = 2 (6/6) / (12/6) = 2 (1/2) = 2 1/2\n\n" +
+                    "So, three-fourths of the apples is equal to 2 1/2 apples.\n\n" +
+                    "To find out how many apples remained, we subtract the quantity served from the total quantity:\n" +
+                    "10/3 - 2 1/2 = (10/3) - (5/2)\n\n" +
+                    "To subtract fractions, we need a common denominator. In this case, the common denominator is 6.\n" +
+                    "10/3 = 20/6\n" +
+                    "5/2 = 15/6\n\n" +
+                    "Now we can subtract the fractions:\n" +
+                    "20/6 - 15/6 = (20 - 15)/6 = 5/6\n\n" +
+                    "Therefore, the number of apples that remained is 5/6 of a dozen or approximately 0.83 dozen."
+        )
+        multipleChoiceList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "A bulldozer weighed 325 tons. If it scooped up 558 tons of sand, what would be the combined weight of the bulldozer and the sand?",
+            "9 3/40 tons",
+            "9 7/40 tons",
+            "8 1/40 tons",
+            "883 tons",
+            4,
+            "Given:\n" +
+                    "Weight of the bulldozer = 325 tons\n" +
+                    "Weight of the scooped sand = 558 tons\n\n" +
+                    "To find the combined weight, we need to add the weights together:\n\n" +
+                    "Step 1: Add the tons of the bulldozer and the scooped sand:\n" +
+                    "325 tons + 558 tons = 883 tons\n\n" +
+                    "Therefore, the combined weight of the bulldozer and the sand is 883 tons."
+        )
+        multipleChoiceList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "A regular size chocolate bar was 738 inches long. If the king size bar was 537 inches longer, what is the length of the king size bar? ",
+            "12 45/56 inches",
+            "1275 inches",
+            "13 45/56 inches",
+            "12 47/56 inches",
+            2,
+            "Given:\n" +
+                    "Length of the regular size bar = 738 inches\n" +
+                    "Additional length for the king size bar = 537 inches\n\n" +
+                    "To find the length of the king size bar:\n\n" +
+                    "Step 1: Add the additional length to the regular size bar:\n" +
+                    "738 inches + 537 inches = 1275 inches\n\n" +
+                    "Therefore, the length of the king size chocolate bar is 1275 inches."
+        )
+        multipleChoiceList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "Sarah's recycled 923 boxes of paper in a month. If she recycled another 649 boxes the next month, what was the total amount she recycled?",
+            "1572 boxes",
+            "16 1/9 boxes",
+            "14 4/9 boxes",
+            "16 5/9 boxes",
+            1,
+            "Given:\n" +
+                    "Boxes recycled in the first month = 923 boxes\n" +
+                    "Boxes recycled in the second month = 649 boxes\n\n" +
+                    "To find the total amount of boxes recycled:\n\n" +
+                    "Step 1: Add the number of boxes from each month:\n" +
+                    "923 boxes + 649 boxes = 1572 boxes\n\n" +
+                    "Therefore, the total amount of boxes Sarah recycled is 1572 boxes."
+        )
+        multipleChoiceList.add(que15)
+
         return multipleChoiceList
     }
 }

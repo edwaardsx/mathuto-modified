@@ -201,6 +201,76 @@ object Question15 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "What is 5.678 divided by 0.1?",
+            "56.70222",
+            "56.78",
+            "7.089.23 ",
+            "708,923",
+            2,
+            "To divide 5.678 by 0.1, we can perform the division operation.\n\n" +
+                    "5.678 ÷ 0.1 = 56.78\n\n" +
+                    "Therefore, 5.678 divided by 0.1 is equal to 56.78"
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "What is 0.7532 divided by 0.01?",
+            "65.43",
+            "6 543",
+            "75.32",
+            "6.543",
+            3,
+            "To divide 0.7532 by 0.01, we can perform the division operation.\n\n" +
+                    "0.7532 ÷ 0.01 = 75.32\n\n" +
+                    "Therefore, 0.7532 divided by 0.01 is equal to 75.32"
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "What is 8.4156 divided by 0.001?",
+            "8415.6",
+            "84.923",
+            "849.23",
+            "84.923",
+            1,
+            "To divide 8.4156 by 0.001, we can perform the division operation.\n\n" +
+                    "8.4156 ÷ 0.001 = 8415.6\n\n" +
+                    "Therefore, 8.4156 divided by 0.001 is equal to 8415.6"
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "What is 0.4569 divided by 0.1?",
+            "4.569",
+            "377.48",
+            "3.7748",
+            "37 748",
+            1,
+            "To divide 0.4569 by 0.1, we can perform the division operation.\n\n" +
+                    "0.4569 ÷ 0.1 = 4.569\n\n" +
+                    "Therefore, 0.4569 divided by 0.1 is equal to 4.569"
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "What is 3.14159 divided by 0.001?",
+            "8.4591",
+            "54.591",
+            "45.91",
+            "3141.59",
+            4,
+            "To divide 3.14159 by 0.001, we can perform the division operation.\n\n" +
+                    "3.14159 ÷ 0.001 = 3141.59\n\n" +
+                    "Therefore, 3.14159 divided by 0.001 is equal to 3141.59"
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

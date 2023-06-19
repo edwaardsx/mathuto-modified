@@ -34,6 +34,18 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btnCalculator"
+                android:text="Calculator"
+                android:elevation="4dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_secondary_button"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

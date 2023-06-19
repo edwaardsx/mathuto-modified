@@ -205,6 +205,84 @@ object Question9 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            " What is the result of 3.2 multiplied by 2.5?",
+            "6.4",
+            "8.0",
+            "5.0",
+            "7.5",
+            2,
+            "To find the result of multiplying 3.2 by 2.5, simply multiply the two numbers together.\n\n" +
+                    "3.2 x 2.5 = 8.0\n\n" +
+                    "Therefore, the result of 3.2 multiplied by 2.5 is 8.0."
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "A box contains 2.5 kilograms of apples. If there are 4 boxes, what is the total weight of the apples?",
+            "6.0 kilograms",
+            "8.0 kilograms",
+            "9.5 kilograms",
+            "10.0 kilograms",
+            4,
+            "To find the total weight of the apples in 4 boxes, multiply the weight of one box by the number of boxes.\n\n" +
+                    "Weight of one box: 2.5 kilograms\n" +
+                    "Number of boxes: 4\n\n" +
+                    "Total weight: 2.5 kilograms * 4 = 10.0 kilograms\n\n" +
+                    "Therefore, the total weight of the apples is 10.0 kilograms."
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "A bag contains 0.6 kilograms of candies. If there are 3 bags, what is the total weight of the candies?",
+            "1.6 kilograms",
+            "1.8 kilograms",
+            "1.4 kilograms",
+            "1.2 kilograms",
+            2,
+            "To find the total weight of the candies in 3 bags, multiply the weight of one bag by the number of bags.\n\n" +
+                    "Weight of one bag: 0.6 kilograms\n" +
+                    "Number of bags: 3\n\n" +
+                    "Total weight: 0.6 kilograms * 3 = 1.8 kilograms\n\n" +
+                    "Therefore, the total weight of the candies is 1.8 kilograms."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "A book costs \$8.95. If you buy 5 books, how much will you spend in total?",
+            "\$40.25",
+            "\$45.25",
+            "\$42.7",
+            "\$44.75",
+            1,
+            "To find the total cost of buying 5 books, multiply the cost of one book by the number of books.\n\n" +
+                    "Cost of one book: \$8.95\n" +
+                    "Number of books: 5\n\n" +
+                    "Total cost: \$8.95 * 5 = \$44.75\n\n" +
+                    "Therefore, you will spend a total of \$44.75 if you buy 5 books."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "The length of a rectangle is 3.2 meters and the width is 1.5 meters. What is the area of the rectangle?",
+            "4.8 square meters",
+            "4.7 square meters",
+            "4.0 square meters",
+            "4.5 square meters",
+            1,
+            "To find the area of a rectangle, multiply its length by its width.\n\n" +
+                    "Length of the rectangle: 3.2 meters\n" +
+                    "Width of the rectangle: 1.5 meters\n\n" +
+                    "Area = Length x Width = 3.2 meters x 1.5 meters = 4.8 square meters\n\n" +
+                    "Therefore, the area of the rectangle is 4.8 square meters."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

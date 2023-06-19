@@ -37,6 +37,7 @@ class Quiz13Activity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mMultipleChoiceList: ArrayList<MultipleChoice>? = null
     private val multipleChoiceListArrangement: ArrayList<MultipleChoice>? =  null
+    private val mMaxQuestions = 10
 
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
@@ -60,6 +61,7 @@ class Quiz13Activity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         db = SQLiteHelper(this)
+        binding.progressBar.max = mMaxQuestions
 
         binding.tvOptionOne.setOnClickListener(this)
         binding.tvOptionTwo.setOnClickListener(this)
@@ -216,7 +218,7 @@ class Quiz13Activity : AppCompatActivity(), View.OnClickListener {
             seCorrect?.start()
         }
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
-        if (mCurrentPosition == mMultipleChoiceList!!.size) {
+        if (mCurrentPosition == mMultipleChoiceList!!.size || mCurrentPosition >= mMaxQuestions) {
             handler.postDelayed({
                 val intent = Intent(applicationContext, Result13Activity::class.java)
                 seBackgroundMusic?.stop()
@@ -239,8 +241,8 @@ class Quiz13Activity : AppCompatActivity(), View.OnClickListener {
                     println("QUESTION ARRANGEMENT: " + question)
                 }
 
-                intent.putExtra(TOTAL_QUESTIONS, mMultipleChoiceList!!.size)
-                intent.putExtra(WRONG_ANS, mMultipleChoiceList!!.size - (mCorrectAnswers))
+                intent.putExtra(TOTAL_QUESTIONS, mMaxQuestions)
+                intent.putExtra(WRONG_ANS, mMaxQuestions - (mCorrectAnswers))
                 //intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 //intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)

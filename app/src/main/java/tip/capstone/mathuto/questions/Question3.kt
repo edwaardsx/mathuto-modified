@@ -194,6 +194,109 @@ object Question3 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "2 2/5 x 9/17 = ?",
+            "15/68",
+            "108/85",
+            "1 23/85",
+            "4 8/15",
+            2,
+            "Given:\n" +
+                    "2 2/5 x 9/17\n\n" +
+                    "Step 1: Convert the mixed number 2 2/5 to an improper fraction:\n" +
+                    "2 2/5 = (5 * 2 + 2)/5 = 12/5\n\n" +
+                    "Step 2: Multiply the fractions:\n" +
+                    "(12/5) x (9/17) = (12 * 9)/(5 * 17) = 108/85\n\n" +
+                    "Step 3: Simplify the fraction, if possible:\n" +
+                    "108/85 is already in its simplest form.\n\n" +
+                    "Therefore, the product of 2 2/5 and 9/17 is 108/85."
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "2 2/5 x 2 3/5 = ?",
+            "6 6/25 ",
+            "12",
+            "25/156",
+            "1 1/12",
+            2,
+            "Given:\n" +
+                    "2 2/5 x 2 3/5\n\n" +
+                    "Step 1: Convert the mixed numbers to improper fractions:\n" +
+                    "2 2/5 = (5 * 2 + 2)/5 = 12/5\n" +
+                    "2 3/5 = (5 * 2 + 3)/5 = 13/5\n\n" +
+                    "Step 2: Multiply the fractions:\n" +
+                    "(12/5) x (13/5) = (12 * 13)/(5 * 5) = 156/25\n\n" +
+                    "Step 3: Simplify the fraction, if possible:\n" +
+                    "156/25 can be simplified by dividing both the numerator and denominator by their greatest common divisor, which is 13.\n" +
+                    "156/25 ÷ 13/13 = (156 ÷ 13)/(25 ÷ 13) = 12/1 = 12\n\n" +
+                    "Therefore, the product of 2 2/5 and 2 3/5 is 12."
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "1 3/7 x 2/3 = ?",
+            "2 1/7",
+            "1 1/20",
+            "7/15",
+            "20/21",
+            4,
+            "Given:\n" +
+                    "1 3/7 x 2/3\n\n" +
+                    "Step 1: Convert the mixed number 1 3/7 to an improper fraction:\n" +
+                    "1 3/7 = (7 * 1 + 3)/7 = 10/7\n\n" +
+                    "Step 2: Multiply the fractions:\n" +
+                    "(10/7) x (2/3) = (10 * 2)/(7 * 3) = 20/21\n\n" +
+                    "Step 3: Simplify the fraction, if possible:\n" +
+                    "20/21 is already in its simplest form.\n\n" +
+                    "Therefore, the product of 1 3/7 and 2/3 is 20/21."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "1 2/7 x 4 1/2 = ?",
+            "5 11/14",
+            "3 1/12",
+            "81/14",
+            "2/7",
+            3,
+            "Given:\n" +
+                    "1 2/7 x 4 1/2\n\n" +
+                    "Step 1: Convert the mixed numbers to improper fractions:\n" +
+                    "1 2/7 = (7 * 1 + 2)/7 = 9/7\n" +
+                    "4 1/2 = (2 * 4 + 1)/2 = 9/2\n\n" +
+                    "Step 2: Multiply the fractions:\n" +
+                    "(9/7) x (9/2) = (9 * 9)/(7 * 2) = 81/14\n\n" +
+                    "Step 3: Simplify the fraction, if possible:\n" +
+                    "81/14 is already in its simplest form.\n\n" +
+                    "Therefore, the product of 1 2/7 and 4 1/2 is 81/14."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "1 1/2 x 3/7 = ?",
+            "2/7",
+            "3 1/2",
+            "9/14",
+            "1 5/9",
+            3,
+            "Given:\n" +
+                    "1 1/2 x 3/7\n\n" +
+                    "Step 1: Convert the mixed number 1 1/2 to an improper fraction:\n" +
+                    "1 1/2 = (2 * 1 + 1)/2 = 3/2\n\n" +
+                    "Step 2: Multiply the fractions:\n" +
+                    "(3/2) x (3/7) = (3 * 3)/(2 * 7) = 9/14\n\n" +
+                    "Step 3: Simplify the fraction, if possible:\n" +
+                    "9/14 is already in its simplest form.\n\n" +
+                    "Therefore, the product of 1 1/2 and 3/7 is 9/14."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

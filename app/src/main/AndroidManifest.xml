@@ -15,6 +15,9 @@
         <activity
             android:name=".FullScreenImageActivity"
             android:exported="false" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="false" />
 
         <activity
             android:name=".quiz.summary.Summary1Activity"

@@ -204,6 +204,76 @@ object Question18 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "Emma bought a pack of 8.25 ounces of almonds. She wants to divide them equally into 5 portions. How many ounces of almonds will each portion have?",
+            "1",
+            "7",
+            "1.65 ",
+            "9",
+            3,
+            "To divide the 8.25 ounces of almonds equally into 5 portions, we need to divide the total weight by the number of portions.\n\n" +
+                    "8.25 ounces ÷ 5 portions = 1.65 ounces\n\n" +
+                    "Therefore, each portion will have 1.65 ounces of almonds."
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "A recipe calls for 0.6 cups of sugar. If Sarah wants to make 3 batches of the recipe, how many cups of sugar does she need in total?",
+            "16",
+            "18",
+            "20",
+            "22",
+            2,
+            "To find the total amount of sugar needed for 3 batches of the recipe, we need to multiply the amount required for one batch (0.6 cups) by the number of batches.\n\n" +
+                    "0.6 cups/batch * 3 batches = 1.8 cups\n\n" +
+                    "Therefore, Sarah needs a total of 1.8 cups of sugar."
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "A bookshelf has a length of 3.75 feet. If Michael wants to divide it into 5 equal sections, what is the length of each section in feet?",
+            "0.12",
+            "0.18",
+            "0.75",
+            "24.5",
+            3,
+            "To find the length of each section, we need to divide the total length of the bookshelf (3.75 feet) by the number of sections (5).\n\n" +
+                    "3.75 feet / 5 sections = 0.75 feet\n\n" +
+                    "Therefore, each section will have a length of 0.75 feet."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "John spent 8.5 hours working on a project. If he wants to divide the total time equally over 4 days, how many hours will he work each day?",
+            "2.13",
+            "7.48",
+            "7.46",
+            "7.45",
+            1,
+            "To find the number of hours John will work each day, we need to divide the total time (8.5 hours) by the number of days (4).\n\n" +
+                    "8.5 hours / 4 days = 2.125 hours\n\n" +
+                    "Rounding to two decimal places, each day John will work approximately 2.13 hours."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "A rectangular garden measures 6.4 meters in length. If the garden is divided into 8 equal rows, what is the length of each row in meters?",
+            "0.8",
+            "0.0085",
+            "0.008",
+            "0.0075",
+            1,
+            "To find the length of each row, we need to divide the total length of the garden (6.4 meters) by the number of rows (8).\n" +
+                    "6.4 meters / 8 rows = 0.8 meters\n\n" +
+                    "Therefore, the length of each row is 0.8 meters."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

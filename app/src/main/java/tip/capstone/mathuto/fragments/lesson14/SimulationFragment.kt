@@ -1,6 +1,7 @@
 package tip.capstone.mathuto.fragments.lesson14
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -9,9 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
+import tip.capstone.mathuto.CalculatorActivity
 import tip.capstone.mathuto.FullScreenImageAdapter
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.*
+import tip.capstone.mathuto.databinding.Lesson14SimulationBinding
 
 class SimulationFragment : Fragment() {
 
@@ -27,6 +29,11 @@ class SimulationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnCalculator.setOnClickListener {
+            val intent = Intent(context, CalculatorActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.simulation.setOnClickListener {
             val dialog = Dialog(requireContext())

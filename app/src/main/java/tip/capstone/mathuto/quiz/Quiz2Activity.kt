@@ -16,11 +16,11 @@ import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ2_PASSED
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Quiz2Binding
+import tip.capstone.mathuto.questions.Question2
 import tip.capstone.mathuto.questions.Question2.CORRECT_ANS
 import tip.capstone.mathuto.questions.Question2.SELECTED_ANSWERS
 import tip.capstone.mathuto.questions.Question2.TOTAL_QUESTIONS
 import tip.capstone.mathuto.questions.Question2.WRONG_ANS
-import tip.capstone.mathuto.questions.Question2
 import tip.capstone.mathuto.quiz.result.Result2Activity
 import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
@@ -37,6 +37,7 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mMultipleChoiceList: ArrayList<MultipleChoice>? = null
     private val multipleChoiceListArrangement: ArrayList<MultipleChoice>? =  null
+    private val mMaxQuestions = 5
 
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
@@ -60,6 +61,7 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         db = SQLiteHelper(this)
+        binding.progressBar.max = mMaxQuestions
 
         binding.tvOptionOne.setOnClickListener(this)
         binding.tvOptionTwo.setOnClickListener(this)
@@ -216,7 +218,7 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
             seCorrect?.start()
         }
         answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
-        if (mCurrentPosition == mMultipleChoiceList!!.size) {
+        if (mCurrentPosition == mMultipleChoiceList!!.size || mCurrentPosition >= mMaxQuestions) {
             handler.postDelayed({
                 val intent = Intent(applicationContext, Result2Activity::class.java)
                 seBackgroundMusic?.stop()
@@ -239,8 +241,8 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
                     println("QUESTION ARRANGEMENT: " + question)
                 }
 
-                intent.putExtra(TOTAL_QUESTIONS, mMultipleChoiceList!!.size)
-                intent.putExtra(WRONG_ANS, mMultipleChoiceList!!.size - (mCorrectAnswers))
+                intent.putExtra(TOTAL_QUESTIONS, mMaxQuestions)
+                intent.putExtra(WRONG_ANS, mMaxQuestions - (mCorrectAnswers))
                 //intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 //intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)

@@ -267,6 +267,81 @@ object Question16 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "What is 3.45 divided by 10?",
+            "0.084",
+            "0.345",
+            "8.4",
+            "84",
+            2,
+            "To divide 3.45 by 10, we can perform the division operation.\n\n" +
+                    "3.45 ÷ 10 = 0.345\n\n" +
+                    "Therefore, 3.45 divided by 10 is equal to 0.345"
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "What is 12.67 divided by 100?",
+            "0.1267",
+            "0.356",
+            "3.56",
+            "35.6",
+            1,
+            "To divide 12.67 by 100, we can perform the division operation.\n" +
+                    "\n" +
+                    "12.67 ÷ 100 = 0.1267\n" +
+                    "\n" +
+                    "Therefore, 12.67 divided by 100 is equal to 0.1267"
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "What is 6.38 divided by 1000?",
+            "0.00638",
+            "0.42789",
+            "4.2789",
+            "42.789",
+            1,
+            "To divide 6.38 by 1000, we can perform the division operation.\n" +
+                    "\n" +
+                    "6.38 ÷ 1000 = 0.00638\n" +
+                    "\n" +
+                    "Therefore, 6.38 divided by 1000 is equal to 0.00638"
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "What is 9.81 divided by 10?",
+            "0.000093",
+            "0.981",
+            "0.0093",
+            "0.093",
+            2,
+            "\n" +
+                    "To divide 9.81 by 10, we can perform the division operation.\n\n" +
+                    "9.81 ÷ 10 = 0.981\n\n" +
+                    "Therefore, 9.81 divided by 10 is equal to 0.981"
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "What is 0.745 divided by 1000?",
+            "0.000745",
+            "0.0975",
+            "0.9750",
+            "9.75",
+            1,
+            "To divide 0.745 by 1000, we can perform the division operation.\n\n" +
+                    "0.745 ÷ 1000 = 0.000745\n\n" +
+                    "Therefore, 0.745 divided by 1000 is equal to 0.000745"
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

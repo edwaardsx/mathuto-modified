@@ -13,9 +13,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizSummary10Binding
-import tip.capstone.mathuto.databinding.QuizSummary1Binding
-import tip.capstone.mathuto.questions.Question1
 import tip.capstone.mathuto.questions.Question10
+import tip.capstone.mathuto.questions.Question10.TOTAL_QUESTIONS
 import tip.capstone.mathuto.sqlite.MultipleChoice
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 
@@ -97,10 +96,11 @@ class Summary10Activity : AppCompatActivity() {
 
         val myIntArray = intent.getIntegerArrayListExtra(Question10.SELECTED_ANSWERS)
         println("ANSWER KEY ARRANGEMENT: " +myIntArray)
+        val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)
 
         if (mCurrentPosition <= mMultipleChoiceList!!.size) {
             val multipleChoice: MultipleChoice = mMultipleChoiceList!![mCurrentPosition - 1]
-            binding.tvProgress.text = "Question $mCurrentPosition/10"
+            binding.tvProgress.text = "Question $mCurrentPosition/$totalQuestions"
             binding.tvQuestion.text = multipleChoice.question
             binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
             binding.tvOptionOne.text = multipleChoice.optionA

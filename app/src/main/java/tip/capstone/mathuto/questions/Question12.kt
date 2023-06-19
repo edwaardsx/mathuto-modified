@@ -166,6 +166,95 @@ object Question12 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "A store sells T-shirts for \$12.50 each. If John buys 3 T-shirts and pays with a \$50 bill, how much change will he receive?",
+            "\$10.00",
+            "\$12.50",
+            "\$13.50",
+            "\$15.00",
+            2,
+            "To find out how much change John will receive, we need to subtract the total cost of the T-shirts from the amount he paid.\n\n" +
+                    "Cost of one T-shirt: \$12.50\n" +
+                    "Number of T-shirts: 3\n\n" +
+                    "Total cost: \$12.50 * 3 = \$37.50\n\n" +
+                    "Amount paid: \$50.00\n\n" +
+                    "Change received: \$50.00 - \$37.50 = \$12.50\n\n" +
+                    "Therefore, John will receive \$12.50 in change."
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "A recipe requires 2.75 cups of milk and 1.5 cups of flour. If Jane wants to make 3 batches of the recipe, how much milk and flour will she need in total?",
+            "7.75 cups of milk, 4.5 cups of flour",
+            "8.25 cups of milk, 4.5 cups of flour",
+            "7.75 cups of milk, 3.5 cups of flour",
+            "8.25 cups of milk, 3.5 cups of flour",
+            2,
+            "To find the total amount of milk and flour needed for 3 batches of the recipe, we need to multiply the required amounts per batch by the number of batches.\n\n" +
+                    "Amount of milk per batch: 2.75 cups\n" +
+                    "Amount of flour per batch: 1.5 cups\n" +
+                    "Number of batches: 3\n\n" +
+                    "Total milk needed: 2.75 cups * 3 = 8.25 cups\n" +
+                    "Total flour needed: 1.5 cups * 3 = 4.5 cups\n\n" +
+                    "Therefore, Jane will need a total of 8.25 cups of milk and 4.5 cups of flour."
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "A car traveled 35.2 miles in the morning and an additional 48.9 miles in the afternoon. What is the total distance traveled?",
+            "73.1 miles",
+            "83.1 miles",
+            "83.9 miles",
+            "84.1 miles",
+            4,
+            "To find the total distance traveled, we need to add the distance traveled in the morning to the distance traveled in the afternoon.\n\n" +
+                    "Distance traveled in the morning: 35.2 miles\n" +
+                    "Distance traveled in the afternoon: 48.9 miles\n\n" +
+                    "Total distance traveled: 35.2 miles + 48.9 miles = 84.1 miles\n\n" +
+                    "Therefore, the total distance traveled is 84.1 miles."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "An item is priced at \$56.75, but there is a 15% discount. If sales tax of 8% is applied after the discount, what is the final price including tax?",
+            "\$46.28",
+            "\$48.24",
+            "\$51.35",
+            "\$52.10",
+            2,
+            "To calculate the final price including the discount and sales tax, we need to apply the discount first and then add the sales tax.\n\n" +
+                    "Original price: \$56.75\n" +
+                    "Discount rate: 15%\n\n" +
+                    "Amount of discount: 15% of \$56.75 = 0.15 * \$56.75 = \$8.51\n\n" +
+                    "Price after discount: \$56.75 - \$8.51 = \$48.24\n\n" +
+                    "Sales tax rate: 8%\n\n" +
+                    "Amount of sales tax: 8% of \$48.24 = 0.08 * \$48.24 = \$3.86\n\n" +
+                    "Final price including tax: \$48.24 + \$3.86 = \$52.10\n\n" +
+                    "Therefore, the final price including tax is \$52.10."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "A company produced 2,500 units of a product and sold 1,820 units. If each unit was sold for \$38.50, what was the total revenue?",
+            "\$66,970",
+            "\$68,970",
+            "\$70,270",
+            "\$72,270",
+            3,
+            "To calculate the total revenue, we need to multiply the number of units sold by the selling price per unit.\n\n" +
+                    "Number of units produced: 2,500\n" +
+                    "Number of units sold: 1,820\n" +
+                    "Selling price per unit: \$38.50\n\n" +
+                    "Total revenue: 1,820 units * \$38.50/unit = \$70,270\n\n" +
+                    "Therefore, the total revenue is \$70,270."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

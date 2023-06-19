@@ -185,6 +185,72 @@ object Question10 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "What is the result of mentally multiplying 3.5 by 0.1?",
+            "0.03",
+            "0.35",
+            "0.0035",
+            "0.35",
+            2,
+            "To mentally multiply 3.5 by 0.1, you can simply move the decimal point of 3.5 one place to the left, resulting in 0.35.\n\n" +
+                    "Therefore, the result of mentally multiplying 3.5 by 0.1 is 0.35"
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "Mentally multiply 0.85 by 10.",
+            "85",
+            "0.085",
+            "8.5",
+            "0.0085",
+            3,
+            "To mentally multiply 0.85 by 10, you can simply move the decimal point of 0.85 one place to the right, resulting in 8.5.\n\n" +
+                    "Therefore, the result of mentally multiplying 0.85 by 10 is 8.5."
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "Mentally multiply 7.6 by 0.01.",
+            "0.076",
+            "0.76",
+            "7.6",
+            "0.0076",
+            3,
+            "To mentally multiply 7.6 by 0.01, you can move the decimal point of 7.6 two places to the left, resulting in 0.076.\n\n" +
+                    "Therefore, the result of mentally multiplying 7.6 by 0.01 is 0.076."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "What is the result of mentally multiplying 2.9 by 100?",
+            "290",
+            "0.029",
+            "29",
+            "0.0029",
+            1,
+            "To mentally multiply 2.9 by 100, you can move the decimal point of 2.9 two places to the right, resulting in 290.\n\n" +
+                    "Therefore, the result of mentally multiplying 2.9 by 100 is 290."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "Mentally multiply 0.4 by 0.1.",
+            "0.04",
+            "0.004",
+            "0.4",
+            "0.0042",
+            1,
+            "To mentally multiply 0.4 by 0.1, you can simply move the decimal point of 0.4 one place to the left, resulting in 0.04.\n\n" +
+                    "Therefore, the result of mentally multiplying 0.4 by 0.1 is 0.04.\n\n" +
+                    "The correct answer is option (a) 0.04."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

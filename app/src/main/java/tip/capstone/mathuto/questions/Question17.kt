@@ -164,6 +164,66 @@ object Question17 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "Which type of decimal quotient is 0.125?",
+            "Terminating decimal",
+            "Non-terminating decimal",
+            "Repeating decimal",
+            "None of the above",
+            1,
+            "The decimal quotient 0.125 is a terminating decimal. A terminating decimal is a decimal number that has a finite number of digits after the decimal point and does not repeat indefinitely. In the case of 0.125, there are no digits that repeat, and the decimal terminates after the third decimal place."
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "Which type of decimal quotient is 0.6666666...?",
+            "Terminating decimal",
+            "Non-terminating decimal",
+            "Repeating decimal",
+            "None of the above",
+            3,
+            "The decimal quotient 0.6666666... is a repeating decimal. A repeating decimal is a decimal number in which one or more digits repeat indefinitely after the decimal point. In the case of 0.6666666..., the digit 6 repeats infinitely."
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "Which type of decimal quotient is 3.14159265358979323846264338327950288419716939937510...?",
+            "Terminating decimal",
+            "Non-terminating decimal",
+            "Repeating decimal",
+            "None of the above",
+            2,
+            "The decimal quotient 3.14159265358979323846264338327950288419716939937510... is a non-terminating decimal. A non-terminating decimal is a decimal number that continues indefinitely without repeating a pattern. The digits in the decimal representation of π (pi) continue indefinitely without repeating a specific pattern."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "Which type of decimal quotient is 0.381381381...?",
+            "Terminating",
+            "Non-terminating",
+            "Repeating",
+            "None of the above",
+            3,
+            "The decimal quotient 0.381381381... is a repeating decimal. A repeating decimal is a decimal number that has a repeating pattern of digits."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "Which type of decimal quotient is 4.5?",
+            "Terminating",
+            "Non-terminating",
+            "Repeating",
+            "None of the above",
+            1,
+            "The decimal quotient 4.5 is a terminating decimal. A terminating decimal is a decimal number that ends or terminates after a finite number of digits."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }

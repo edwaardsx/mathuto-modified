@@ -236,6 +236,77 @@ object Question13 : Serializable {
         )
         questionList.add(que10)
 
+        val que11 = MultipleChoice(
+            1,
+            "What is 48 divided by 2.5?",
+            "19.2",
+            "19.5",
+            "20.2",
+            "20.5",
+            1,
+            "To divide 48 by 2.5, we simply perform the division operation.\n\n" +
+                    "48 ÷ 2.5 = 19.2\n\n" +
+                    "Therefore, the result of 48 divided by 2.5 is 19.2."
+        )
+        questionList.add(que11)
+
+        val que12 = MultipleChoice(
+            1,
+            "What is 23 divided by 2.4?",
+            "19.2",
+            "19.5",
+            "0.9051",
+            "9.58",
+            4,
+            "To divide 23 by 2.4, we can perform the division operation.\n\n" +
+                    "23 ÷ 2.4 ≈ 9.58333333333\n\n" +
+                    "Rounded to two decimal places, the result is approximately 9.58"
+        )
+        questionList.add(que12)
+
+        val que13 = MultipleChoice(
+            1,
+            "What is 65 divided by 0.5?",
+            "120",
+            "130",
+            "140",
+            "150",
+            2,
+            "To divide 65 by 0.5, we can perform the division operation.\n\n" +
+                    "65 ÷ 0.5 = 130\n\n" +
+                    "Therefore, 65 divided by 0.5 is equal to 130."
+        )
+        questionList.add(que13)
+
+        val que14 = MultipleChoice(
+            1,
+            "What is 80 divided by 1.25?",
+            "64",
+            "68",
+            "72",
+            "76",
+            1,
+            "To divide 80 by 1.25, we can perform the division operation.\n\n" +
+                    "80 ÷ 1.25 = 64\n\n" +
+                    "Therefore, 80 divided by 1.25 is equal to 64."
+        )
+        questionList.add(que14)
+
+        val que15 = MultipleChoice(
+            1,
+            "What is 110 divided by 1.75?",
+            "57",
+            "62.5",
+            "63",
+            "67",
+            2,
+            "To divide 110 by 1.75, we can perform the division operation.\n\n" +
+                    "110 ÷ 1.75 ≈ 62.857142857\n\n" +
+                    "Rounded to two decimal places, the result is approximately 62.86.\n\n" +
+                    "Therefore, 110 divided by 1.75 is approximately 62.86."
+        )
+        questionList.add(que15)
+
         return questionList
     }
 }
