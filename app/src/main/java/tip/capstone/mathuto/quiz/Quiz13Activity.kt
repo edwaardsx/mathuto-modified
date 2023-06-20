@@ -228,7 +228,7 @@ class Quiz13Activity : AppCompatActivity(), View.OnClickListener {
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 13", mCorrectAnswers.toString())
                 }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                    if (mCorrectAnswers > Integer.parseInt(scores[12].score))
                         db.updateHighScores("Lesson 13", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {

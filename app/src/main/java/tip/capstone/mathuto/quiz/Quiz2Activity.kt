@@ -228,10 +228,10 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 2", mCorrectAnswers.toString())
                 }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                    if (mCorrectAnswers > Integer.parseInt(scores[1].score))
                         db.updateHighScores("Lesson 2", mCorrectAnswers.toString())
                 }
-                if(mCorrectAnswers >= 5) {
+                if(mCorrectAnswers >= 3) {
                     QUIZ2_PASSED = true
                 }
 

@@ -16,11 +16,11 @@ import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.MainActivity.Companion.QUIZ5_PASSED
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Quiz5Binding
+import tip.capstone.mathuto.questions.Question5
 import tip.capstone.mathuto.questions.Question5.CORRECT_ANS
 import tip.capstone.mathuto.questions.Question5.SELECTED_ANSWERS
 import tip.capstone.mathuto.questions.Question5.TOTAL_QUESTIONS
 import tip.capstone.mathuto.questions.Question5.WRONG_ANS
-import tip.capstone.mathuto.questions.Question5
 import tip.capstone.mathuto.quiz.result.Result5Activity
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import tip.capstone.mathuto.sqlite.TrueOrFalse
@@ -204,7 +204,7 @@ class Quiz5Activity : AppCompatActivity(), View.OnClickListener {
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 5", mCorrectAnswers.toString())
                 }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                    if (mCorrectAnswers > Integer.parseInt(scores[4].score))
                         db.updateHighScores("Lesson 5", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {

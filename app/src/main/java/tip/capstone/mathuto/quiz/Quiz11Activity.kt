@@ -204,7 +204,7 @@ class Quiz11Activity : AppCompatActivity(), View.OnClickListener {
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 11", mCorrectAnswers.toString())
                 }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[0].score))
+                    if (mCorrectAnswers > Integer.parseInt(scores[10].score))
                         db.updateHighScores("Lesson 11", mCorrectAnswers.toString())
                 }
                 if(mCorrectAnswers >= 5) {

@@ -62,13 +62,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_2,
                     "Problem Solving Involving Addition and Subtraction of Fractions",
                     "Lesson 2",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ1_PASSED)
                 Data(R.drawable.recycler_img_2,
                     "Problem Solving Involving Addition and Subtraction of Fractions",
                     "Lesson 2",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_2,
@@ -81,13 +81,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_3,
                     "Multiplication of Simple Fractions and Mixed Fractions",
                     "Lesson 3",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ2_PASSED)
                 Data(R.drawable.recycler_img_3,
                     "Multiplication of Simple Fractions and Mixed Fractions",
                     "Lesson 3",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_3,
@@ -100,13 +100,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_4,
                     "Problem Solving on Multiplication of Fractions",
                     "Lesson 4",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ3_PASSED)
                 Data(R.drawable.recycler_img_4,
                     "Problem Solving on Multiplication of Fractions",
                     "Lesson 4",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_4,
@@ -119,13 +119,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_5,
                     "Dividing Simple Fractions and Mixed Fractions",
                     "Lesson 5",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ4_PASSED)
                 Data(R.drawable.recycler_img_5,
                     "Dividing Simple Fractions and Mixed Fractions",
                     "Lesson 5",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_5,
@@ -138,13 +138,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_1,
                     "Solving Routine or Non-Routine Problems Involving Division Without or With Any of the Other Operations of Fractions and Mixed Fractions",
                     "Lesson 6",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ5_PASSED)
                 Data(R.drawable.recycler_img_1,
                     "Solving Routine or Non-Routine Problems Involving Division Without or With Any of the Other Operations of Fractions and Mixed Fractions",
                     "Lesson 6",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_1,
@@ -157,13 +157,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_2,
                     "Addition and Subtraction of Fractions Part 2",
                     "Lesson 7",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ6_PASSED)
                 Data(R.drawable.recycler_img_2,
                     "Addition and Subtraction of Fractions Part 2",
                     "Lesson 7",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_2,
@@ -176,13 +176,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_3,
                     "Solving Routine or Non-Routine Problems Involving Addition and Subtraction of Decimals and Mixed Decimals Using Appropriate Problem Solving Strategies and Tools",
                     "Lesson 8",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ7_PASSED)
                 Data(R.drawable.recycler_img_3,
                     "Solving Routine or Non-Routine Problems Involving Addition and Subtraction of Decimals and Mixed Decimals Using Appropriate Problem Solving Strategies and Tools",
                     "Lesson 8",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_3,
@@ -195,13 +195,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_4,
                     "Multiplication of Decimals and Mixed Decimals",
                     "Lesson 9",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ8_PASSED)
                 Data(R.drawable.recycler_img_4,
                     "Multiplication of Decimals and Mixed Decimals",
                     "Lesson 9",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_4,
@@ -214,13 +214,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_5,
                     "Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100",
                     "Lesson 10",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ9_PASSED)
                 Data(R.drawable.recycler_img_5,
                     "Multiplication of Decimals and Mixed Decimals Mentally by 0.1, 0.01, 10 and 100",
                     "Lesson 10",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_5,
@@ -233,13 +233,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_1,
                     "Problem-Solving on Multiplication of Decimals",
                     "Lesson 11",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ10_PASSED)
                 Data(R.drawable.recycler_img_1,
                     "Problem-Solving on Multiplication of Decimals",
                     "Lesson 11",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_1,
@@ -252,13 +252,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_2,
                     "Multi-Step Problems Involving Multiplication and Addition or Subtraction of Decimals",
                     "Lesson 12",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ11_PASSED)
                 Data(R.drawable.recycler_img_2,
                     "Multi-Step Problems Involving Multiplication and Addition or Subtraction of Decimals",
                     "Lesson 12",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_2,
@@ -271,13 +271,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_3,
                     "Dividing Whole Numbers by Decimals Up 2 Decimal Places",
                     "Lesson 13",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ12_PASSED)
                 Data(R.drawable.recycler_img_3,
                     "Dividing Whole Numbers by Decimals Up 2 Decimal Places",
                     "Lesson 13",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_3,
@@ -290,13 +290,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_4,
                     "Dividing Decimals and Mixed Decimals",
                     "Lesson 14",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ13_PASSED)
                 Data(R.drawable.recycler_img_4,
                     "Dividing Decimals and Mixed Decimals",
                     "Lesson 14",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_4,
@@ -309,13 +309,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_5,
                     "Dividing Decimals Up to 4 Decimal Places by 0.1, 0.01 and 0.001",
                     "Lesson 15",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ14_PASSED)
                 Data(R.drawable.recycler_img_5,
                     "Dividing Decimals Up to 4 Decimal Places by 0.1, 0.01 and 0.001",
                     "Lesson 15",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_5,
@@ -328,13 +328,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_1,
                     "Dividing Decimals Up to 2 Decimal Places by 10, 100 and 1000 Mentally",
                     "Lesson 16",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ15_PASSED)
                 Data(R.drawable.recycler_img_1,
                     "Dividing Decimals Up to 2 Decimal Places by 10, 100 and 1000 Mentally",
                     "Lesson 16",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_1,
@@ -347,13 +347,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_2,
                     "Differentiating Repeating from Terminating and Non-Terminating Decimal Quotient",
                     "Lesson 17",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ16_PASSED)
                 Data(R.drawable.recycler_img_2,
                     "Differentiating Repeating from Terminating and Non-Terminating Decimal Quotient",
                     "Lesson 17",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_2,
@@ -366,13 +366,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_3,
                     "Solving Word Problems Involving Division of Decimals",
                     "Lesson 18",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ17_PASSED)
                 Data(R.drawable.recycler_img_3,
                     "Solving Word Problems Involving Division of Decimals",
                     "Lesson 18",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_3,
@@ -385,13 +385,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 Data(R.drawable.recycler_img_4,
                     "Solving Multi-Step Problems Involving Division of Decimals and Any of the Other Operations",
                     "Lesson 19",
-                    IN_PROGRESS
+                    COMPLETED
                 )
             else if(QUIZ18_PASSED)
                 Data(R.drawable.recycler_img_4,
                     "Solving Multi-Step Problems Involving Division of Decimals and Any of the Other Operations",
                     "Lesson 19",
-                    COMPLETED
+                    IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_4,
@@ -657,25 +657,25 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
     companion object {
 
-        var QUIZ1_PASSED: Boolean = true
-        var QUIZ2_PASSED: Boolean = true
-        var QUIZ3_PASSED: Boolean = true
-        var QUIZ4_PASSED: Boolean = true
-        var QUIZ5_PASSED: Boolean = true
-        var QUIZ6_PASSED: Boolean = true
-        var QUIZ7_PASSED: Boolean = true
-        var QUIZ8_PASSED: Boolean = true
-        var QUIZ9_PASSED: Boolean = true
-        var QUIZ10_PASSED: Boolean = true
-        var QUIZ11_PASSED: Boolean = true
-        var QUIZ12_PASSED: Boolean = true
-        var QUIZ13_PASSED: Boolean = true
-        var QUIZ14_PASSED: Boolean = true
-        var QUIZ15_PASSED: Boolean = true
-        var QUIZ16_PASSED: Boolean = true
-        var QUIZ17_PASSED: Boolean = true
-        var QUIZ18_PASSED: Boolean = true
-        var QUIZ19_PASSED: Boolean = true
+        var QUIZ1_PASSED: Boolean = false
+        var QUIZ2_PASSED: Boolean = false
+        var QUIZ3_PASSED: Boolean = false
+        var QUIZ4_PASSED: Boolean = false
+        var QUIZ5_PASSED: Boolean = false
+        var QUIZ6_PASSED: Boolean = false
+        var QUIZ7_PASSED: Boolean = false
+        var QUIZ8_PASSED: Boolean = false
+        var QUIZ9_PASSED: Boolean = false
+        var QUIZ10_PASSED: Boolean = false
+        var QUIZ11_PASSED: Boolean = false
+        var QUIZ12_PASSED: Boolean = false
+        var QUIZ13_PASSED: Boolean = false
+        var QUIZ14_PASSED: Boolean = false
+        var QUIZ15_PASSED: Boolean = false
+        var QUIZ16_PASSED: Boolean = false
+        var QUIZ17_PASSED: Boolean = false
+        var QUIZ18_PASSED: Boolean = false
+        var QUIZ19_PASSED: Boolean = false
 
         const val IN_PROGRESS = R.drawable.ic_unlock
         const val COMPLETED = R.drawable.ic_done

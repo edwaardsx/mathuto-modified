@@ -1,10 +1,10 @@
 package tip.capstone.mathuto
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import tip.capstone.mathuto.sqlite.SQLiteHelper
+import androidx.appcompat.app.AppCompatActivity
 import tip.capstone.mathuto.databinding.ActivityMainScoresBinding
+import tip.capstone.mathuto.sqlite.SQLiteHelper
 
 class MainScoresActivity : AppCompatActivity() {
 
@@ -42,7 +42,6 @@ class MainScoresActivity : AppCompatActivity() {
             binding.cardViewLessonNineteen.visibility  = View.GONE
         }else{
             binding.scoreNoContent.visibility = View.INVISIBLE
-
 
             binding.lessonOneHighScore.text = scores[0].score
             binding.cardViewLesoonOne.visibility  = View.VISIBLE
