@@ -1,10 +1,10 @@
 package tip.capstone.mathuto
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
+import android.view.WindowInsetsController
+import androidx.appcompat.app.AppCompatActivity
 import tip.capstone.mathuto.databinding.ActivityMainAboutBinding
-import tip.capstone.mathuto.databinding.ActivityMainBinding
 
 class AboutActivity : AppCompatActivity() {
 
@@ -14,6 +14,12 @@ class AboutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.statusBarColor = Color.parseColor("#F1F6F9")
+        window.decorView.windowInsetsController?.setSystemBarsAppearance(
+            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+        )
 
         binding.btnBack.setOnClickListener {
             finish()

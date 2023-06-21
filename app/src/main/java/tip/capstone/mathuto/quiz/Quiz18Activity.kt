@@ -225,7 +225,7 @@ class Quiz18Activity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
 
                 val scores = db.getAllHighScores()
-                if(scores.isEmpty()){
+                if(scores.size < 18){
                     db.insertHighScores("Lesson 18", mCorrectAnswers.toString())
                 }else{
                     if (mCorrectAnswers > Integer.parseInt(scores[17].score)) {

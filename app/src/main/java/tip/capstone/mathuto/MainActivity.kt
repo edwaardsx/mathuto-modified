@@ -64,12 +64,12 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
             overridePendingTransition(0, 0)
         }
 
-        binding.progressMonitoring.setOnClickListener{
+        /*binding.progressMonitoring.setOnClickListener{
             val intent = Intent(applicationContext, ProgressMonitoringActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)
             overridePendingTransition(0, 0)
-        }
+        }*/
 
         binding.tips.setOnClickListener{
             val tips = TipsList.getTips().random()
@@ -706,14 +706,14 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         if (isSearching) {
             carouselView.visibility = View.GONE
             binding.tvContents.visibility = View.GONE
-            binding.mainContents.visibility = View.GONE
+            //binding.mainContents.visibility = View.GONE
             if (recyclerAdapter.itemCount == 0) {
                 binding.tvLessons.text = "No results found"
             }
         } else {
             carouselView.visibility = View.VISIBLE
             binding.tvContents.visibility = View.VISIBLE
-            binding.mainContents.visibility = View.VISIBLE
+            //binding.mainContents.visibility = View.VISIBLE
             binding.tvLessons.text = "Lessons"
         }
     }
@@ -760,15 +760,15 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         var QUIZ8_PASSED: Boolean = true
         var QUIZ9_PASSED: Boolean = true
         var QUIZ10_PASSED: Boolean = true
-        var QUIZ11_PASSED: Boolean = false
-        var QUIZ12_PASSED: Boolean = false
-        var QUIZ13_PASSED: Boolean = false
-        var QUIZ14_PASSED: Boolean = false
-        var QUIZ15_PASSED: Boolean = false
-        var QUIZ16_PASSED: Boolean = false
-        var QUIZ17_PASSED: Boolean = false
-        var QUIZ18_PASSED: Boolean = false
-        var QUIZ19_PASSED: Boolean = false
+        var QUIZ11_PASSED: Boolean = true
+        var QUIZ12_PASSED: Boolean = true
+        var QUIZ13_PASSED: Boolean = true
+        var QUIZ14_PASSED: Boolean = true
+        var QUIZ15_PASSED: Boolean = true
+        var QUIZ16_PASSED: Boolean = true
+        var QUIZ17_PASSED: Boolean = true
+        var QUIZ18_PASSED: Boolean = true
+        var QUIZ19_PASSED: Boolean = true
 
         const val IN_PROGRESS = R.drawable.ic_unlock
         const val COMPLETED = R.drawable.ic_done
