@@ -12,7 +12,7 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00b8d4"
+        android:background="#304FFE"
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -21,7 +21,7 @@
             android:layout_height="200dp"
             app:expandedTitleTextAppearance="@style/MyExpandedAppBar"
             app:collapsedTitleTextAppearance="@style/MyCollapsedAppBar"
-            app:contentScrim="#00b8d4"
+            app:contentScrim="#304FFE"
             app:expandedTitleGravity="bottom"
             app:expandedTitleMarginStart="16dp"
             app:expandedTitleMarginBottom="36dp"
@@ -51,8 +51,9 @@
                     android:layout_height="24dp"
                     android:background="#F1F6F9"/>
                 <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="16dp"
+                    app:cardCornerRadius="10dp"
                     app:cardElevation="0dp"
+                    android:layout_marginHorizontal="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                 <com.google.android.material.tabs.TabLayout
@@ -61,11 +62,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     app:tabIndicator="@drawable/indicator_tab"
-                    app:tabIndicatorColor="#03acc6"
+                    app:tabIndicatorColor="#2962FF"
                     app:tabTextColor="#1B1B1B"
-                    app:tabSelectedTextColor="@color/white"
+                    app:tabSelectedTextColor="@color/black"
+                    app:tabIndicatorGravity="bottom"
+                    app:tabIndicatorHeight="3dp"
                     app:tabIndicatorAnimationMode="elastic"
-                    app:tabIndicatorGravity="stretch"
                     app:tabMode="fixed"
                     app:tabGravity="fill"
                     app:tabMaxWidth="0dp"

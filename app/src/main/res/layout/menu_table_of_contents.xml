@@ -26,6 +26,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:text="Table of Contents"
+                android:fontFamily="@font/geologica_regular"
                 android:textSize="18sp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"

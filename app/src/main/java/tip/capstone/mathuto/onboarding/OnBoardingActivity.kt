@@ -3,6 +3,7 @@ package tip.capstone.mathuto.onboarding
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.View
@@ -52,6 +53,8 @@ class OnBoardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = OnBoardingLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.statusBarColor = Color.parseColor("#F1F6F9")
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
 

@@ -57,6 +57,8 @@ class Quiz2Activity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        window.statusBarColor = Color.parseColor("#303030")
+
         binding = Quiz2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 

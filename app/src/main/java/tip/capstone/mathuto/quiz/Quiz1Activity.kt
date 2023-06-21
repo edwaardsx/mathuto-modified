@@ -60,6 +60,8 @@ class Quiz1Activity : AppCompatActivity(), View.OnClickListener {
         binding = Quiz1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.statusBarColor = Color.parseColor("#303030")
+
         db = SQLiteHelper(this)
         binding.progressBar.max = mMaxQuestions
 

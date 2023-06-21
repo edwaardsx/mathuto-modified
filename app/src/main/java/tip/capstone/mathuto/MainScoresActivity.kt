@@ -1,5 +1,6 @@
 package tip.capstone.mathuto
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,8 @@ class MainScoresActivity : AppCompatActivity() {
 
         binding = ActivityMainScoresBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.statusBarColor = Color.parseColor("#F1F6F9")
 
         val scores = db.getAllHighScores()
         if(scores.isEmpty()){

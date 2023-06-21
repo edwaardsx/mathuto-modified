@@ -59,6 +59,8 @@ class Quiz5Activity : AppCompatActivity(), View.OnClickListener {
         binding = Quiz5Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.statusBarColor = Color.parseColor("#303030")
+
         db = SQLiteHelper(this)
 
         binding.tvOptionOne.setOnClickListener(this)

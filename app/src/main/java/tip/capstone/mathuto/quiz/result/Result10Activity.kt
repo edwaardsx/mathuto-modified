@@ -36,6 +36,8 @@ class Result10Activity : AppCompatActivity() {
         binding = QuizResult10Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.statusBarColor = Color.parseColor("#303030")
+
         val correctAnswer = intent.getIntExtra(CORRECT_ANS, 0)
         val wrongAnswer = intent.getIntExtra(WRONG_ANS, 0)
         val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)

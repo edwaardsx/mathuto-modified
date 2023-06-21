@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.statusBarColor = Color.parseColor("#304FFE")
+        window.statusBarColor = Color.parseColor("#F1F6F9")
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
 
@@ -750,25 +750,25 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
     companion object {
 
-        var QUIZ1_PASSED: Boolean = true
-        var QUIZ2_PASSED: Boolean = true
-        var QUIZ3_PASSED: Boolean = true
-        var QUIZ4_PASSED: Boolean = true
-        var QUIZ5_PASSED: Boolean = true
-        var QUIZ6_PASSED: Boolean = true
-        var QUIZ7_PASSED: Boolean = true
-        var QUIZ8_PASSED: Boolean = true
-        var QUIZ9_PASSED: Boolean = true
-        var QUIZ10_PASSED: Boolean = true
-        var QUIZ11_PASSED: Boolean = true
-        var QUIZ12_PASSED: Boolean = true
-        var QUIZ13_PASSED: Boolean = true
-        var QUIZ14_PASSED: Boolean = true
-        var QUIZ15_PASSED: Boolean = true
-        var QUIZ16_PASSED: Boolean = true
-        var QUIZ17_PASSED: Boolean = true
-        var QUIZ18_PASSED: Boolean = true
-        var QUIZ19_PASSED: Boolean = true
+        var QUIZ1_PASSED: Boolean = false
+        var QUIZ2_PASSED: Boolean = false
+        var QUIZ3_PASSED: Boolean = false
+        var QUIZ4_PASSED: Boolean = false
+        var QUIZ5_PASSED: Boolean = false
+        var QUIZ6_PASSED: Boolean = false
+        var QUIZ7_PASSED: Boolean = false
+        var QUIZ8_PASSED: Boolean = false
+        var QUIZ9_PASSED: Boolean = false
+        var QUIZ10_PASSED: Boolean = false
+        var QUIZ11_PASSED: Boolean = false
+        var QUIZ12_PASSED: Boolean = false
+        var QUIZ13_PASSED: Boolean = false
+        var QUIZ14_PASSED: Boolean = false
+        var QUIZ15_PASSED: Boolean = false
+        var QUIZ16_PASSED: Boolean = false
+        var QUIZ17_PASSED: Boolean = false
+        var QUIZ18_PASSED: Boolean = false
+        var QUIZ19_PASSED: Boolean = false
 
         const val IN_PROGRESS = R.drawable.ic_unlock
         const val COMPLETED = R.drawable.ic_done

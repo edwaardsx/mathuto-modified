@@ -1,5 +1,6 @@
 package tip.capstone.mathuto.tutorial
 
+import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +20,8 @@ class Tutorial4Activity : AppCompatActivity() {
 
         binding = Tutorial4Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.statusBarColor = Color.parseColor("#000000")
 
         val videoUri = Uri.parse("android.resource://" + packageName + "/" + R.raw.tutorial4)
         binding.videoView.setVideoURI(videoUri)
