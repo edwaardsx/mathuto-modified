@@ -5,6 +5,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import tip.capstone.mathuto.tips.Tips
 
 class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db", null, 1) {
 
@@ -14,12 +15,14 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
         db.execSQL("CREATE TABLE HIGHSCORES(id Integer PRIMARY KEY, lesson TEXT, score TEXT)")
         db.execSQL("CREATE TABLE QUESTIONS(id TEXT, question TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, correctAnswer TEXT, explanation TEXT)")
         db.execSQL("CREATE TABLE QUESTIONSTF(id TEXT, question TEXT, optionA TEXT, optionB TEXT, correctAnswer TEXT, explanation TEXT)")
+        db.execSQL("CREATE TABLE TIPS(id TEXT, title TEXT, tips TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS HIGHSCORES")
         db.execSQL("DROP TABLE IF EXISTS QUESTIONS")
         db.execSQL("DROP TABLE IF EXISTS QUESTIONSTF")
+        db.execSQL("DROP TABLE IF EXISTS TIPS")
         onCreate(db)
     }
 
@@ -78,6 +81,18 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
             put("explanation", trueOrFalse.explanation)
         }
         db.insert("QUESTIONSTF", null, values)
+        db.close()
+        return true
+    }
+
+    fun insertTips(tips: Tips) :Boolean {
+        val db = writableDatabase
+        val values = ContentValues().apply {
+            put("id", tips.id)
+            put("title", tips.title)
+            put("tips", tips.tips)
+        }
+        db.insert("TIPS", null, values)
         db.close()
         return true
     }
@@ -175,5 +190,28 @@ class SQLiteHelper(context: Context) : SQLiteOpenHelper(context, "userScores.db"
         cursor.close()
         db.close()
         return trueOrFalseList
+    }
+
+    @SuppressLint("Range")
+    fun getAllTips(): ArrayList<Tips> {
+        val tipsList = ArrayList<Tips>()
+        val db = readableDatabase
+        val selectQuery = "SELECT * FROM TIPS"
+
+        val cursor = db.rawQuery(selectQuery, null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndex("id"))
+                val title = cursor.getString(cursor.getColumnIndex("title"))
+                val tips = cursor.getString(cursor.getColumnIndex("tips"))
+
+                val tipsObject = Tips(id, title, tips)
+                tipsList.add(tipsObject)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+        return tipsList
     }
 }

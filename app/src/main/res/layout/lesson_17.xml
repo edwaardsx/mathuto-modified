@@ -60,7 +60,7 @@
                     android:contentDescription="tabs"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    app:tabIndicator="@drawable/tab_indicators"
+                    app:tabIndicator="@drawable/indicator_tab"
                     app:tabIndicatorColor="#01b29a"
                     app:tabTextColor="#1B1B1B"
                     app:tabSelectedTextColor="@color/white"

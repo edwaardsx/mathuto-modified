@@ -1,11 +1,14 @@
 package tip.capstone.mathuto
 
 import android.annotation.SuppressLint
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
+import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,8 +19,10 @@ import tip.capstone.mathuto.databinding.ActivityMainBinding
 import tip.capstone.mathuto.lessons.*
 import tip.capstone.mathuto.recycler.Data
 import tip.capstone.mathuto.recycler.RecyclerViewAdapter
+import tip.capstone.mathuto.tips.Tips
+import tip.capstone.mathuto.tips.TipsList
 
-class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListener {
+class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListener, SearchView.OnQueryTextListener {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var carouselView: CarouselView
@@ -36,6 +41,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.statusBarColor = Color.parseColor("#304FFE")
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
 
@@ -43,8 +49,39 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         carouselView.pageCount = carouselImages.size
         carouselView.setImageListener(imageListener)
 
+        /*BottomSheetBehavior.from(binding.bottomSheetLayout).apply {
+            peekHeight = 400
+            this.state = BottomSheetBehavior.STATE_COLLAPSED
+        }*/
+
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        binding.listOfQuizScore.setOnClickListener{
+            val intent = Intent(applicationContext, MainScoresActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            applicationContext.startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        binding.progressMonitoring.setOnClickListener{
+            val intent = Intent(applicationContext, ProgressMonitoringActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            applicationContext.startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        binding.tips.setOnClickListener{
+            val tips = TipsList.getTips().random()
+            showTipsDialog(tips)
+        }
+
+        binding.aboutApp.setOnClickListener{
+            val intent = Intent(applicationContext, AboutActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            applicationContext.startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
 
         val dataList = listOf(
             if(QUIZ1_PASSED)
@@ -405,6 +442,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
+
     }
 
     override fun onItemClick(data: Data) {
@@ -580,6 +618,25 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         }
     }
 
+    private fun showTipsDialog(tips: Tips) {
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.activity_tip_of_the_day)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val btnClose = dialog.findViewById<ImageButton>(R.id.btn_close_tips)
+        btnClose.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        val titleTextView = dialog.findViewById<TextView>(R.id.tv_title)
+        titleTextView.text = tips.title
+
+        val tipsTextView = dialog.findViewById<TextView>(R.id.tv_tips)
+        tipsTextView.text = tips.tips
+
+        dialog.show()
+    }
+
     private val imageListener = ImageListener { position, imageView ->
         val imagePosition = position % carouselImages.size
         imageView.setImageResource(carouselImages[imagePosition])
@@ -589,10 +646,37 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         menuInflater.inflate(R.menu.menu_item_main, menu)
 
         val searchItem = menu?.findItem(R.id.search)
-        val searchView = searchItem?.actionView as SearchView
-        searchView.queryHint = "Search for lessons, modules & title"
+        val searchView = searchItem?.actionView as? SearchView
+        searchView?.setOnQueryTextListener(this)
+        searchView?.queryHint = "Search for title & lessons"
 
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        /*val font = ResourcesCompat.getFont(this, R.font.geologica_regular)
+        val typefaceSpan = font?.let { TypefaceSpan(it) }
+
+        val queryHint = "Search for title & lessons"
+        val spannableString = SpannableString(queryHint)
+        spannableString.setSpan(typefaceSpan, 0, spannableString.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        searchView?.queryHint = spannableString*/
+
+        /*val searchEditText = searchView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
+        searchEditText?.setTextColor(ContextCompat.getColor(this, R.color.black))
+        searchEditText?.setHintTextColor(ContextCompat.getColor(this, R.color.black))
+
+        val closeButton = searchView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)
+        closeButton?.setImageResource(R.drawable.ic_close_secondary)
+
+        val backButton = searchView?.findViewById<ImageView>(androidx.appcompat.R.id.search_button)
+        backButton?.setImageResource(R.drawable.ic_back_secondary)*/
+
+        /*val hintTextColor = Color.parseColor("#000000")
+        val hintTextSpan = SpannableString("Search for title & lessons")
+        hintTextSpan.setSpan(ForegroundColorSpan(hintTextColor), 0, hintTextSpan.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        searchView.queryHint = hintTextSpan
+
+        val searchTextView = searchView.findViewById<AutoCompleteTextView>(androidx.appcompat.R.id.search_src_text)
+        searchTextView.setTextColor(Color.BLACK)*/
+
+        /*searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 return true
             }
@@ -602,7 +686,18 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 updateCarouselVisibility()
                 return true
             }
-        })
+        })*/
+        return true
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        return true
+    }
+
+    override fun onQueryTextChange(newText: String): Boolean {
+        recyclerAdapter.filter(newText)
+        isSearching = newText.isNotEmpty()
+        updateCarouselVisibility()
         return true
     }
 
@@ -610,11 +705,15 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
     private fun updateCarouselVisibility() {
         if (isSearching) {
             carouselView.visibility = View.GONE
+            binding.tvContents.visibility = View.GONE
+            binding.mainContents.visibility = View.GONE
             if (recyclerAdapter.itemCount == 0) {
                 binding.tvLessons.text = "No results found"
             }
         } else {
             carouselView.visibility = View.VISIBLE
+            binding.tvContents.visibility = View.VISIBLE
+            binding.mainContents.visibility = View.VISIBLE
             binding.tvLessons.text = "Lessons"
         }
     }
@@ -640,12 +739,6 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
             }
-            R.id.list_of_quiz_score -> {
-                val intent = Intent(applicationContext, MainScoresActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                applicationContext.startActivity(intent)
-                overridePendingTransition(0, 0)
-            }
             R.id.search -> {
                 isSearching = true
                 updateCarouselVisibility()
@@ -657,16 +750,16 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 
     companion object {
 
-        var QUIZ1_PASSED: Boolean = false
-        var QUIZ2_PASSED: Boolean = false
-        var QUIZ3_PASSED: Boolean = false
-        var QUIZ4_PASSED: Boolean = false
-        var QUIZ5_PASSED: Boolean = false
-        var QUIZ6_PASSED: Boolean = false
-        var QUIZ7_PASSED: Boolean = false
-        var QUIZ8_PASSED: Boolean = false
-        var QUIZ9_PASSED: Boolean = false
-        var QUIZ10_PASSED: Boolean = false
+        var QUIZ1_PASSED: Boolean = true
+        var QUIZ2_PASSED: Boolean = true
+        var QUIZ3_PASSED: Boolean = true
+        var QUIZ4_PASSED: Boolean = true
+        var QUIZ5_PASSED: Boolean = true
+        var QUIZ6_PASSED: Boolean = true
+        var QUIZ7_PASSED: Boolean = true
+        var QUIZ8_PASSED: Boolean = true
+        var QUIZ9_PASSED: Boolean = true
+        var QUIZ10_PASSED: Boolean = true
         var QUIZ11_PASSED: Boolean = false
         var QUIZ12_PASSED: Boolean = false
         var QUIZ13_PASSED: Boolean = false

@@ -228,8 +228,20 @@ class Quiz15Activity : AppCompatActivity(), View.OnClickListener {
                 if(scores.isEmpty()){
                     db.insertHighScores("Lesson 15", mCorrectAnswers.toString())
                 }else{
-                    if (mCorrectAnswers > Integer.parseInt(scores[14].score))
-                        db.updateHighScores("Lesson 15", mCorrectAnswers.toString())
+                    if (mCorrectAnswers > Integer.parseInt(scores[14].score)) {
+                        // Sort the scores in descending order using QuickSort
+                        val scoreList = ArrayList<Int>()
+                        for (scoreEntry in scores) {
+                            scoreList.add(Integer.parseInt(scoreEntry.score))
+                        }
+                        quickSort(scoreList, 0, scoreList.size - 1)
+
+                        // Update the high scores
+                        val highestScore = scoreList[0]
+                        if (mCorrectAnswers > highestScore) {
+                            db.updateHighScores("Lesson 15", mCorrectAnswers.toString())
+                        }
+                    }
                 }
                 if(mCorrectAnswers >= 5) {
                     QUIZ15_PASSED = true
@@ -300,5 +312,34 @@ class Quiz15Activity : AppCompatActivity(), View.OnClickListener {
             setQuestion()
             seWrong?.start()
         }
+    }
+
+    private fun quickSort(scores: ArrayList<Int>, low: Int, high: Int) {
+        if (low < high) {
+            val pivotIndex = partition(scores, low, high)
+            quickSort(scores, low, pivotIndex - 1)
+            quickSort(scores, pivotIndex + 1, high)
+        }
+    }
+
+    private fun partition(scores: ArrayList<Int>, low: Int, high: Int): Int {
+        val pivot = scores[high]
+        var i = low - 1
+
+        for (j in low until high) {
+            if (scores[j] > pivot) {
+                i++
+                swap(scores, i, j)
+            }
+        }
+
+        swap(scores, i + 1, high)
+        return i + 1
+    }
+
+    private fun swap(scores: ArrayList<Int>, i: Int, j: Int) {
+        val temp = scores[i]
+        scores[i] = scores[j]
+        scores[j] = temp
     }
 }

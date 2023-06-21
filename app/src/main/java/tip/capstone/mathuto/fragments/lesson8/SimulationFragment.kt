@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import tip.capstone.mathuto.CalculatorActivity
 import tip.capstone.mathuto.FullScreenImageAdapter
+import tip.capstone.mathuto.FullScreenVideoActivity
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.Lesson8SimulationBinding
 
@@ -44,11 +46,18 @@ class SimulationFragment : Fragment() {
             val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
             val images = listOf(
                 R.drawable.simulation_8_1, R.drawable.simulation_8_2, R.drawable.simulation_8_3,
-                R.drawable.simulation_8_4)
+                R.drawable.simulation_8_4, R.drawable.simulation_8_5)
             val adapter = FullScreenImageAdapter(requireContext(), images)
             viewPager.adapter = adapter
 
             dialog.show()
+        }
+
+        binding.btnWatchVideo.setOnClickListener{
+            val videoUri = Uri.parse("android.resource://" + requireActivity().packageName + "/" + R.raw.simulation_8)
+            val intent = Intent(context, FullScreenVideoActivity::class.java)
+            intent.putExtra("videoUri", videoUri.toString())
+            startActivity(intent)
         }
     }
 }

@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:elevation="10dp"
+        android:elevation="4dp"
         android:background="#F1F6F9">
         <Button
             android:id="@+id/btn_back"
@@ -23,6 +23,7 @@
             android:contentDescription="back button"/>
         <TextView
             android:text="Scores"
+            android:fontFamily="@font/geologica_regular"
             android:textSize="18sp"
             android:layout_gravity="center"
             android:gravity="center"

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#F1F6F9"
-        android:elevation="10dp">
+        android:elevation="0dp">
         <Button
             android:id="@+id/btn_back"
             android:background="@null"
             android:drawableStart="@drawable/ic_back"
+            android:drawableTint="@color/black"
             android:layout_width="48dp"
             android:layout_height="?attr/actionBarSize"
             android:contentDescription="back button"/>

@@ -25,13 +25,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF5252"
-        android:minWidth="150dp"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_primary_button"
+        android:minWidth="200dp"
         android:text="Next"
+        android:textColor="@color/white"
         android:fontFamily="@font/geologica_regular"
         android:textSize="14sp"
         android:textStyle="bold"

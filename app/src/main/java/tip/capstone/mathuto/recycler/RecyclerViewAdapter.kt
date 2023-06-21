@@ -1,5 +1,6 @@
 package tip.capstone.mathuto.recycler
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -65,6 +66,7 @@ class RecyclerViewAdapter(private val dataList: List<Data>,
         fun onItemClick(data: Data)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun filter(query: String) {
         filteredList = if (query.isEmpty()) {
             dataList

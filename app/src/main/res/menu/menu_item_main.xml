@@ -6,17 +6,16 @@
     <item
         android:id="@+id/search"
         android:icon="@drawable/ic_search"
-        android:iconTint="@color/white"
-        android:title="Search"
+        android:title=""
         app:queryBackground="@android:color/transparent"
         app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        />
 
     <item
         android:title="menu_actions"
         android:icon="@drawable/ic_more_vert"
-        android:iconTint="@color/white"
-        app:showAsAction="ifRoom" >
+        app:showAsAction="always">
     <menu>
         <item
             android:id="@+id/about"
@@ -24,12 +23,12 @@
             android:icon="@drawable/ic_about"
             android:orderInCategory="100"
             app:showAsAction="never" />
-        <item
+        <!--<item
             android:id="@+id/list_of_quiz_score"
             android:title="Scores"
             android:icon="@drawable/ic_score"
             android:orderInCategory="100"
-            app:showAsAction="never" />
+            app:showAsAction="never" />-->
     </menu>
     </item>
 

@@ -27,22 +27,22 @@ class OnBoardingActivity : AppCompatActivity() {
         listOf(
             IntroSlide(
                 "Progress Monitoring",
-                "A feature that tracks and displays the progress of learners as they engage with the learning materials and activities within the app. It provides users with valuable insights into their learning journey, helping them stay motivated and informed about their achievements.",
+                "Tracks and shows the progress of learners as they interact with learning materials and activities in the app. It offers valuable insights into their learning journey, keeping them motivated and informed about their achievements.",
                 R.raw.onboarding_monitoring
             ),
             IntroSlide(
                 "Lessons",
-                "It focus on specific topics or subjects that are organized and presented in a structured manner to facilitate learning. It provides learners with comprehensive content, including text, images, tutorial videos, and quizzes, to ensure a well-rounded understanding of the topic.",
+                "Focuses on specific topics or subjects presented in a structured manner to facilitate learning. It offers comprehensive content, such as text, images, tutorial videos, and quizzes, to ensure learners gain a well-rounded understanding of the topic.",
                 R.raw.onboarding_lessons
             ),
             IntroSlide(
                 "Read Aloud Speech",
-                "Read aloud speech that allows the application to audibly read the text content to the learners. It uses text-to-speech (TTS) technology to convert written text into spoken words, enabling learners to listen to the content rather than reading it themselves.",
+                "This feature enables the application to read aloud the text content to learners using text-to-speech (TTS) technology. It converts written text into spoken words, allowing learners to listen to the content instead of reading it themselves.",
                 R.raw.onboarding_read_aloud
             ),
             IntroSlide(
                 "Simulation",
-                "Refers to the use of interactive, virtual environments or scenarios that replicate real-world situations or processes. It allows learners to engage in realistic simulations, exercises, or activities that mimic authentic experiences and provide hands-on learning opportunities.",
+                "Refers to the use of interactive virtual environments or scenarios that replicate real-world situations. It enables learners to participate in realistic simulations, exercises, or activities that imitate authentic experiences, providing them with hands-on learning opportunities.",
                 R.raw.onboarding_simulation
             )
         )

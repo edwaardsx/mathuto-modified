@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#F1F6F9"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title"
+                android:hint="Title"
+                android:padding="16dp"
+                android:fontFamily="@font/geologica_bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:id="@+id/btn_close_tips"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@null"
+                android:contentDescription="button_close"
+                android:src="@drawable/ic_close_secondary" />
+        </RelativeLayout>
+        <View
+            android:background="#ededed"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/tv_tips"
+            android:hint="In life, we encounter various little moments that, when added or subtracted together, contribute to creating a bigger picture or a meaningful experience. Similarly, when adding or subtracting decimals, we combine or take away those small parts to create a larger result. Just like life's moments, every decimal holds value and plays a role in shaping the final outcome. So, embrace the process of adding and subtracting decimals, and enjoy the journey of building something greater."
+            android:padding="16dp"
+            android:fontFamily="@font/geologica_regular"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
