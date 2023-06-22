@@ -2,6 +2,7 @@ package tip.capstone.mathuto
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -18,6 +19,8 @@ class SplashScreenActivity : AppCompatActivity() {
 
         val binding: ActivitySplashScreenBinding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.statusBarColor = Color.parseColor("#303030")
 
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
