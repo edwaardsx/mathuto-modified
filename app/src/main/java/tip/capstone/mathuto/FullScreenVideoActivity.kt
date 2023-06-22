@@ -1,5 +1,6 @@
 package tip.capstone.mathuto
 
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.widget.MediaController
@@ -12,6 +13,8 @@ class FullScreenVideoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.simulation_video)
+
+        window.statusBarColor = Color.parseColor("#000000")
 
         videoView = findViewById(R.id.videoView)
 

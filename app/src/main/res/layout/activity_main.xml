@@ -19,64 +19,119 @@
             android:layout_height="wrap_content"/>
     </androidx.appcompat.widget.Toolbar>
 
-    <com.synnapps.carouselview.CarouselView
-        android:id="@+id/carouselView"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="5dp"
-        app:animateOnBoundary="false"
-        app:fillColor="@android:color/white"
-        app:pageColor="#00000000"
-        app:radius="4dp"
-        app:slideInterval="6000"
-        app:strokeColor="@android:color/darker_gray"
-        app:strokeWidth="1dp"/>
-
-    <TextView
+    <LinearLayout
         android:id="@+id/tv_contents"
-        android:fontFamily="@font/geologica_bold"
-        android:text="Contents"
-        android:textSize="18sp"
-        android:textColor="#303030"
-        android:layout_marginStart="16dp"
-        android:paddingVertical="5dp"
-        android:gravity="center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="190dp"
             android:layout_marginHorizontal="16dp"
-            android:orientation="horizontal">
-            <!--<androidx.cardview.widget.CardView
-                android:id="@+id/progress_monitoring"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:background="@drawable/ic_progress_monitoring"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:animateOnBoundary="false"
+            app:fillColor="@android:color/white"
+            app:pageColor="#00000000"
+            app:radius="4dp"
+            app:slideInterval="6000"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth="1dp"/>
+
+        <TextView
+            android:fontFamily="@font/geologica_bold"
+            android:text="Contents"
+            android:textSize="18sp"
+            android:textColor="#303030"
+            android:layout_marginStart="16dp"
+            android:paddingVertical="5dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="horizontal">
+                <!--<androidx.cardview.widget.CardView
+                    android:id="@+id/progress_monitoring"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="Progress Monitoring"
-                        android:fontFamily="@font/geologica_regular"
-                        android:textColor="#303030"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>-->
+                        android:orientation="vertical">
+                        <ImageView
+                            android:background="@drawable/ic_progress_monitoring"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Progress Monitoring"
+                            android:fontFamily="@font/geologica_regular"
+                            android:textColor="#303030"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/list_of_quiz_score"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:background="@drawable/ic_high_score"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Quiz High\nScore"
+                                android:fontFamily="@font/geologica_regular"
+                                android:textColor="#303030"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/list_of_quiz_score"
+                    android:id="@+id/tips"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:layout_marginHorizontal="10dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:background="@drawable/ic_tip_of_the_day"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Tip of the\nDay"
+                            android:fontFamily="@font/geologica_regular"
+                            android:textColor="#303030"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/about_app"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="100dp"
@@ -88,74 +143,21 @@
                         android:gravity="center"
                         android:orientation="vertical">
                         <ImageView
-                            android:background="@drawable/ic_high_score"
+                            android:background="@drawable/ic_about_app"
                             android:layout_width="50dp"
                             android:layout_height="50dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Quiz High\nScore"
+                            android:text="About\nApp"
                             android:fontFamily="@font/geologica_regular"
                             android:textColor="#303030"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/tips"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="100dp"
-                android:layout_marginHorizontal="10dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:background="@drawable/ic_tip_of_the_day"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Tip of the\nDay"
-                        android:fontFamily="@font/geologica_regular"
-                        android:textColor="#303030"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/about_app"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="100dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:background="@drawable/ic_about_app"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="About\nApp"
-                        android:fontFamily="@font/geologica_regular"
-                        android:textColor="#303030"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvLessons"
