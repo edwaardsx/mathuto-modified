@@ -14,6 +14,7 @@ import androidx.core.content.res.ResourcesCompat
 import tip.capstone.mathuto.R
 import tip.capstone.mathuto.databinding.QuizSummary19Binding
 import tip.capstone.mathuto.questions.Question19
+import tip.capstone.mathuto.questions.Question19.TOTAL_QUESTIONS
 import tip.capstone.mathuto.sqlite.SQLiteHelper
 import tip.capstone.mathuto.sqlite.TrueOrFalse
 
@@ -89,10 +90,11 @@ class Summary19Activity : AppCompatActivity() {
 
         val myIntArray = intent.getIntegerArrayListExtra(Question19.SELECTED_ANSWERS)
         println("ANSWER KEY ARRANGEMENT: " +myIntArray)
+        val totalQuestions = intent.getIntExtra(TOTAL_QUESTIONS, 0)
 
         if (mCurrentPosition <= mTrueOrFalse!!.size) {
             val trueOrFalse: TrueOrFalse = mTrueOrFalse!![mCurrentPosition - 1]
-            binding.tvProgress.text = "Question $mCurrentPosition/10"
+            binding.tvProgress.text = "Question $mCurrentPosition/$totalQuestions"
             binding.tvQuestion.text = trueOrFalse.question
             binding.tvQuestion.typeface = ResourcesCompat.getFont(this, R.font.geologica_regular)
             binding.tvOptionOne.text = trueOrFalse.optionA

@@ -26,177 +26,249 @@
         <activity
             android:name=".CalculatorActivity"
             android:exported="false" />
+
+
+
+
         <activity
             android:name=".quiz.summary.Summary1Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary2Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary3Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary4Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary5Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary6Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary7Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary8Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary9Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary10Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary11Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary12Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary13Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary14Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary15Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary16Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary17Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary18Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.summary.Summary19Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
+
+
+
+
         <activity
             android:name=".quiz.result.Result1Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result2Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result3Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result4Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result5Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result6Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result7Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result8Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result9Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result10Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result11Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result12Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result13Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result14Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result15Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result16Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result17Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result18Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.result.Result19Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
+
+
+
+
         <activity
             android:name=".quiz.Quiz1Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz"/>
         <activity
             android:name=".quiz.Quiz2Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz3Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz4Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz5Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz6Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz7Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz8Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz9Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz10Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz11Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz12Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz"/>
         <activity
             android:name=".quiz.Quiz13Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz14Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz15Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz16Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz17Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz18Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
         <activity
             android:name=".quiz.Quiz19Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mathuto.Quiz" />
+
+
+
         <activity
             android:name=".tutorial.Tutorial1Activity"
             android:exported="false" />
@@ -311,6 +383,9 @@
         <activity
             android:name=".lessons.Lesson19Activity"
             android:exported="false" />
+
+
+
         <activity
             android:name=".menu.IntroductoryMessageActivity"
             android:exported="false" />
@@ -334,7 +409,8 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Mathuto">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

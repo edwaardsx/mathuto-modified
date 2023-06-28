@@ -115,6 +115,7 @@ class Result14Activity : AppCompatActivity() {
 
             val intent = Intent(applicationContext,  Summary14Activity::class.java)
             intent.putIntegerArrayListExtra(SELECTED_ANSWERS, myIntArray)
+            intent.putExtra(TOTAL_QUESTIONS, totalQuestions)
 
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             applicationContext.startActivity(intent)

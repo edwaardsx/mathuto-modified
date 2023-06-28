@@ -36,6 +36,7 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mTrueOrFalseList: ArrayList<TrueOrFalse>? = null
     private val trueOrFalseListArrangement: ArrayList<TrueOrFalse>? =  null
+    private val mMaxQuestions = 10
 
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
@@ -61,6 +62,7 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
         window.statusBarColor = Color.parseColor("#303030")
 
         db = SQLiteHelper(this)
+        binding.progressBar.max = mMaxQuestions
 
         binding.tvOptionOne.setOnClickListener(this)
         binding.tvOptionTwo.setOnClickListener(this)
@@ -185,17 +187,17 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
         disableOptions()
         val question = mTrueOrFalseList?.get(mCurrentPosition - 1)
         selectedAnswer.add(mSelectedOptionPosition)
-        if (question!!.correctAnswer != mSelectedOptionPosition) {
+        if (question!!.correctAnswer == mSelectedOptionPosition) {
+            answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
+            mCorrectAnswers++
+            seCorrect?.start()
+            mTrueOrFalseList
+        } else {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
             seWrong?.start()
-            mTrueOrFalseList
-        } else {
-            mCorrectAnswers++
-            seCorrect?.start()
         }
-        answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
-        if (mCurrentPosition == mTrueOrFalseList!!.size) {
+        if (mCurrentPosition == mTrueOrFalseList!!.size || mCurrentPosition >= mMaxQuestions) {
             handler.postDelayed({
                 val intent = Intent(applicationContext, Result14Activity::class.java)
                 seBackgroundMusic?.stop()
@@ -230,8 +232,8 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
                     println("QUESTION ARRANGEMENT: " + question)
                 }
 
-                intent.putExtra(TOTAL_QUESTIONS, mTrueOrFalseList!!.size)
-                intent.putExtra(WRONG_ANS, mTrueOrFalseList!!.size - (mCorrectAnswers))
+                intent.putExtra(TOTAL_QUESTIONS, mMaxQuestions)
+                intent.putExtra(WRONG_ANS, mMaxQuestions - (mCorrectAnswers))
                 //intent.putExtra(WRONG_ANS, mQuestionList!!.size - (mCorrectAnswers + mUnansweredQuestion))
                 //intent.putExtra(UNANSWERED_QUESTIONS, mQuestionList!!.size - (mCorrectAnswers + mWrongAnswers))
                 intent.putExtra(CORRECT_ANS, mCorrectAnswers)
@@ -276,11 +278,27 @@ class Quiz14Activity : AppCompatActivity(), View.OnClickListener {
         }
 
         override fun onFinish() {
-            mCurrentPosition++
-            areOptionsEnabled = true
-            setQuestion()
+            areOptionsEnabled = false
+            disableOptions()
+            val question = mTrueOrFalseList?.get(mCurrentPosition - 1)
+            val wrongAnswer = getWrongAnswer(question?.correctAnswer ?: 0)
+            selectedAnswer.add(wrongAnswer)
+            mWrongAnswers++
             seWrong?.start()
+            answerView(wrongAnswer, R.drawable.quiz_wrong_option_border_bg) // Highlight the wrong answer option
+            answerView(question?.correctAnswer ?: 0, R.drawable.quiz_correct_option_border_bg) // Highlight the correct answer as wrong
+            handler.postDelayed({
+                mCurrentPosition++
+                areOptionsEnabled = true
+                setQuestion()
+            }, delayDuration)
         }
+    }
+
+    private fun getWrongAnswer(correctAnswer: Int): Int {
+        val options = arrayListOf(1, 2)
+        options.remove(correctAnswer)
+        return options.random()
     }
 
     private fun quickSort(scores: ArrayList<Int>, low: Int, high: Int) {

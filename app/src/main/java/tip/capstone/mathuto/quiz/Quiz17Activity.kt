@@ -210,16 +210,16 @@ class Quiz17Activity : AppCompatActivity(), View.OnClickListener {
         disableOptions()
         val question = mMultipleChoiceList?.get(mCurrentPosition - 1)
         selectedAnswer.add(mSelectedOptionPosition)
-        if (question!!.correctAnswer != mSelectedOptionPosition) {
+        if (question!!.correctAnswer == mSelectedOptionPosition) {
+            answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
+            mCorrectAnswers++
+            seCorrect?.start()
+            mMultipleChoiceList
+        } else {
             answerView(mSelectedOptionPosition, R.drawable.quiz_wrong_option_border_bg)
             mWrongAnswers++
             seWrong?.start()
-            mMultipleChoiceList
-        } else {
-            mCorrectAnswers++
-            seCorrect?.start()
         }
-        answerView(question.correctAnswer, R.drawable.quiz_correct_option_border_bg)
         if (mCurrentPosition == mMultipleChoiceList!!.size || mCurrentPosition >= mMaxQuestions) {
             handler.postDelayed({
                 val intent = Intent(applicationContext, Result17Activity::class.java)
@@ -309,11 +309,27 @@ class Quiz17Activity : AppCompatActivity(), View.OnClickListener {
         }
 
         override fun onFinish() {
-            mCurrentPosition++
-            areOptionsEnabled = true
-            setQuestion()
+            areOptionsEnabled = false
+            disableOptions()
+            val question = mMultipleChoiceList?.get(mCurrentPosition - 1)
+            val wrongAnswer = getWrongAnswer(question?.correctAnswer ?: 0)
+            selectedAnswer.add(wrongAnswer)
+            mWrongAnswers++
             seWrong?.start()
+            answerView(wrongAnswer, R.drawable.quiz_wrong_option_border_bg) // Highlight the wrong answer option
+            answerView(question?.correctAnswer ?: 0, R.drawable.quiz_correct_option_border_bg) // Highlight the correct answer as wrong
+            handler.postDelayed({
+                mCurrentPosition++
+                areOptionsEnabled = true
+                setQuestion()
+            }, delayDuration)
         }
+    }
+
+    private fun getWrongAnswer(correctAnswer: Int): Int {
+        val options = arrayListOf(1, 2, 3, 4)
+        options.remove(correctAnswer)
+        return options.random()
     }
 
     private fun quickSort(scores: ArrayList<Int>, low: Int, high: Int) {

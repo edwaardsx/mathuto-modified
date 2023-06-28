@@ -650,43 +650,6 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
         searchView?.setOnQueryTextListener(this)
         searchView?.queryHint = "Search for title & lessons"
 
-        /*val font = ResourcesCompat.getFont(this, R.font.geologica_regular)
-        val typefaceSpan = font?.let { TypefaceSpan(it) }
-
-        val queryHint = "Search for title & lessons"
-        val spannableString = SpannableString(queryHint)
-        spannableString.setSpan(typefaceSpan, 0, spannableString.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        searchView?.queryHint = spannableString*/
-
-        /*val searchEditText = searchView?.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)
-        searchEditText?.setTextColor(ContextCompat.getColor(this, R.color.black))
-        searchEditText?.setHintTextColor(ContextCompat.getColor(this, R.color.black))
-
-        val closeButton = searchView?.findViewById<ImageView>(androidx.appcompat.R.id.search_close_btn)
-        closeButton?.setImageResource(R.drawable.ic_close_secondary)
-
-        val backButton = searchView?.findViewById<ImageView>(androidx.appcompat.R.id.search_button)
-        backButton?.setImageResource(R.drawable.ic_back_secondary)*/
-
-        /*val hintTextColor = Color.parseColor("#000000")
-        val hintTextSpan = SpannableString("Search for title & lessons")
-        hintTextSpan.setSpan(ForegroundColorSpan(hintTextColor), 0, hintTextSpan.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        searchView.queryHint = hintTextSpan
-
-        val searchTextView = searchView.findViewById<AutoCompleteTextView>(androidx.appcompat.R.id.search_src_text)
-        searchTextView.setTextColor(Color.BLACK)*/
-
-        /*searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                return true
-            }
-            override fun onQueryTextChange(newText: String): Boolean {
-                recyclerAdapter.filter(newText)
-                isSearching = newText.isNotEmpty()
-                updateCarouselVisibility()
-                return true
-            }
-        })*/
         return true
     }
 

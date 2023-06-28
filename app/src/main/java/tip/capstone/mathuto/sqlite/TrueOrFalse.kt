@@ -1,6 +1,6 @@
 package tip.capstone.mathuto.sqlite
 
-class TrueOrFalse(
+data class TrueOrFalse(
     val id: Int,
     val question: String,
     val optionA: String,
