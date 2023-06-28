@@ -31,7 +31,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/geologica_bold"
                         android:gravity="center_vertical"
-                        android:text="Addition and Subtraction\nof Fractions Part 2"
+                        android:text="Addition and Subtraction\nof Decimals"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/black" />
                     <Button
@@ -66,7 +66,7 @@
                     android:src="@drawable/lesson_7_sample_1" />
                 <TextView
                     android:id="@+id/description_2"
-                    android:text="HINTS: The decimal point is represented by the word AND. Treat the decimal part as its own number and add the place value of the final digit.\n\nTo read the figure in word form, that is one thousand two hundred forty-six and four thousand seven hundred twenty-six ten thousandths and the standard form can be written as 1,246.4726."
+                    android:text="On the Place Value Chart\n\nBefore we proceed on addition and subtraction of decimals, it is necessary that you know how to read and write the standard form of the decimals. And now let’s try to work on to the next activities.\n\nActivity 1: Battle of Marathon\n\nRead the given figure and write its word name\n\nThe marathon is a long-distance race with an official distance of 42.1950 kilometers, usually run as a road race. The event was instituted in commemoration of the fabled run of the Greek soldier Pheidippides, a messenger from the Battle of Marathon to Athens, who reported the victory.\n\nActivity 2: Write the word name of the following decimal numbers:\n\n1. 6.4531 = ___________________________________________________________\n2. 7.96420 = __________________________________________________________\n3. 4.78012 = __________________________________________________________\n4. 57.8750 = __________________________________________________________\n5. 412.5632 =__________________________________________________________\n\nActivity 3: Write the standard form of the given word name\n\n1. Two and twenty-one thousand three hundred sixty-four ten thousandths = ____________________________\n2. Eight and four thousand seven hundred ninety-nine ten thousandths = ______________________________\n3. Three and eleven thousand five hundred one hundred thousandths = ________________________________\n3. Three and eleven thousand five hundred one hundred thousandths = ________________________________\n4. One hundred thirty-two and sixty-four ten thousandths = _____________________________\n5. Eighteen and three hundred seventeen ten thousandths = ____________________________"
                     android:fontFamily="@font/geologica_regular"
                     android:textColor="@color/black"
                     android:paddingHorizontal="16dp"
@@ -82,194 +82,193 @@
                     android:src="@drawable/lesson_7_sample_1_1" />
             </LinearLayout>
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:padding="16dp"
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#ffffff"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <androidx.cardview.widget.CardView
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp"
-                        app:cardBackgroundColor="#ffffff"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_gradient_tutorial"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:background="@drawable/bg_gradient_tutorial"
+                        <TextView
+                            android:text="Tutorial"
+                            android:textSize="18sp"
+                            android:paddingTop="10dp"
+                            android:paddingHorizontal="16dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/geologica_bold"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                            <TextView
-                                android:text="Tutorial"
-                                android:textSize="18sp"
-                                android:paddingTop="10dp"
-                                android:paddingHorizontal="16dp"
-                                android:textColor="@color/black"
-                                android:fontFamily="@font/geologica_bold"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"/>
-                            <TextView
-                                android:paddingHorizontal="16dp"
-                                android:layout_marginTop="10dp"
-                                android:textColor="@color/black"
-                                android:text="Are you struggling with the numbers mixing in your head? In this tutorial, we will guide you through the step-by-step process of this lesson!"
-                                android:fontFamily="@font/geologica_regular"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"/>
-                            <Button
-                                android:id="@+id/btn_tutorial"
-                                android:text="Watch Tutorial"
-                                android:textAllCaps="false"
-                                android:fontFamily="@font/geologica_regular"
-                                android:textColor="@color/black"
-                                android:background="@drawable/btn_secondary_button"
-                                android:drawablePadding="10dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="16dp"
-                                android:layout_marginHorizontal="16dp"
-                                android:layout_width="150dp"
-                                android:layout_height="48dp"/>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-                    <androidx.cardview.widget.CardView
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp"
-                        app:cardBackgroundColor="#ffffff"
-                        android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:text="Are you struggling with the numbers mixing in your head? In this tutorial, we will guide you through the step-by-step process of this lesson!"
+                            android:fontFamily="@font/geologica_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Button
+                            android:id="@+id/btn_tutorial"
+                            android:text="Watch Tutorial"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/geologica_regular"
+                            android:textColor="@color/black"
+                            android:background="@drawable/btn_secondary_button"
+                            android:drawablePadding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_width="150dp"
+                            android:layout_height="48dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_gradient_quiz"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Quiz"
+                            android:textSize="18sp"
+                            android:paddingTop="10dp"
+                            android:paddingHorizontal="16dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/geologica_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
                         <LinearLayout
-                            android:orientation="vertical"
-                            android:background="@drawable/bg_gradient_quiz"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginTop="10dp"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                            <TextView
-                                android:text="Quiz"
-                                android:textSize="18sp"
-                                android:paddingTop="10dp"
-                                android:paddingHorizontal="16dp"
-                                android:textColor="@color/white"
-                                android:fontFamily="@font/geologica_bold"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_list"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <LinearLayout
-                                android:orientation="horizontal"
+                                android:orientation="vertical"
                                 android:paddingHorizontal="16dp"
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
-                                <ImageView
-                                    android:layout_gravity="center"
-                                    android:background="@drawable/bg_list"
+                                <TextView
+                                    android:text="10"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/geologica_bold"
+                                    android:textColor="@color/white"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:paddingHorizontal="16dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-                                    <TextView
-                                        android:text="10"
-                                        android:textSize="18sp"
-                                        android:fontFamily="@font/geologica_bold"
-                                        android:textColor="@color/white"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
-                                    <TextView
-                                        android:text="Multiple Choice Questions"
-                                        android:fontFamily="@font/geologica_regular"
-                                        android:textColor="@color/white"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
-                                </LinearLayout>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:paddingHorizontal="16dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <ImageView
-                                    android:layout_gravity="center"
-                                    android:background="@drawable/bg_clock"
+                                <TextView
+                                    android:text="Multiple Choice Questions"
+                                    android:fontFamily="@font/geologica_regular"
+                                    android:textColor="@color/white"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:paddingHorizontal="16dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-                                    <TextView
-                                        android:text="2 mins"
-                                        android:textSize="18sp"
-                                        android:fontFamily="@font/geologica_bold"
-                                        android:textColor="@color/white"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
-                                    <TextView
-                                        android:text="Per Questions"
-                                        android:fontFamily="@font/geologica_regular"
-                                        android:textColor="@color/white"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
-                                </LinearLayout>
                             </LinearLayout>
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:paddingHorizontal="16dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <ImageView
-                                    android:layout_gravity="center"
-                                    android:background="@drawable/bg_trophy"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:paddingHorizontal="16dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-                                    <TextView
-                                        android:text="50%"
-                                        android:textSize="18sp"
-                                        android:fontFamily="@font/geologica_bold"
-                                        android:textColor="@color/white"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
-                                    <TextView
-                                        android:text="To Passed the Quiz"
-                                        android:fontFamily="@font/geologica_regular"
-                                        android:textColor="@color/white"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
-                                </LinearLayout>
-                            </LinearLayout>
-                            <TextView
-                                android:paddingHorizontal="16dp"
-                                android:layout_marginTop="10dp"
-                                android:text="Let's measure your problem-solving skills to assess your level of understanding."
-                                android:fontFamily="@font/geologica_regular"
-                                android:textColor="@color/white"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"/>
-                            <Button
-                                android:id="@+id/btn_start_quiz"
-                                android:text="Start Quiz!"
-                                android:textAllCaps="false"
-                                android:fontFamily="@font/geologica_regular"
-                                android:textColor="@color/white"
-                                android:background="@drawable/btn_primary_button"
-                                android:drawablePadding="10dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="16dp"
-                                android:layout_marginHorizontal="16dp"
-                                android:paddingHorizontal="16dp"
-                                android:layout_width="150dp"
-                                android:layout_height="48dp"/>
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
-
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_clock"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:paddingHorizontal="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:text="2 mins"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/geologica_bold"
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:text="Per Questions"
+                                    android:fontFamily="@font/geologica_regular"
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_trophy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:paddingHorizontal="16dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:text="50%"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/geologica_bold"
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:text="To Passed the Quiz"
+                                    android:fontFamily="@font/geologica_regular"
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Let's measure your problem-solving skills to assess your level of understanding."
+                            android:fontFamily="@font/geologica_regular"
+                            android:textColor="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <Button
+                            android:id="@+id/btn_start_quiz"
+                            android:text="Start Quiz!"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/geologica_regular"
+                            android:textColor="@color/white"
+                            android:background="@drawable/btn_primary_button"
+                            android:drawablePadding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:paddingHorizontal="16dp"
+                            android:layout_width="150dp"
+                            android:layout_height="48dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

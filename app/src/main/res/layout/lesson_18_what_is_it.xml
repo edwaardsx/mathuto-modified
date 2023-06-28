@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson18.WhatIsItFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="Now you have seen the process on how to solve a routine word problem Always remember to follow the process: Understand, Plan, Execute (Solve) and Review(check). Take note of the different keywords used in the word problems that will guide you on which mathematical operation you will use.\n\nFurther, you will be learning the steps in solving non-routine word problems. This will be easy because you already have the basic skills and strategies in solving word problems.\n\nAnswering non-routine problems are quite challenging but it will be easier to solve if we will follow the steps or the processes on how to simplify it. All you need is to have a STRATEGY to get the correct answer. Read the Word Problem below and don’t forget to follow the process: Understand, Plan, strategize, Execute; and Review\n\nSome suggested strategies: (Note: you can pick one or combination of 2 strategies)\n\nDraw a picture or diagram \nMake a table \nFind patterns\nAct out a problem\nWrite an equation \nBreak into parts\nMake an organized list\nSolve simpler related problem\nGuess and Check\nWork backward\nUse manipulative\n\nProblem 2\n\nAna have to save a money from her allowance. During the first week, she was able to save 88.65 pesos, she saved 96.00 on the second week, 69.40 for third week. If she had an average savings of 87.55, how much will be her savings on the fourth week?\n\nStep 1. Understand\n\n• What is asked?\n➢ Ana’ s savings on the fourth week (her refers to Ana)\n• What are the given facts?\n➢ P 88.65 Ana’s savings during the first week\n➢ P 96.00 during the second week\n➢ P 69.40 during the third week\n➢ P 87.55 average savings of Ana\n\nStep 2. Plan\n\n• What operation will be used?\n➢ Choose your own strategy to find the correct answer\n▪ STRATEGY 1: Make a table\n\nSteps:\n\n• Find the product of the average savings (87.55) by 4(total number of saving weeks)\n\n87.55 x 4 = 350.20\n• Add the savings of Ana for 3 weeks\n\n88.65+96.00+69.40=254.05\n• Subtract the sum of the three-week savings of Ana (Step 2) from the product of the average savings of Ana for four weeks (Step1) \n\n 350.20\n - 254.05\n P 96.15\n\nState your complete answer\n\nAna’s savings on the fourth week is P 96.15\n\n• To review or to check if your answer is correct, get the sum of the four week savings of Ana.\n\n• Divide the sum of four-week savings of Ana by 4 (number of saving week)350.20 ÷ 4 = 87.55 This means that our answer is correct\n\n➢ In solving non-routine word problems, always remember to: Understand the problem, Plan which includes the right strategy or strategies to solve the problem, Execute or solve for the answer using the number sentences formulated and the strategies, and lastly, don’t forget to Review or check if your answer is correct by looking back at the processes you have taken.\n\n➢ That in solving routine word problems, you need a correct strategy or strategies. Some of the strategies to consider are the following:\n\nDraw a picture or diagram\nake an organized list\nMake a table\nSolve simpler related problem\nFind patterns\nGuess and check\nAct out a problem\nWork backward\nWrite an equation\nUse manipulative\nBreak into parts\n\n"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

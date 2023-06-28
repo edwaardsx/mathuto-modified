@@ -39,7 +39,9 @@ class Lesson13Activity : AppCompatActivity() {
         showObjectives()
 
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Overview"))
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("What's In"))
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("What's New"))
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("What Is It"))
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Simulation"))
 
         val tabAdapter = Lesson13TabAdapter(supportFragmentManager, binding.tabLayout.tabCount)

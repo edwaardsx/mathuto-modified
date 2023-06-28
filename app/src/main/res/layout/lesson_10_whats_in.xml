@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson14.WhatsInFragment">
+    tools:context=".fragments.lesson10.WhatsInFragment">
 
     <androidx.core.widget.NestedScrollView
         android:overScrollMode="never"
@@ -38,7 +38,7 @@
             <TextView
                 android:id="@+id/description_1"
                 android:textColor="@color/black"
-                android:text="In the previous lesson, you learned a lot about multiplying decimals and mixed decimals with factors up to two decimal places."
+                android:text="In the previous lesson, you learned a lot about multiplying decimals and mixed decimals with factors up to two decimal places. \n\nApple Time!!! \n\nIn a local market, one medium-sized apple costs P15.75. How much will 5 dozens cost?\n\nTo find the cost of 5 dozens of apples, multiply 12 x 5 = 60 Total number of apples. Number sentence: 60 x 15.75 = N\n\nIn order to come up with the correct answer, multiply P15.75 and 60 apples.\n\n"
                 android:fontFamily="@font/geologica_regular"
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="16dp"

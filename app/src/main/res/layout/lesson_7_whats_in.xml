@@ -38,20 +38,21 @@
             <TextView
                 android:id="@+id/description_1"
                 android:textColor="@color/black"
-                android:text="In this lesson we will briefly review decimals and the relationship to place value. We have just started. We feel how eager you are to learn the content of this module. We hope that you keep it up for you to accomplish the activities/exercises of this lesson.\n\nExample:\n\nOn the Place Value Chart\n\nBefore we proceed on addition and subtraction of decimals, it is necessary that you know how to read and write the standard form of the decimals. And now let’s try to work on to the next activities.\n\nBattle of Marathon\n\nRead the given figure and write its word name"
+                android:text="After a series of discussion, we want you now to take on the next challenge. We are pretty sure that you gained a lot on the content of this module. With the knowledge you gained, try to answer the next activities. We encourage you to solve manually. You may use extra sheets in solving the activities.\n\nA. Find the sum. Match the addends with the sum. Write the letter of your answer on the space provided before the number.\n\nAddends\n_______ 1. 0.2364 + 2.4523 + 0.9123\n_______ 2. 2.1356 + 0.3525 + 1.4657\n_______ 3. 1.3672 + 1.3534 + 14.2562\n_______ 4. 0.3457 + 2.2679 + 9.1875\n_______ 5. 1.3428 + 6.2435 + 7.1367\nSum\na. 3.9538\nb. 11.8011\nc. 3.6010\nd. 14.7230\ne. 16.9768\n\nB. Find the difference.\n\n1. 20.8976 – 10.4312 = __________\n2. 15.9342 – 11.1235 = __________\n4. 3.4821 – 1.9988 = __________\n5. 9.2178 – 3.6599 = __________\n\na. 1.4833\nb. 4.8107\nc. 5.5579\nd. 10.4664\ne. 1.1232"
                 android:fontFamily="@font/geologica_regular"
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <ImageView
-                android:id="@+id/example_1"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:contentDescription="example"
+            <TextView
+                android:id="@+id/description_2"
+                android:textColor="@color/black"
+                android:text="Assessment\n\nWe are almost done kids! You really made us proud of your performance. At this point in time, we want you to undergo with the post-test. This will help us evaluate your level of mastery. We all know you can do it.\n\nPost-test. Direction: Read the following problem carefully. Write the chosen letter on a separate sheet of paper.\n\n1. Add: 29.2778 + 12.956\n\nA. 42.2338\nB. 43.2833\nC. 41.3338\nD. 40.0378\n\n2. Find the difference.35.0419 - 17.992\n\nA. 17.0499\nB. 17.8599\nC. 17.8553\nD. 18.8069\n\n3. Find the sum.\n217.3014\n30.2310\n+ 22 .2061\n\nA. 269.7385\nB. 259.3602\nC.268.6743\nD. 265.8965\n\n4. Subtract: 76.6994 - 70.588\n\nA. 6.673\nB. 6.1114\nC. 7.1004\nD. 8.9424\n\n5. Add 7.096 to the difference of 0.5846 and 0.4345.\n\nA.7.2461\nB. 8.2462\nC. 9.2461\nD. 10.2461\n\n6. The sum of 1.324 and 1.4572 is subtracted by 1.6301 is.\n\nA. 1.1511\nB. 1.5111\nC. 2.7161\nD. 3.3115\n\n7. What is the difference of 12.1199 minus 3.72?\n\nA. 6.1983\nB. 7.1639\nC. 8. 3999\nD. 9. 9399\n\n8. What is the difference if the sum of 78.451 and 69.354 is subtracted by the sum of 12.03 and 16.54.\n\nA. 1.19235\nB.11.9235\nC. 119. 235\nD. 1192.35\n\n9. If you add 6.3508 plus 3.0967, then subtract the sum from 10.4333, what will be the result?\n\nA. 0.8858\nB. 0.9858\nC. 0.0858\nD. 0.01858\n\n10. What number is added to 6.842 to get 8.0311?\n\nA. 0.1990\nB. 1.1981\nC. 1.1891\nD. 11.891"
+                android:fontFamily="@font/geologica_regular"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/lesson_7_sample_2"/>
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

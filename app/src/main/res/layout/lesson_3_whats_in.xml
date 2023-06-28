@@ -44,6 +44,15 @@
                 android:paddingHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/description_2"
+                android:textColor="@color/black"
+                android:text="Let's go through an example that covers both multiplying simple fractions by whole numbers and multiplying one fraction by another fraction.\n\nExample:\nMultiply simple fractions by whole numbers:\nProblem: Mary has 3/4 of a pie. If she triples the amount of pie she has, how much pie does she have now?\n\nSolution:\nTo find the new amount of pie Mary has, we need to multiply her current amount (3/4) by the whole number 3.\n\nStep 1: Multiply the numerator of the fraction by the whole number:\n3/4 * 3 = 9/4\n\nStep 2:\nSimplify the fraction, if possible:\nThe fraction 9/4 is an improper fraction, meaning the numerator is greater than the denominator. We can simplify it by dividing the numerator by the denominator:\n9 ÷ 4 = 2 with a remainder of 1\n\nSo, Mary now has 2 and 1/4 (or 2 1/4) pies.\n\nMultiply fraction by another fraction:\nProblem: John drank 2/3 of a liter of water. If he pours 1/2 of the remaining water into another glass, how much water does he pour?\n\nSolution:\nTo find the amount of water John pours into another glass, we need to multiply the fraction representing the remaining water (1/2) by the fraction representing the amount he drank (2/3).\n\nStep 1: Multiply the numerators to get the new numerator:\n1/2 * 2/3 = 2/6\n\nStep 2: Simplify the fraction, if possible:\nThe fraction 2/6 can be simplified by dividing both the numerator and denominator by their greatest common divisor, which is 2:\n2 ÷ 2 = 1\n6 ÷ 2 = 3\n\nSo, John pours 1/3 of a liter of water into another glass.\n\nBy following these step-by-step solutions, we were able to multiply simple fractions by whole numbers and multiply one fraction by another fraction to find the desired quantities. These skills are important in various mathematical applications and problem-solving situations.\n\n"
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

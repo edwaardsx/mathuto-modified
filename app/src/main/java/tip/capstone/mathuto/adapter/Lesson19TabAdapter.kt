@@ -5,9 +5,7 @@ package tip.capstone.mathuto.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import tip.capstone.mathuto.fragments.lesson19.OverviewFragment
-import tip.capstone.mathuto.fragments.lesson19.SimulationFragment
-import tip.capstone.mathuto.fragments.lesson19.WhatsNewFragment
+import tip.capstone.mathuto.fragments.lesson19.*
 
 @Suppress("DEPRECATION")
 internal class Lesson19TabAdapter(fragmentManager: FragmentManager,
@@ -20,9 +18,15 @@ internal class Lesson19TabAdapter(fragmentManager: FragmentManager,
                 OverviewFragment()
             }
             1 -> {
-                WhatsNewFragment()
+                WhatsInFragment()
             }
             2 -> {
+                WhatsNewFragment()
+            }
+            3 -> {
+                WhatIsItFragment()
+            }
+            4 -> {
                 SimulationFragment()
             }
             else -> getItem(position)

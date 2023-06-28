@@ -42,9 +42,28 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/geologica_regular"
                 android:textColor="@color/black"
-                android:text="What is the question?\n\n➢ How much will she pay for the dressed chicken?\n\nWhat will you do to answer the question?\n\n➢ Multiply ₱ 143.15 by 23\n\nHow many decimal places are there in the multiplicand and multiplier?\n\n➢ ( 2 places in the multiplicand and none in the multiplier )\n\nSo, putting the same number of decimal places in the final product, the answer is ₱ 3,292.45\n\nMother will be paying ₱ 3,292.45 for the chickens."/>
+                android:text="Mother buys 23 pieces of dressed chicken to be
+fried for her restaurant. How much will she pay if
+each kilo costs ₱ 143.15?"/>
+
+            <TextView
+                android:id="@+id/description_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="What is the question?\n\n➢ How much will she pay for the dressed chicken?\n\nWhat will you do to answer the question?\n\n➢ Multiply ₱ 143.15 by 23\n\nHow many decimal places are there in the multiplicand and multiplier?\n\n➢ ( 2 places in the multiplicand and none in the multiplier )\n\n"/>
             <ImageView
                 android:id="@+id/example_1"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:layout_marginVertical="10dp"
+                android:contentDescription="example"
+                android:src="@drawable/lesson_9_sample_4" />
+            <ImageView
+                android:id="@+id/example_2"
                 android:layout_width="match_parent"
                 android:layout_height="310dp"
                 android:layout_marginVertical="10dp"

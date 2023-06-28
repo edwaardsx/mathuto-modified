@@ -51,7 +51,7 @@
 
             </RelativeLayout>
             <TextView
-                android:text="This module covers Lesson 1: Adding and Subtracting Decimals."
+                android:text="This module was designed and written with you in mind. It is here to help you master the Addition and Subtraction of Decimals."
                 android:textSize="16sp"
                 android:fontFamily="@font/geologica_regular"
                 android:paddingHorizontal="10dp"
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:text="After going through this module, you are expected to:"
+                android:text="After going through this module, you are expected to:\n"
                 android:textSize="16sp"
                 android:fontFamily="@font/geologica_regular"
                 android:paddingHorizontal="10dp"
@@ -78,29 +78,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="Add and Subtract simple fractions with or without re-grouping;"
+                    android:text=" Add and Subtract decimals and mixed decimals through ten thousandths\n\n"
                     android:paddingStart="10dp"
                     android:textSize="16sp"
-                    android:fontFamily="@font/geologica_regular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:text="✦"
-                    android:textSize="16sp"
-                    android:textColor="#3f2570"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:text="Add and Subtract mixed numbers without or with re-grouping;"
-                    android:textSize="16sp"
-                    android:paddingStart="10dp"
                     android:fontFamily="@font/geologica_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>

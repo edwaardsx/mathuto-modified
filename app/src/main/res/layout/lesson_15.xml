@@ -68,7 +68,7 @@
                     app:tabIndicatorGravity="bottom"
                     app:tabIndicatorHeight="3dp"
                     app:tabIndicatorAnimationMode="elastic"
-                    app:tabMode="fixed"
+                    app:tabMode="scrollable"
                     app:tabGravity="fill"
                     app:tabMaxWidth="0dp"
                     app:tabTextAppearance="@style/MyCustomTextAppearance"

@@ -51,7 +51,7 @@ class Summary4Activity : AppCompatActivity() {
                 mCurrentPosition++
                 setQuestion()
             } else {
-                db.deleteQuestion()
+                db.deleteQuestion2()
             }
         }
         binding.btnBackPreviousQuestion.setOnClickListener{

@@ -52,6 +52,15 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/lesson_6_sample_1"/>
+            <TextView
+                android:id="@+id/description_2"
+                android:textColor="@color/black"
+                android:text="Let's have some fun while exploring problem-solving strategies for division with fractions and mixed fractions. This explanation will be designed to be easily understood by a grade 6 student.\n\nIn this module, we will focus on solving problems that involve dividing fractions and mixed fractions. We will use problem-solving strategies and tools to help us find the correct answers. Before we dive into the challenging part of the module, let's start with an activity to warm up our problem-solving skills.\n\nActivity 1 - Do Me:\nDirections:\n\nInside the polygon, you will find division problems involving fractions.\nSolve each division problem.\nDetermine if the answer is between 0 and 1, greater than 1 or less than 2, or greater than or equal to 2.\nColor the shape based on the given conditions:\nIf the answer is between 0 and 1, color the shape blue.\nIf the answer is greater than 1 or less than 2, color the shape yellow.\nIf the answer is greater than or equal to 2, color the shape red.\n\nFor more fun, trace and cut out the design to form a solid figure. You can do this on your activity sheet.\nBy completing this activity, you will have the opportunity to practice dividing fractions and mixed fractions while also creating a colorful and fun solid figure.\n\nNow, let's move on to learning the problem-solving strategies and tools that will help us solve more challenging division problems involving fractions and mixed fractions. Remember to take your time, ask questions if needed, and enjoy the process of learning and problem-solving!"
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

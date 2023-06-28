@@ -65,6 +65,15 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"/>
+            <TextView
+                android:id="@+id/description_3"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="The third decimal number obviously is an example of a terminating decimal. The digit immediately ends at 5. You get a terminating decimal when you divide a number which will give you a remainder of 0.\n\nYou will come across these three decimals when changing fractions to decimals or when dividing numbers whose quotient is a decimal number. Decimal quotients could either be a Repeating Decimal, Terminating Decimal or a Non-terminating Decimal.\n"
+                android:fontFamily="@font/geologica_regular"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

@@ -38,24 +38,21 @@
             <TextView
                 android:id="@+id/description_1"
                 android:textColor="@color/black"
-                android:text="Are you ready kid to take the challenge? The gate is open wide for you to get inside to this challenging world.\n\nA. Directions: Give the answer in lowest term. Write you answers in your answer sheets"
+                android:text="Are you ready kid to take the challenge? The gate is open wide for you to get inside to this challenging world.\n\n"
                 android:fontFamily="@font/geologica_regular"
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <ImageView
-                android:id="@+id/example_1"
-                android:src="@drawable/lesson_4_sample_2"
+            <TextView
+                android:id="@+id/description_2"
+                android:textColor="@color/black"
+                android:text="A. Directions: Give the answer in lowest term. Write you answers in your answer sheets.\n\n1) 2/10 + 1/5 =_____________________\n2) 3/4 -1/2 =_____________________\n 3) 1/3 x 2 2/5 =_____________________\n4) (1/2 x 8) x 5 =_____________________\n\nB. Direction: Arrange the letters to form a word as fast as you can. Write you answers in your answer sheets.\n\n1) nnudtaresd - _____________________________________\n2) anlp - _____________________________________\n3) oevls - _____________________________________n\n4) cchke - _____________________________________\n\nDid you get it right, Kids? How long did you do it? Congratulations for accomplishing this activity! We can move on now to the new world of knowledge."
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
                 android:layout_width="match_parent"
-                android:layout_marginVertical="10dp"
-                android:layout_height="300dp"/>
-            <ImageView
-                android:id="@+id/example_2"
-                android:src="@drawable/lesson_4_sample_2_1"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="20dp"
-                android:layout_height="300dp"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

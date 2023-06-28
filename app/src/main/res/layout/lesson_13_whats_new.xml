@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson13.WhatsInFragment">
+    tools:context=".fragments.lesson13.WhatsNewFragment">
 
     <androidx.core.widget.NestedScrollView
         android:overScrollMode="never"
@@ -51,6 +51,14 @@
                 android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"/>
+
+            <ImageView
+                android:id="@+id/example_2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/lesson_13_sample_2_3" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

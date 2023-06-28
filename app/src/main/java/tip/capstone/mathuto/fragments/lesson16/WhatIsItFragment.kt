@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import tip.capstone.mathuto.FullScreenImageAdapter
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.Lesson15WhatIsItBinding
 import tip.capstone.mathuto.databinding.Lesson16WhatIsItBinding
 import java.util.*
 
@@ -62,6 +61,19 @@ class WhatIsItFragment : Fragment(), TextToSpeech.OnInitListener {
 
             val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
             val images = listOf(R.drawable.lesson_16_sample_2)
+            val adapter = FullScreenImageAdapter(requireContext(), images)
+            viewPager.adapter = adapter
+
+            dialog.show()
+        }
+        binding.example1.setOnClickListener {
+            val dialog = Dialog(requireContext())
+            dialog.setContentView(R.layout.activity_full_screen_image)
+            dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+            val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
+            val images = listOf(R.drawable.lesson_16_sample_2_2)
             val adapter = FullScreenImageAdapter(requireContext(), images)
             viewPager.adapter = adapter
 

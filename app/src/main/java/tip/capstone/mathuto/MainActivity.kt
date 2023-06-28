@@ -192,19 +192,19 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
 ////////////////////////////////////////////////////////////////////////////////////////////////////
             if(QUIZ7_PASSED)
                 Data(R.drawable.recycler_img_2,
-                    "Addition and Subtraction of Fractions Part 2",
+                    "Addition and Subtraction of Decimals",
                     "Lesson 7",
                     COMPLETED
                 )
             else if(QUIZ6_PASSED)
                 Data(R.drawable.recycler_img_2,
-                    "Addition and Subtraction of Fractions Part 2",
+                    "Addition and Subtraction of Decimals",
                     "Lesson 7",
                     IN_PROGRESS
                 )
             else
                 Data(R.drawable.recycler_img_2,
-                    "Addition and Subtraction of Fractions Part 2",
+                    "Addition and Subtraction of Decimals",
                     "Lesson 7",
                     LOCK
                 ),
@@ -645,10 +645,10 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_item_main, menu)
 
-        val searchItem = menu?.findItem(R.id.search)
+        /*val searchItem = menu?.findItem(R.id.search)
         val searchView = searchItem?.actionView as? SearchView
         searchView?.setOnQueryTextListener(this)
-        searchView?.queryHint = "Search for title & lessons"
+        searchView?.queryHint = "Search for title & lessons"*/
 
         return true
     }
@@ -700,10 +700,10 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.OnItemClickListene
                 applicationContext.startActivity(intent)
                 overridePendingTransition(0, 0)
             }
-            R.id.search -> {
+            /*R.id.search -> {
                 isSearching = true
                 updateCarouselVisibility()
-            }
+            }*/
             else -> super.onOptionsItemSelected(item)
         }
         return super.onOptionsItemSelected(item)

@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="Add and Subtract simple fractions with or without re-grouping;"
+                    android:text="Add and Subtract simple fraction;"
                     android:paddingStart="10dp"
                     android:textSize="16sp"
                     android:fontFamily="@font/geologica_regular"
@@ -90,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:text="Add and Subtract mixed numbers without or with re-grouping;"
+                    android:text="Add and Subtract mixed numbers;"
                     android:textSize="16sp"
                     android:paddingStart="10dp"
                     android:fontFamily="@font/geologica_regular"

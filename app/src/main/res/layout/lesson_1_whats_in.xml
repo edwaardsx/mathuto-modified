@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson3.WhatsInFragment">
+    tools:context=".fragments.lesson1.WhatsInFragment">
 
     <androidx.core.widget.NestedScrollView
         android:overScrollMode="never"
@@ -54,7 +54,7 @@
                 android:id="@+id/description_2"
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/black"
-                android:text="Example #1:\n\n3/12 = 1/4 The numerator (2) and denominator (12) are both divided by 3.\n\nIn the same way: 7/21 = 1/3\n\n5/10 = 1/2 Here both numerator and denominator are divided by 2. Sometimes the bottom number does not divide by the top number, but they both divide by some other number.\n\nIn mathematical terms, this means that they have a common factor. In such cases, divide both numbers by the common factor until one or both are either  prime numbers, or they have no more common factors."
+                android:text="Example:\n\n3/12 = 1/4. The numerator (2) and denominator (12) are both divided by 3.\n\nIn the same way: 7/21 = 1/3\n\n5/10 = 1/2. Here both numerator and denominator are divided by 2.\n\nSometimes the bottom number does not divide by the top number, but they both divide by some other number. In mathematical terms, this means that they have a common factor.\n\nIn such cases, divide both numbers by the common factor until one or both are either prime numbers, or they have no more common factors.\n\nExample:\n\n28/70 = 14/35 = 2/5  Divide first by 2 and then by 7. Hence, the greatest common factor is 14 (multiplying 2 and 7).\n\n25/40 = 5/8 Divide by 5.\n\n9/23 Cannot be reduced, as 23 is a prime number so cannot be divided by anything except itself and one.\n\nAlright! This activity will determine how much have you learned in finding the Least Common Denominator (LCD) and Greatest Common Factor (GCF). So that you could be able to add and subtract fractions and mixed fractions as well.\n\nA. Find the LCD of the following:\n\n1.𝟑/𝟕 and 𝟓/𝟏𝟎 =\n2. 7/24 and 3/48 =\n3. 12/20 and 15/30 =\n\nB. Find the GCF of the following:\n\n1. 9and 21 =\n2. 12 and 24 =\n3. 45 and 60 ="
                 android:fontFamily="@font/geologica_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -65,15 +65,7 @@
                 android:contentDescription="example"
                 android:layout_marginVertical="10dp"
                 android:src="@drawable/lesson_1_sample_2_1"/>
-            <TextView
-                android:id="@+id/description_3"
-                android:textColor="@color/black"
-                android:paddingHorizontal="16dp"
-                android:layout_marginBottom="20dp"
-                android:text="Example #2:\n\n28/70 = 14/35 = 2/5. Divide first by 2 and then by 7. Hence, the greatest common factor is 14 (multiplying 2 and 7).25/40 = 5/8. Divide by 5\n\n9/23. Cannot be reduced, as 23 is a prime number so cannot be divided by anything except itself and one."
-                android:fontFamily="@font/geologica_regular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

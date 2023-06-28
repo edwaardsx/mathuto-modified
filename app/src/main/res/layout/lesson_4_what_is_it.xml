@@ -42,14 +42,23 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/geologica_regular"
                 android:textColor="@color/black"
-                android:text="Kids, wear your smile! This time you have to study the different examples in step by step process. Different methods are also introduced in finding the product of the given facts in problem solving. You may use either of the methods. If you discover another method or process, it is acceptable as long as you get the correct answer. That is part of your exploration. Thus, mathematicians believe that there are so many ways in finding the right answer."/>
+                android:text="Kids, wear your smile! This time you have to study the different examples in step by step process. Different methods are also introduced in finding the product of the given facts in problem solving. You may use either of the methods. If you discover another method or process, it is acceptable as long as you get the correct answer. That is part of your exploration. Thus, mathematicians believe that there are so many ways in finding the right answer.\n\nProblem 1:\n\nEngr. Yson planned to tile the floor of his room. Its length is 4 meters and the width is 3 meters. What is the floor area of the room?\n\nArea = length x width\n\nUnderstand:\n\na) What is asked?\nThe floor area of the room\n\nb) What are the given facts?\n4 1/2 meters length, 3 1/3 meters width\n\nPlan:What is the operation to be used?\nMultiplication\n\nSolve:\nMethod 1\n4 1/2 x 3 1/3 = 9/2 x 10/3 = 90/6 or 15m2\n\nMethod 2\n4 1/2 x 3 1/3 = 1/2 x 5/1 = 15/1 or 15 m2\n\nMethos 3\n4 1/4 x 3 1/3 = 9/2 x 10/3\n= 3x3/2 x 2x5/3\n= 3/3 x 2/2 x 3x3/1\n= 1 x 1 x 15\n= 15m2\n\n Answer: The floor area of the room is 15 m2.\n\nCheck:\nReview your calculation of the answer.\n\nProblem 2:\nA water tank is 3/4 full. When 2 1/2 liters are drown from the tank, it is half-full. What is the capacity of the tank?\n\nUnderstand:\na) What is asked: The capacity of the tank\nb) What are the given facts? 3/4 full, 2 liters, half-full.\n"/>
+
             <ImageView
                 android:id="@+id/example_1"
+                android:src="@drawable/lesson_4_sample_2_2"
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:layout_marginBottom="20dp"
-                android:contentDescription="example"
-                android:src="@drawable/lesson_4_sample_3_1" />
+                android:layout_marginBottom="10dp"
+                android:layout_height="250dp"/>
+            <TextView
+                android:id="@+id/description_2"
+                android:textColor="@color/black"
+                android:text="Capacity of the tank\n\n2 1/2 x 4 = 5/2 x 4/1 = 20/2 or 10 liters.\n\nAnswers: The capacity of the tank is 10 liters.\nCheck: Go back to illustration to check the answer."
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

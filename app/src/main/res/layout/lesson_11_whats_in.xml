@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson11.WhatsInFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:textColor="@color/black"
+                android:text="The activities in the succeeding parts of this module involve multiplication of decimals. It is a must that you had mastered the table of multiplication. If not, you may write a table of multiplication for each set of factors.\n\nAnswer the following:\n\nA. Find the product of the following decimals. Be sure to solve it accurately.\n\n1.) 0.23\n      x 1.7\n\n2.) 7.2 x 2.3\n\n3.) 0.35\n      x 0.7\n\n4.) 0.81 x 0.53 = __________\n\n5.) 39.6 x 5.8 = ____________\n\nB. Solve mentally. Just put the decimal point in the product in the correct position:\n6.) 0.21 x 10 = 2 1 0\n7.) 21.63 x 0.01 = 0 2 1 6 3\n8.) 0.06 x 0.01 = 0 0 0 0 6\n9.) 23.15 x 100 = 2 3 1 5 0 0\n10.) 54.1 x 0.1 = 5 4 1 0\n\nIn order to come up with a correct answer, long method of multiplication can be used. Shortcut method in multiplying with 0.1, 0.01, 0.001, 10 and 100 will also be of big help.\n\n"
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

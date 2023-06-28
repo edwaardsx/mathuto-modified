@@ -77,8 +77,16 @@
                     android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="230dp"/>
+                <TextView
+                    android:id="@+id/description_3"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:text="Let's expand on the explanation of problem-solving and provide a detailed solution to the example problem.\n\nProblem-solving involves using critical thinking skills to arrive at a solution in a systematic and efficient manner. When it comes to mathematical word problems, solving them effectively relies not only on the student's ability to perform the necessary mathematical operations but also on their capacity to accurately comprehend the problem's context.\n\nExample:\n\nProblem: Yael walked one-half of a kilometer yesterday and three-fourths of a kilometer today. How many miles has Yael walked?\n\nSolution: To solve this word problem, we need to add the fractions representing the distances Yael walked on different days.\n\nFirst, let's convert the fractions to have a common denominator. In this case, we choose 4 as the common denominator, as it can accommodate both halves and fourths.\n\nConverting 1/2 to a fraction with a denominator of 4:\nSince 2 multiplied by 2 equals 4, we can multiply both the numerator and denominator of 1/2 by 2, resulting in 2/4.\n\nConverting 3/4 to a fraction with a denominator of 4:\nSince 4 multiplied by 1 equals 4, we can leave the fraction as is, as it already has a denominator of 4.\n\nNow that we have the fractions with a common denominator, we can proceed with addition.\n\n1/2 + 3/4 = 2/4 + 3/4 = 5/4\n\nThe fraction 5/4 represents the total distance Yael walked, but we can simplify it further. Since the numerator (5) is greater than the denominator (4), we know it is an improper fraction. We can divide 5 by 4, which equals 1 with a remainder of 1. This means Yael walked 1 whole kilometer, and there is an additional 1/4 remaining.\n\nTherefore, Yael walked a total of 1 1/4 kilometers.\n\nIt's worth noting that the problem mentions kilometers, but the solution could be expressed in other units if desired (such as miles, as mentioned in the explanation). However, if the problem specifically asks for the answer in kilometers, then 1 1/4 kilometers would be the appropriate response.\n\nBy following a systematic approach and understanding the given problem, we were able to determine the distance Yael walked using fractions and arrive at a precise solution."
+                    android:fontFamily="@font/geologica_regular"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
-
             <LinearLayout
                 android:orientation="vertical"
                 android:padding="16dp"

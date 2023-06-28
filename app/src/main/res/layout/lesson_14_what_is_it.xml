@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson16.WhatIsItFragment">
+    tools:context=".fragments.lesson14.WhatIsItFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -42,10 +42,10 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/geologica_regular"
                 android:textColor="@color/black"
-                android:text="The decimal point allows you to write whole numbers and numbers with a fractional component using a consistent notation. This makes it more meaningful especially when you will be needing it to solve and seek solutions for certain concerns that you might want to address.\n\nOn a lighter sense, making operations such as addition, subtraction, multiplication, and division, which are easier and simpler.\n\nNow, to further explain it, here are another examples.\n\nExample:\n\nWhat is the quotient of 23.64 and 0.04?\n\nTo divide the decimals, follow the steps\n\nStep 1 Move the decimal point of the divisor two places to the right to make a whole number divisor.\n\nStep 2 Move the decimal point of the dividend the same number of decimal places as the divisor. So, move it two places to the right.\n\nStep 3 Divide 2 364 by 4 the way you divide whole numbers.\n\nStep 4 Write the decimal point of the quotient directly above the decimal point of the dividend.\n\nHence, the quotient of 23.64 and 0.04 is 591."/>
+                android:text="The decimal point allows you to write whole numbers and numbers with a fractional component using a consistent notation. This makes it more meaningful especially when you will be needing it to solve and seek solutions for certain concerns that you might want to address.\n\nOn a lighter sense, making operations such as addition, subtraction, multiplication, and division, which are easier and simpler.\n\nNow, to further explain it, here are another examples.\n\nExample:\n\nWhat is the quotient of 23.64 and 0.04?\n\nTo divide the decimals, follow the steps\n\nStep 1: Move the decimal point of the divisor two places to the right to make a whole number divisor.\n\nStep 2: Move the decimal point of the dividend the same number of decimal places as the divisor. So, move it two places to the right.\n\nStep 3: Divide 2 364 by 4 the way you divide whole numbers.\n\nStep 4: Write the decimal point of the quotient directly above the decimal point of the dividend.\n\nHence, the quotient of 23.64 and 0.04 is 591."/>
             <ImageView
                 android:id="@+id/example_1"
-                android:src="@drawable/lesson_14_sample_3"
+                android:src="@drawable/lesson_14_sample_3_1"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"

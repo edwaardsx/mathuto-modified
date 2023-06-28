@@ -65,6 +65,15 @@
                 android:layout_marginVertical="10dp"
                 android:contentDescription="example"
                 android:src="@drawable/lesson_3_sample_2_1" />
+            <TextView
+                android:id="@+id/description_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="Questions:\n\n1) Before multiplying, what are you going to do with the mixed fraction? ___________\n\n2) Next, what will you do with the numerators___________________________________\n\nHow about the denominators?_________________________________________________\n\n3) Examine the answer. What will you do with the result if it is either of the following?\n\na) Improper fraction___________________________________________________________\nb) Higher term ________________________________________________________________\nc) Both numerator and denominator are the same ______________________________\n"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

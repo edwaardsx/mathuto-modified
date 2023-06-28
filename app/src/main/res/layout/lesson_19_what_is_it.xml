@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson19.WhatIsItFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:text="I know you are a little confused of what you are going to do. Do you want some idea? To be able to correctly answer the given problem, we need to follow the following steps.\n\nStep 1. Understand the problem.\n\nIn understanding the problem, you need to answer the following questions:\n1. What is asked in the problem?\nAnswer: How much was each one’s share for the fare?\n2. What are the given facts that will help you solve the problem?\nAnswer: Php379 - fare for the taxi in going to the mall Marian, Joan and 2 classmates -persons who will be sharing for the fare\n\nStep 2. Plan\n\nIn planning, there are 2 questions that you need to answer.\n1. What are the operations to be used?\nAnswer: Addition and Division\nWe need to add the number of persons who will share for the fare. We need to divide the fare to the number of persons who rode the taxi to know their individual share for the fare.\n\n2. What is the number sentence?\nA number sentence is a mathematical sentence made up of numbers and signs.\nSince we already know that we need to use addition and division in answering the problem, the number sentence would be: 379 ÷ (2 + 1 + 1) = N\n\nStep 3. Solve\n\nNow, with the number sentence we already formulated, we can solve the problem.\nPhp379 ÷ 4 = Php94.75\nEach of them will share Php94.75 for their fare.\n\nStep 4. Check if your answer is correct.\n\nIn checking, you need to go back to what is asked in the problem. Does it answer the question being asked? If yes, then your answer is correct.\n\nThe problem above needs two operations to answer it. That is an example of a non-routine problem or the so-called multi-step word problem wherein it involves 2 or more operations. Sometimes, in answering multi-step word problems, we need to answer the hidden questions before answering the main question. This is non routine problem. Shall we try it? Let us use again almost the same problem given above.\n\nMarian, Joan and their 2 classmates went to the mall. They took a taxi and the fare was Php379. The fare will be divided among four of them. If Marian has Php850, how much will be left from her money upon paying her share for the fare?\n\n"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

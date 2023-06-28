@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson3.WhatIsItFragment">
+    tools:context=".fragments.lesson1.WhatIsItFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -43,13 +43,6 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/geologica_regular"
                 android:text="Fractions look a little like division expressions, but they aren’t problems to be solved. They are a way of expressing an amount. Like numbers, fractions tell you how much you have of something. There are different kinds of fractions that you need to get acquainted with and be able to deal with utmost understanding.\n\nSimilar Fractions:\n\nSimilar fractions are fractions which have the same denominator. To add or subtract similar fractions, add or subtract the numerators and copy the common denominator. Simplify the resulting fraction, if possible."/>
-            <ImageView
-                android:id="@+id/example_1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="example"
-                android:layout_marginVertical="10dp"
-                android:src="@drawable/lesson_1_sample_3" />
             <TextView
                 android:id="@+id/description_2"
                 android:layout_width="match_parent"
@@ -57,9 +50,9 @@
                 android:fontFamily="@font/geologica_regular"
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/black"
-                android:text="Example 1:\n\nAdd: 3/6 + 1/6\n\n3+1 Add the numerators.\n\n4/6 Copy the common denominator.\n\nAnswer: 𝟐/𝟑 Simplify (Lowest Term). → 4÷2/6÷2 = 2/3\n\nExample 2:\n\nSubtract: 8/15 − 3/15\n\n8−3 Subtract the numerators.\n\n5/15 Copy the common denominator.\n\nAnswer:𝟏/𝟑 Simplify (lowest term). → 5÷5/15÷5 = 1/3" />
+                android:text="Example:\n\nAdd: 3/6 + 1/6\n\n3+1 Add the numerators.\n\n4/6 Copy the common denominator.\n\nAnswer: 𝟐/𝟑 Simplify (Lowest Term). → 4÷2/6÷2 = 2/3\n\nExample:\n\nSubtract: 8/15 − 3/15\n\n8−3 Subtract the numerators.\n\n5/15 Copy the common denominator.\n\nAnswer:𝟏/𝟑 Simplify (lowest term). → 5÷5/15÷5 = 1/3"/>
             <ImageView
-                android:id="@+id/example_2"
+                android:id="@+id/example_1"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_marginVertical="10dp"
@@ -72,9 +65,9 @@
                 android:fontFamily="@font/geologica_regular"
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/black"
-                android:text="Dissimilar Fractions:\n\nDissimilar fractions are fractions with different denominators. To add or subtract dissimilar fractions, find the Least Common Denominator or LCD. Then, rewrite each fraction into its equivalent fraction using the LCD. Add or subtract the numerators and write the sum or difference over the common denominator. Simplify the resulting fraction, if possible.\n\nExample 3:\n\nAdd: 1/4 + 2/6\n\n12 + 12 Determine the LCD.\n\n3/12 + 4/12 To get the equivalent fraction, divide the LCD by the denominator and multiply the answer/quotient by the numerator.\n\n3+4/12 Add the numerators over the common denominator.\n\nAnswer: 𝟕/𝟏2" />
+                android:text="Dissimilar Fractions:\n\nDissimilar fractions are fractions with different denominators. To add or subtract dissimilar fractions, find the Least Common Denominator or LCD. Then, rewrite each fraction into its equivalent fraction using the LCD. Add or subtract the numerators and write the sum or difference over the common denominator. Simplify the resulting fraction, if possible.\n\nExample:\n\nAdd: 1/4 + 2/6\n\n12 + 12 Determine the LCD.\n\n3/12 + 4/12 To get the equivalent fraction, divide the LCD by the denominator and multiply the answer/quotient by the numerator.\n\n3+4/12 Add the numerators over the common denominator.\n\nAnswer: 𝟕/𝟏2\n\nExample:\n\nSubtract: 3/5 − 3/15\n\nDetermine the LCD.\n\n9/15 − 3/15 Get the equivalent fraction.\n\n9 − 3/15 Subtract the numerators over the common denominator.\n\n6/15 𝑜𝑟 2/5 Simplify (lowest term). → 6÷3/15÷3 = 2/5\n\nAnswer: 2/5"/>
             <ImageView
-                android:id="@+id/example_3"
+                android:id="@+id/example_2"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:layout_marginVertical="10dp"
@@ -87,7 +80,7 @@
                 android:fontFamily="@font/geologica_regular"
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/black"
-                android:text="Example 4:\n\nAdd: 1/4 + 2/6\n\n12 + 12 Determine the LCD.\n\n3/12 + 4/12 To get the equivalent fraction, divide the LCD by the denominator and multiply the answer/quotient by the numerator.\n\n3+4/12 Add the numerators over the common denominator.\n\nAnswer: 𝟕/𝟏2" />
+                android:text="Mixed Fractions:\n\nFor mixed similar fractions, add or subtract the whole numbers and the fractions. Simplify the resulting fraction if possible.\n\nExample\n\nAdd: 4 5/10 + 2 3\10\n(4 + 2) + (5/10 + 3/10)    Add the whole numbers and the fractions.\n\n6 + 8/10 𝑜𝑟 6 4/5      Combine and simplify.\n\nAnswer:6 4/5\n\nExample Subtract: 5 8/10 − 2 2/10\n\n(5 − 2) + (8/10 − 2/10) Subtract the whole numbers and the fractions.\n\n3 6/10 𝑜𝑟 3 3/5 Combine and simplify.\n\nAnswer: 3 3/5\n\nFor mixed dissimilar fractions, determine the LCD of the fraction and change it to its equivalent fraction using the common denominator. Add or subtract the whole numbers and the fractions. Simplify the resulting fraction if possible.\n\nExample Add: 4 2/3 + 5 2/6\n\n4/6 + 5/6              Determine the LCD.\n\n4 4/6 + 5 2/6         Get the equivalent fraction.\n\n(4+5) + 4+2/6       Add the whole numbers and then the fractions.\n9 6/6\n\nAnswer: 10\n\nExample Subtract: 2/3 − 4 5/7\n\n6/21 − 4/21      Determine the LCD.\n\n6 14/21 − 4 15/21      Get the equivalent fraction.\n\n[5 + (21/21 + 14/21)] − 4 15/21 Since we cannot subtract 15 from 14, regroup 1 or 21/21 from 6.\n\n5 35/21 − 4 15/21\n\n(5-4) – 35−15/21    Subtract the whole numbers and then the fractions.\n\n1 20/21\n\nAnswer: 1 20/21\n\nCHECK\n\nCheck if the answer is correct\n\n2/4 + 1/4 + 1/4 = 4/4 𝑜𝑟 1\n\n"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

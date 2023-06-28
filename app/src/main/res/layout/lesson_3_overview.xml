@@ -63,8 +63,16 @@
                     android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"/>
+                <TextView
+                    android:id="@+id/description_2"
+                    android:text="In mathematics, multiplication is the operation of combining two or more quantities to find their total or product. It can be seen as repeated addition, where the same quantity is added multiple times.\n\nThe symbols commonly used to represent multiplication are the cross (×) and the dot (·). In the context of multiplying fractions, the cross symbol (×) is often used.\n\nThis module will guide you through the various methods of multiplying fractions. There are different approaches to finding the product, but regardless of the method you choose, you will always arrive at the correct answer.\n\nBefore diving into this module, it is recommended to review your previous lessons on fractions. Having a solid understanding of the basic concepts and operations involving fractions will enable you to grasp the lessons in this module more effectively.\n\nMultiplying fractions can be made easier by following certain steps and applying appropriate techniques. Some common methods include:\n\nMultiplying Numerators and Denominators:\n\nMultiply the numerators (top numbers) of the fractions together.\nMultiply the denominators (bottom numbers) of the fractions together.\nSimplify the resulting fraction, if possible, by reducing it to its simplest form.\nCross-Multiplication:\n\nWrite the fractions in a diagonal or X shape, with the numerators of one fraction on the opposite denominator.\nMultiply the values diagonally across from each other: numerator of the first fraction with the denominator of the second fraction, and numerator of the second fraction with the denominator of the first fraction.\nSimplify the resulting fraction, if possible.\nUsing Whole Numbers:\n\nConvert any whole numbers to fractions by placing them over a denominator of 1.\nMultiply the fractions following the steps mentioned above.\nIf necessary, simplify the resulting fraction.\n\nBy following these methods and practicing regularly, you will become more comfortable and proficient in multiplying fractions.\n\nRemember, it is crucial to understand the underlying concepts and apply the appropriate techniques to ensure accurate multiplication of fractions. This module aims to provide a comprehensive understanding of multiplying fractions, assisting you in tackling various problem-solving scenarios.\n\n"
+                    android:fontFamily="@font/geologica_regular"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
-
                 <LinearLayout
                     android:orientation="vertical"
                     android:padding="16dp"

@@ -13,8 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import tip.capstone.mathuto.FullScreenImageAdapter
 import tip.capstone.mathuto.R
-import tip.capstone.mathuto.databinding.Lesson1WhatIsItBinding
-import tip.capstone.mathuto.databinding.Lesson2WhatIsItBinding
 import tip.capstone.mathuto.databinding.Lesson4WhatIsItBinding
 import java.util.*
 
@@ -41,14 +39,16 @@ class WhatIsItFragment : Fragment(), TextToSpeech.OnInitListener {
 
         binding.btnTts.setOnClickListener {
             val description1 = binding.description1.text.toString()
+            val description2 = binding.description2.text.toString()
+            val mDescription = "$description1 $description2"
 
-            if (description1.isNotEmpty()) {
+            if (mDescription.isNotEmpty()) {
                 if (isReadingAloud) {
                     tts.stop()
                     isReadingAloud = false
                     binding.btnTts.text = "Read Aloud"
                 } else {
-                    tts.speak(description1, TextToSpeech.QUEUE_FLUSH, null, null)
+                    tts.speak(mDescription, TextToSpeech.QUEUE_FLUSH, null, null)
                     isReadingAloud = true
                     binding.btnTts.text = "Stop Read Aloud"
                 }
@@ -61,7 +61,7 @@ class WhatIsItFragment : Fragment(), TextToSpeech.OnInitListener {
             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
             val viewPager: ViewPager = dialog.findViewById(R.id.view_pager)
-            val images = listOf(R.drawable.lesson_4_sample_3_1)
+            val images = listOf(R.drawable.lesson_4_sample_2_2)
             val adapter = FullScreenImageAdapter(requireContext(), images)
             viewPager.adapter = adapter
 

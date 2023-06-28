@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson17.WhatIsItFragment">
+    tools:context=".fragments.lesson12.WhatIsItFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/geologica_regular"
                 android:textColor="@color/black"
-                android:text="In multi-step math word problems, one or more problems have to be solved in order to get the information needed to solve the question being asked. This lesson will provide help and guidance that will help solve these types of problems."/>
+                android:text="In multi-step math word problems, one or more problems have to be solved in order to get the information needed to solve the question being asked. This lesson will provide help and guidance that will help solve these types of problems. \n\nHow do you start to work a word problem? \n\n1. Read the problem all the way through quickly, to see what kind of word problem it is and what is about.\n\n2. Look for a question at the end of the problem. This is often a good way to find what you are solving for.\n\n3. Translate the word problem into equation. Then solve the equation.\n\n4. Write your answer/s, labeling with the appropriate units.\n\n5. Reread the question to make sure your answer is sensible.\n\nThe guide questions are needed to analyze and solve the word problem.\n\n1. What is asked in the problem?\n\n- Understand what the problem is asking. What do you know, and what do you need to find out.\n\na. Read the problem\n\nb. Paraphrase the problem\n\nc. You may underline/circle important information\n\n2. What are the given facts?\n\n- Collect all the given facts in the problem that may contribute to your solution.\n\n3. What are the hidden question?\n\n- Inspect for the hidden question that may contribute to design your equation.\n\n4. What operation will you use to solve the problem?\n\n- Decide what operation to be used.\n\n5. What is the number sentence?\n\n- Design your equation that may answer the problem and using your chosen operation.\n\n6. What is the answer?\n\n- Solve for your answer.\n\n"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

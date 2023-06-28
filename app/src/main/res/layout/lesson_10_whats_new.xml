@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F6F9"
-    tools:context=".fragments.lesson13.WhatsNewFragment">
+    tools:context=".fragments.lesson10.WhatsNewFragment">
 
     <androidx.core.widget.NestedScrollView
         android:overScrollMode="never"
@@ -38,7 +38,7 @@
             <TextView
                 android:id="@+id/description_1"
                 android:textColor="@color/black"
-                android:text="We have just started and we feel how interested you are to learn the content of this module. We hope that you keep it up for you to accomplish all the activities and exercises of this lesson. It is time to proceed to the next activity.\n\n Lace for the Blouse Read and understand the problem.\n\nLilia was asked by her mother to buy 10 meters of lace for her blouse and 100 meters of the same lace for the dresses that her mother sew. Each meter costs ₱ 8.45. She made a table to show the data of her problem."
+                android:text="We have just started and we feel how interested you are to learn the content of this module. We hope that you keep it up for you to accomplish all the activities and exercises of this lesson. It is time to proceed to the next activity.\n\n Activity 1: Lace for the Blouse Read and understand the problem.\n\nLilia was asked by her mother to buy 10 meters of lace for her blouse and 100 meters of the same lace for the dresses that her mother sew. Each meter costs ₱ 8.45. She made a table to show the data of her problem."
                 android:fontFamily="@font/geologica_regular"
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="16dp"
@@ -61,7 +61,7 @@
             <TextView
                 android:id="@+id/description_2"
                 android:textColor="@color/black"
-                android:text="Solution 1:\n\n₱ 8.45 x 10 = ₱ 84.5 She moved the decimal point one place to the right because 10 has only one zero. So, she paid the cashier ₱ 84.50 for the 10m of lace.\n\nSolution 2:\n\n₱ 8.45 x 100 = ₱ 845 She moved the decimal point two places to the right because 100 has two zeros. So, she paid the cashier ₱ 845 for the 100 m of lace."
+                android:text="Solution 1:\n\n₱ 8.45 x 10 = ₱ 84.5 She moved the decimal point one place to the right because 10 has only one zero. So, she paid the cashier ₱ 84.50 for the 10m of lace.\n\nSolution 2:\n\n₱ 8.45 x 100 = ₱ 845 She moved the decimal point two places to the right because 100 has two zeros. So, she paid the cashier ₱ 845 for the 100 m of lace. \n\n"
                 android:fontFamily="@font/geologica_regular"
                 android:paddingHorizontal="16dp"
                 android:layout_width="match_parent"

@@ -44,6 +44,15 @@
                 android:paddingHorizontal="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/description_2"
+                android:textColor="@color/black"
+                android:text="Let's solve the two word problems involving addition and subtraction of fractions.\n\nProblem 1: Word Problems Involving Subtraction of Fractions From a 1-meter ribbon, Ericka cut 2/4 meter for her hat and another 1/4 meter for her bag. How long was the remaining piece?\n\nSolution:\nTo find the length of the remaining piece, we need to subtract the lengths of the hat and the bag from the total length of the ribbon.\n\nStep 1: Find the total length cut for the hat and bag.\n2/4 meter (hat) + 1/4 meter (bag) = 3/4 meter\n\nStep 2: Subtract the total length cut from the original length.\n1 meter - 3/4 meter = 4/4 meter - 3/4 meter = 1/4 meter\n\nTherefore, the length of the remaining piece is 1/4 meter.\n\nProblem 2: Word Problems Involving Addition of Fractions Jepoy drove his bicycle for 1/3 km going to his friend's house. Then, he proceeded for another 2/4 km to his cousin. He drove another 1/6 km on his way home. How far did he cover from his friend's house to his house?\n\nSolution:\nTo find the total distance Jepoy covered from his friend's house to his house, we need to add the distances traveled for each segment of the journey.\n\nStep 1: Add the distances traveled for each segment. 1/3 km (friend's house) + 2/4 km (cousin's house) + 1/6 km (home) = (4/12) km + (6/12) km + (2/12) km = 12/12 km\n\nStep 2: Simplify the fraction, if necessary.\n12/12 km is equivalent to 1 km.\n\nTherefore, Jepoy covered a distance of 1 km from his friend's house to his house.\n\nI hope this helps you understand how to solve word problems involving addition and subtraction of fractions!\n\n"
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </FrameLayout>

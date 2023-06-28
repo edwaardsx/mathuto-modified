@@ -38,7 +38,7 @@
             <TextView
                 android:id="@+id/description_1"
                 android:textColor="@color/black"
-                android:text="Can you still remember how to divide a whole number with a decimal and mixed decimal? How do we divide decimals by 10, 100 or 1 000? How will we know that the quotient is a terminating or non-terminating?"
+                android:text="Can you still remember how to divide a whole number with a decimal and mixed decimal? How do we divide decimals by 10, 100 or 1 000? How will we know that the quotient is a terminating or non-terminating? \n\n Since this is a complex competency and it requires reading comprehension and analytical skills, please provide reinforcements by enriching your learners’ vocabularies."
                 android:fontFamily="@font/geologica_regular"
                 android:layout_marginTop="10dp"
                 android:paddingHorizontal="16dp"
