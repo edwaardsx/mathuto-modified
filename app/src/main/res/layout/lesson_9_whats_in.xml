@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    tools:context=".fragments.lesson9.WhatsInFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_tts"
+                    android:text="Read Aloud"
+                    android:fontFamily="@font/geologica_regular"
+                    android:background="@drawable/btn_secondary_button"
+                    android:drawableStart="@drawable/ic_text_to_speech"
+                    android:textAllCaps="false"
+                    android:drawablePadding="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/description_1"
+                android:textColor="@color/black"
+                android:text="The following activities involve multiplication of numbers. It is a must that you had mastered the table of multiplication. If not, you may write a table of multiplication for each set of factors. To help you remember how, answer the simple multiplication drills for whole numbers below:\n\n1) 4 x 7 = ____ \n\n2) 8 x 3 = ____\n\n3) 6 x 9 = ____\n\n4) 12 x 7 = ____\n\n5) 8 x 11 = ____\n\n"
+                android:fontFamily="@font/geologica_regular"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/example_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="example"
+                android:background="@color/white"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/lesson_9_sample_2_2"/>
+            <ImageView
+                android:id="@+id/example_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="example"
+                android:background="@color/white"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/lesson_9_sample_2_1"/>
+            <ImageView
+                android:id="@+id/example_3"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:contentDescription="example"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/lesson_9_sample_1" />
+            <TextView
+                android:id="@+id/description_2"
+                android:text="Multiplying decimals and mixed decimals with factors up to two decimal places is similar to multiplying with whole numbers. The main difference lies in correctly placing the decimal point in the final product. To understand how to do this, let's go through the activities step by step:\n\nActivity 1: Start by multiplying the decimals as you would with whole numbers. Ignore the decimal points for now.\n\nExample: Let's say we want to multiply 2.5 and 1.3.\n\nStep 1: Multiply the whole numbers: 2 multiplied by 1 equals 2.\nStep 2: Multiply the decimal parts: 5 multiplied by 3 equals 15.\n\nActivity 2: Determine the total number of decimal places in the factors being multiplied. Count the number of decimal places in both factors.\n\nExample: In our previous example, 2.5 has one decimal place, and 1.3 also has one decimal place.\n\nActivity 3: Add the total number of decimal places in the factors. This sum will determine the position of the decimal point in the final product.\n\nExample: In our previous example, we have a total of two decimal places (1 + 1).\n\nActivity 4: Place the decimal point in the product. Count from the right of the product and place the decimal point in the position determined by the total number of decimal places.\n\nExample: In our previous example, since we have a total of two decimal places, we count two places from the right of the product and place the decimal point there. The final product is 3.25.\n\nBy following these activities, you can correctly place the decimal point in the product when multiplying decimals and mixed decimals with factors up to two decimal places. Remember to always consider the total number of decimal places in the factors and count from the right to place the decimal point in the correct position.\n"
+                android:fontFamily="@font/geologica_regular"
+                android:textColor="@color/black"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>
